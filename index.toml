@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "4d43b0d1ed98b2503f7c944ec961a64db0ea97657d73370372a77aebf52099cc"
+hash = "1270667af129ad33c14dd6816d97ce7b4f609db2c4f0a444caa429b1385bb8f7"
 
 [[files]]
 file = "CLAUDE.md"
@@ -231,5 +231,5 @@ hash = "58eb7f330c8e2158385fda1a391b1a93faf36459f8d25ccb482e26ce885deb5e"
 metafile = true
 
 [[files]]
-file = "overrides/shaderpacks/ComplementaryReimagined_r5.6.1.zip"
+file = "shaderpacks/ComplementaryReimagined_r5.6.1.zip"
 hash = "33153747d25fbee470acb42ccf4f26b03cc551bb900d4c6d3389b5500dd84839"
