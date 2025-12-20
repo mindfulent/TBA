@@ -1,4 +1,4 @@
-# MCArtsAndCrafts v0.9.5
+# MCArtsAndCrafts v0.9.6
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -11,6 +11,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **ModernFix** - Faster loading, dynamic resource management
 - **Krypton** - Network stack optimization
 - **Iris Shaders** - OptiFine shader compatibility
+- **Distant Horizons** - LOD rendering for extended view distances
 
 ### Building & Decoration
 - **Chipped** - 11,000+ decorative block variants with connected textures
@@ -122,7 +123,7 @@ MCServer/
    ```json
    {
      "project_id": "mcartsandcrafts",
-     "version_id": "0.9.5"
+     "version_id": "0.9.6"
    }
    ```
 3. Set server jar to `mrpack4server.jar`

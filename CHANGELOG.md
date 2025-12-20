@@ -2,6 +2,14 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.6] - 2025-12-20
+
+### Added
+- **Distant Horizons** - LOD rendering for extended view distances without performance loss
+
+### Changed
+- Mod count increased from 38 to 39
+
 ## [0.9.5] - 2025-12-20
 
 ### Fixed

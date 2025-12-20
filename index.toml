@@ -6,7 +6,7 @@ hash = "401d44f72f43771be11a32bba160f6bb43b2d25a7c308b165ee73d632ef5ef67"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "4c876ad2b9cdf937160667cb5af898237b90a056f84bf94af4192aa8f23eaab3"
+hash = "c26daa4dec27a13f438cab793434dc76d372b455db53a84ced21b63fab018769"
 
 [[files]]
 file = "CLAUDE.md"
@@ -14,7 +14,7 @@ hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "e34a486337f4eaa24d11a8b6a7f4d28521094cc74a3f84be79693af710bf78a8"
+hash = "585794cf100698e769e70d5292f1e053e73129990e5a74f162b17044f935cdcb"
 
 [[files]]
 file = "config/iris.properties"
@@ -74,6 +74,11 @@ metafile = true
 [[files]]
 file = "mods/controlling.pw.toml"
 hash = "eecdc8127f69c74ff55fd183d1f1d7d5ef3e714d73845a239fe9e086147a67b1"
+metafile = true
+
+[[files]]
+file = "mods/distanthorizons.pw.toml"
+hash = "5a7c1b20dfbc7f9d4816afe5f0a842d8cb718f6c08e7f78aef47bababe8c078a"
 metafile = true
 
 [[files]]
