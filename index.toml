@@ -17,12 +17,24 @@ file = "config/iris.properties"
 hash = "fb31c8e9b359db11d0d74dc2dec5b0728595f06f9df05c892df6bc6b2eb1ef9a"
 
 [[files]]
+file = "config/xaerominimap.txt"
+hash = "7cc7fb6fa65eb074fda74d982b0c12ddcf7f4fa7a34eeff44a4e8b1036c1adf8"
+
+[[files]]
+file = "config/xaeroworldmap.txt"
+hash = "257de4a5e2e324d07b1c93d5ae91985a5413e76366cae40aed1fd2e312841baf"
+
+[[files]]
 file = "docs/minecraft-college-setup-guide.md"
 hash = "5d717577101ef8c5eced132a2ddf43338f78e0b0906cc01aac9a2828a54a08de"
 
 [[files]]
 file = "docs/server-plan.md"
 hash = "bf520f7154bfb854775ed476f781ad462cab86ca68b67c56f4a8936baf82b557"
+
+[[files]]
+file = "journeymap/config/5.9/journeymap.minimap.json"
+hash = "4a30c9be3f878a9b2ecf59f5e0ada934c9d7e390f09c232597a46d5b4e929a50"
 
 [[files]]
 file = "mods/appleskin.pw.toml"
