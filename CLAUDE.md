@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Minecraft College 1.21.1 Fabric modpack built with Packwiz. This repository contains the modpack definition files and documentation for a college SMP server.
+Minecraft College 1.21.1 Fabric modpack built with Packwiz. This repository contains the modpack definition files and documentation for a college CMP server.
 
 ## Commands
 
@@ -50,7 +50,7 @@ MCServer/
 
 **QoL:** REI (recipes), JourneyMap, Jade (tooltips), AppleSkin, Inventory Profiles Next, Mouse Tweaks, Controlling
 
-**SMP:** Simple Voice Chat, Universal Graves, Flan (claims), Better Sleep, Spark, Chunky
+**Multiplayer:** Simple Voice Chat, Universal Graves, Flan (claims), Better Sleep, Spark, Chunky
 
 ## Side Configuration
 

@@ -1,6 +1,6 @@
-# Minecraft 1.21.1 Modding Ecosystem for College SMP
+# Minecraft 1.21.1 Modding Ecosystem for College CMP
 
-**Minecraft 1.21.1 offers a mature modding ecosystem with excellent support across Fabric and NeoForge, though traditional Forge should be avoided.** The modding community has largely consolidated around these two loaders, with Sodium and Lithium now officially supporting both platforms. Most essential mods for building, farming, storage, and quality of life are available, with notable exceptions being Decorative Blocks and some Farmer's Delight addons. For a college SMP, **Fabric provides the best combination of mod availability, performance, and ease of setup**, while NeoForge is necessary only if Create mod is essential to your vision.
+**Minecraft 1.21.1 offers a mature modding ecosystem with excellent support across Fabric and NeoForge, though traditional Forge should be avoided.** The modding community has largely consolidated around these two loaders, with Sodium and Lithium now officially supporting both platforms. Most essential mods for building, farming, storage, and quality of life are available, with notable exceptions being Decorative Blocks and some Farmer's Delight addons. For a college CMP, **Fabric provides the best combination of mod availability, performance, and ease of setup**, while NeoForge is necessary only if Create mod is essential to your vision.
 
 ---
 
@@ -10,7 +10,7 @@ The 2023 Forge team split fundamentally changed the 1.21+ modding landscape. **N
 
 **Fabric leads in total mod count** with approximately 26,000 mods on Modrinth, nearly double NeoForge's 14,000. Fabric's lightweight architecture delivers faster loading times and lower memory footprint, making it ideal for communities with varied hardware. The CaffeineMC team's 2024 decision to officially support NeoForge with Sodium and Lithium has narrowed the performance gap significantly, but Fabric remains the optimization leader.
 
-For the College SMP context, **Fabric is recommended unless specific mods require NeoForge**. Key considerations:
+For the College CMP context, **Fabric is recommended unless specific mods require NeoForge**. Key considerations:
 
 - **Choose Fabric if:** Performance is priority, vanilla+ enhancement focus, players have varied hardware, or you want maximum mod selection
 - **Choose NeoForge if:** You need Create mod (NeoForge-only for 1.21.1), want complex tech/automation mods, or prefer Forge-style modpack conventions
@@ -124,7 +124,7 @@ For environmental enhancement, **Effective** (water splashes, waterfalls, firefl
 
 **JourneyMap** (Beta 6.0.0-beta.53) and **Xaero's Minimap/World Map** both fully support 1.21.1 for Fabric, Forge, NeoForge, and Quilt. JourneyMap offers browser-based viewing while Xaero's provides rotating minimap with entity tracking.
 
-### SMP utilities
+### Multiplayer utilities
 
 | Category | Recommended Mod | 1.21.1 Status | Notes |
 |----------|----------------|--------------|-------|
@@ -152,7 +152,7 @@ For environmental enhancement, **Effective** (water splashes, waterfalls, firefl
 | Third-party launcher support | Excellent | Good |
 | Modpack format | .mrpack (superior) | .zip requiring extraction |
 
-**Modrinth is recommended for the College SMP** due to cleaner interface, superior .mrpack format with automatic client/server separation, and excellent third-party launcher compatibility without Overwolf dependency.
+**Modrinth is recommended for the College CMP** due to cleaner interface, superior .mrpack format with automatic client/server separation, and excellent third-party launcher compatibility without Overwolf dependency.
 
 ### Launcher recommendation
 
@@ -183,6 +183,6 @@ Several popular mods have not been updated and require alternatives or version c
 
 ## Conclusion: Recommended modpack architecture
 
-For the Minecraft College SMP, build on **Fabric 1.21.1** unless Create mod is essential (then use NeoForge). Start with the Sodium/Lithium/FerriteCore performance core, add Farmer's Delight Refabricated and Chipped for content, include the full Macaw's suite for building variety, and layer in Handcrafted for furniture. Distribute via Modrinth in .mrpack format, direct players to Prism Launcher, and consider BisectHosting or Shockbyte with **6-8GB RAM** for a medium-sized modpack with 10-15 players.
+For the Minecraft College CMP, build on **Fabric 1.21.1** unless Create mod is essential (then use NeoForge). Start with the Sodium/Lithium/FerriteCore performance core, add Farmer's Delight Refabricated and Chipped for content, include the full Macaw's suite for building variety, and layer in Handcrafted for furniture. Distribute via Modrinth in .mrpack format, direct players to Prism Launcher, and consider BisectHosting or Shockbyte with **6-8GB RAM** for a medium-sized modpack with 10-15 players.
 
-The 1.21.1 ecosystem is mature and stable—most mods are actively maintained, and the platform choice between Fabric and NeoForge is clearer than in previous versions. The main gaps (Decorative Blocks, some Farmer's Delight addons) have reasonable alternatives, making 1.21.1 an excellent foundation for a new SMP.
+The 1.21.1 ecosystem is mature and stable—most mods are actively maintained, and the platform choice between Fabric and NeoForge is clearer than in previous versions. The main gaps (Decorative Blocks, some Farmer's Delight addons) have reasonable alternatives, making 1.21.1 an excellent foundation for a new CMP.

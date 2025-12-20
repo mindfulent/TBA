@@ -17,7 +17,13 @@
       "Bash(grep:*)",
       "Bash(./packwiz.exe refresh:*)",
       "Bash(./packwiz.exe modrinth export:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial Minecraft College modpack - Fabric 1.21.1\n\n43 mods including:\n- Performance: Sodium, Lithium, FerriteCore, ModernFix, Krypton, Iris\n- Maps: JourneyMap, Xaero''s Minimap/World Map\n- Building: Chipped, Handcrafted, full Macaw''s suite\n- Content: Farmer''s Delight Refabricated, Storage Drawers\n- QoL: REI, Jade, AppleSkin, IPN, Voice Chat\n- SMP: Universal Graves, Flan claims, Better Sleep\n\nBundled shader: Complementary Reimagined r5.6.1\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }

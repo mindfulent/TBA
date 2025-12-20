@@ -1,6 +1,6 @@
 # Minecraft College Modpack
 
-A curated Fabric 1.21.1 modpack for the Minecraft College SMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
+A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
 ## Features
 
