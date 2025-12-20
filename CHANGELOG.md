@@ -2,6 +2,24 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.8] - 2025-12-20
+
+### Added
+- **Simple Discord RPC** - Shows Minecraft activity in Discord status (client-side)
+- **CraterLib** - Dependency for Simple Discord RPC
+- **Discord-MC-Chat** - Bridges server chat with Discord channel (server-side)
+
+### Changed
+- Mod count increased from 39 to 42
+
+## [0.9.7] - 2025-12-20
+
+### Fixed
+- **Default settings restored** - Render distance, simulation distance, and dark loading screen were accidentally reset in previous versions
+  - Render Distance: 32 (was 12)
+  - Simulation Distance: 32 (was 12)
+  - Dark Loading Screen: On (was off)
+
 ## [0.9.6] - 2025-12-20
 
 ### Added

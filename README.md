@@ -1,4 +1,4 @@
-# MCArtsAndCrafts v0.9.6
+# MCArtsAndCrafts v0.9.8
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -35,6 +35,10 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
+
+### Discord Integration
+- **Simple Discord RPC** - Shows Minecraft activity in your Discord status
+- **Discord-MC-Chat** - Bridges server chat with Discord channel (server-side)
 
 ### Bundled Shaders
 - **BSL v10.0** - High visual quality (enabled by default)
@@ -123,7 +127,7 @@ MCServer/
    ```json
    {
      "project_id": "mcartsandcrafts",
-     "version_id": "0.9.6"
+     "version_id": "0.9.8"
    }
    ```
 3. Set server jar to `mrpack4server.jar`

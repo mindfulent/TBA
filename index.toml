@@ -2,11 +2,11 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "401d44f72f43771be11a32bba160f6bb43b2d25a7c308b165ee73d632ef5ef67"
+hash = "006b41394f6351fbbed2cc67b30675f7987525886c6df107c0de34f3589ffa24"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "c26daa4dec27a13f438cab793434dc76d372b455db53a84ced21b63fab018769"
+hash = "c829b2917f8a1ecb1b4fc1c32f176f0bc0791ccf42dc10a3d23621ba815b8e86"
 
 [[files]]
 file = "CLAUDE.md"
@@ -14,7 +14,11 @@ hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "585794cf100698e769e70d5292f1e053e73129990e5a74f162b17044f935cdcb"
+hash = "7c929c70c4b4211404e4a50e0938609b4bbb9b485c2f152ced74b5005575daa7"
+
+[[files]]
+file = "config/discord-mc-chat/discord-mc-chat.json"
+hash = "6e6e7dd8749a8448f85996a924f57dfbdfe68f2e485480846ea7f481dfe4ea4d"
 
 [[files]]
 file = "config/iris.properties"
@@ -74,6 +78,16 @@ metafile = true
 [[files]]
 file = "mods/controlling.pw.toml"
 hash = "eecdc8127f69c74ff55fd183d1f1d7d5ef3e714d73845a239fe9e086147a67b1"
+metafile = true
+
+[[files]]
+file = "mods/craterlib.pw.toml"
+hash = "8827202405d0d549145059b55449836dad4d71aff21030d7390f2769daf0222c"
+metafile = true
+
+[[files]]
+file = "mods/discord-mc-chat.pw.toml"
+hash = "ba8b5da91075ac957c34a56cf6a3ab34616b6d6c998f59130cc73476012066d4"
 metafile = true
 
 [[files]]
@@ -207,6 +221,11 @@ hash = "8302da862578554b012b2cfe58a3c1e75b514d09f94d842e7303be41a2157aeb"
 metafile = true
 
 [[files]]
+file = "mods/simple-discord-rpc.pw.toml"
+hash = "82a7a2d7cf37f5ceab22bcdacfd3206ede5a69c30b4f567a3976293e2231d30d"
+metafile = true
+
+[[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "1c0d731cceb2515e4ba22318ac3d6bbd8bb670047cb5596d988725bc6e97b12a"
 metafile = true
@@ -233,7 +252,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "5f77c38d21222e3a2cd225a3deea8db6e011e0c1b9ab9718c859f43a26605f6c"
+hash = "5f30cc88a38375250345b391ce650516f78b73d8b2c041da4fca72c09e0f679d"
 
 [[files]]
 file = "shaderpacks/BSL_v10.0.zip"

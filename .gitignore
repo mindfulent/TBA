@@ -11,3 +11,6 @@ nul
 # IDE
 .idea/
 .vscode/
+
+# Sensitive configs (contains bot tokens)
+config/discord-mc-chat/discord-mc-chat.json
