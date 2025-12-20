@@ -1,12 +1,12 @@
 name = "MCArtsAndCrafts"
 author = "Slash"
-version = "0.9.11"
+version = "0.9.12"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "393c0713fc5a80861bf43a4a92f97a5ba05e184bef79d97c723ce0e739ec7539"
+hash = "5cea4c37adac1d58bbd0bd05b32d077645427ef39f0da137ed18519a5d0c0143"
 
 [versions]
 fabric = "0.18.3"

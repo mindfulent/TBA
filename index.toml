@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "0778cfba75f09fdcadd3e168710c9ee8b6311108b6483178279f2859376f7456"
+hash = "f07da8703cf15dff11a858b63196d7fcc408eae3534efab17a3fd933dc75b25a"
 
 [[files]]
 file = ".env"
@@ -14,7 +14,7 @@ hash = "70535e20ae4e0f3edff09d661bbe3b2d244290e4001af76c9547d409cc6270a6"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "80c31cfc621c23e25b6f8f720ece1ad0736fb1d02f2de1cd8aeeb1a5015f0ec9"
+hash = "7196557e677b2da65627d87c13c9ff4267fa18c40f3a938258a45c01ced683d9"
 
 [[files]]
 file = "CLAUDE.md"
@@ -22,11 +22,15 @@ hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "0ba282d015c52e43017410cb38ac9c484a269cb728cf2f3572760791fd4b21f8"
+hash = "cb45621f0e72df63bb1213c5bf39727062a1b9b1f196d93c2834a1f987353246"
 
 [[files]]
 file = "config/discord-mc-chat/discord-mc-chat.json"
 hash = "6e6e7dd8749a8448f85996a924f57dfbdfe68f2e485480846ea7f481dfe4ea4d"
+
+[[files]]
+file = "config/fabric-seasons.json"
+hash = "57c9f9eac24cdb072c858155ef63d353b708b728186455f45b9e2f09eb49a942"
 
 [[files]]
 file = "config/iris.properties"
@@ -106,6 +110,16 @@ metafile = true
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
 hash = "2831d2be7f52107b8cb23145f8812485c7ee12107a4eabf47d39d5b5d778cf04"
+metafile = true
+
+[[files]]
+file = "mods/fabric-seasons-extras.pw.toml"
+hash = "7833078d6daef78131f8cc43425ef5292413e966154ac3ce305e17196bd530e2"
+metafile = true
+
+[[files]]
+file = "mods/fabric-seasons.pw.toml"
+hash = "d40faa8d75ec7b4741146b033dca1d47368868985da3dcc6dc32fd9def5841d9"
 metafile = true
 
 [[files]]
@@ -260,7 +274,7 @@ metafile = true
 
 [[files]]
 file = "mods/worldedit.pw.toml"
-hash = "08d4775f8546564ad812b09062633ffc48f44b76328efe3832c021651af86b14"
+hash = "f1670113ba6c7687790c33c13521505caf0fb59a50a253e9533e9f6ebe3cf8c9"
 metafile = true
 
 [[files]]
@@ -274,6 +288,10 @@ hash = "5f30cc88a38375250345b391ce650516f78b73d8b2c041da4fca72c09e0f679d"
 [[files]]
 file = "server-config.py"
 hash = "3ec0b138ebbb89d95cb419648b4e569ae51e00c7724239cc012b7c8e630ad935"
+
+[[files]]
+file = "server.properties"
+hash = "85f44b55f2ab3c7fe7026f33318937fe08daa18ad0c4d9bfb0210c57be00ef87"
 
 [[files]]
 file = "shaderpacks/BSL_v10.0.zip"

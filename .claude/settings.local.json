@@ -33,7 +33,9 @@
       "WebFetch(domain:inventory-profiles-next.github.io)",
       "WebFetch(domain:teamjm.github.io)",
       "WebFetch(domain:github.com)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:modrinth.com)",
+      "Bash(python server-config.py:*)"
     ]
   }
 }

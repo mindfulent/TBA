@@ -2,6 +2,19 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.12] - 2025-12-20
+
+### Added
+- **Fabric Seasons** - Four seasons (Spring, Summer, Fall, Winter) with visual and gameplay changes
+- **Fabric Seasons: Extras** - Additional seasonal features and integrations
+- **server.properties** - Bundled server defaults (creative mode, max view distance)
+
+### Changed
+- Default gamemode set to creative
+- Seasons sync with real-world calendar (Northern Hemisphere)
+- View/simulation distance maxed at 32
+- Mod count increased from 43 to 45
+
 ## [0.9.11] - 2025-12-20
 
 ### Added
