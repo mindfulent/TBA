@@ -1,0 +1,13 @@
+# Packwiz binary
+packwiz.exe
+packwiz
+
+# Exported modpacks (can be regenerated)
+*.mrpack
+
+# Windows artifacts
+nul
+
+# IDE
+.idea/
+.vscode/

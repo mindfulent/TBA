@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b \"C:\\\\Users\\\\slash\\\\Projects\\\\MCServer\")",
+      "Bash(dir /b \"C:\\\\Users\\\\slash\\\\Projects\")",
+      "Bash(packwiz --version:*)",
+      "Bash(go version:*)",
+      "Bash(curl:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri ''https://nightly.link/packwiz/packwiz/workflows/go/main/Windows%2064-bit.zip'' -OutFile ''C:\\\\Users\\\\slash\\\\Projects\\\\MCServer\\\\packwiz.zip''\")",
+      "Bash(powershell -Command:*)",
+      "Bash(C:UsersslashProjectsMCServerpackwiz.exe --version)",
+      "Bash(\"/c/Users/slash/Projects/MCServer/packwiz.exe\" --version)",
+      "Bash(./packwiz.exe init:*)",
+      "Bash(./packwiz.exe mr install:*)",
+      "Bash(./packwiz.exe list:*)",
+      "Bash(grep:*)",
+      "Bash(./packwiz.exe refresh:*)",
+      "Bash(./packwiz.exe modrinth export:*)",
+      "Bash(git init:*)"
+    ]
+  }
+}
