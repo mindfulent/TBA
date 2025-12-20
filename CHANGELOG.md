@@ -2,6 +2,14 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.11] - 2025-12-20
+
+### Added
+- **WorldEdit** - In-game map editor for building and terrain manipulation (server-side)
+
+### Changed
+- Mod count increased from 42 to 43
+
 ## [0.9.10] - 2025-12-20
 
 ### Added

@@ -1,4 +1,4 @@
-# MCArtsAndCrafts v0.9.10
+# MCArtsAndCrafts v0.9.11
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -35,6 +35,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
+- **WorldEdit** - In-game map editor for terrain and building (server-side)
 
 ### Discord Integration
 - **Simple Discord RPC** - Shows Minecraft activity in your Discord status (client-side)
@@ -157,16 +158,8 @@ After first server start, configure Discord integration:
    - (Optional) Right-click a console channel → Copy ID
 
 3. **Edit server config:**
-   - Location: `config/limeshulkerbox/fabricord.json`
-   - Set these values:
-     ```json
-     {
-       "bot_token": "YOUR_BOT_TOKEN_HERE",
-       "chat_channel_id": "YOUR_CHAT_CHANNEL_ID",
-       "console_channel_id": "YOUR_CONSOLE_CHANNEL_ID",
-       "send_wrong_channel_message": false
-     }
-     ```
+   - Location: `home/fabricord/config.yml` (in server root)
+   - Set your bot token and channel IDs in the YAML config
 
 4. **Restart the server**
 
@@ -177,7 +170,7 @@ After first server start, configure Discord integration:
 | Side | Mods |
 |------|------|
 | **Client-only** | Sodium, Iris, Controlling, Mouse Tweaks |
-| **Server-only** | Flan, Universal Graves, Fabricord |
+| **Server-only** | Flan, Universal Graves, Fabricord, WorldEdit |
 | **Both** | Most content mods, Voice Chat, REI, JourneyMap |
 
 ### Not Available for 1.21.1

@@ -26,4 +26,4 @@ __pycache__/
 
 # Sensitive configs (contains bot tokens)
 config/discord-mc-chat/discord-mc-chat.json
-config/limeshulkerbox/fabricord.json
+home/fabricord/config.yml
