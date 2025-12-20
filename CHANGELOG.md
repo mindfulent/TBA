@@ -2,6 +2,12 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.4] - 2025-12-20
+
+### Fixed
+- **Keybind conflict on M** - Disabled alternate map toggle keybinds to prevent conflicts
+- Added explicit keybind settings: J for fullscreen map, disabled minimap toggles
+
 ## [0.9.3] - 2025-12-20
 
 ### Removed

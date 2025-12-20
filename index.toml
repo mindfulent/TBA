@@ -6,7 +6,7 @@ hash = "ef622d43d8c6260fef784b512e2d58bfd37d55ebafdb633d051ad34fbf9aafd8"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "d6e4182f2f5feab4a110324a0994cc609a3b1d299d95a8d4e84132b0762508d7"
+hash = "95144b03e9b4b9ce8d404a478aa9c15003cb6276adc0851f0eda611f1b3d1165"
 
 [[files]]
 file = "CLAUDE.md"
@@ -14,7 +14,7 @@ hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "16909ba5b878a96d5137d1bcaedbfd33717b17e3f8d5edab0ebf8d5885c36db8"
+hash = "a828e2704f5cf6e1ce2965be0b9ac6c60a86b21596bb714402fbfc5afc9bac6d"
 
 [[files]]
 file = "config/iris.properties"
@@ -224,7 +224,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "bcdadded2fcdcaa4147fb73e8ce6e0b35e34fcd97d3d679bc2ec53c75aa4fdcf"
+hash = "693d29b42a774a775ab4edf655f087005b4f4f52931db295b253f9c68afc15fd"
 
 [[files]]
 file = "shaderpacks/BSL_v10.0.zip"
