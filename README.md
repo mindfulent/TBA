@@ -1,4 +1,4 @@
-# MCArtsAndCrafts v0.9.8
+# MCArtsAndCrafts v0.9.10
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -37,8 +37,8 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Better Sleep** - Sleep voting for multiplayer nights
 
 ### Discord Integration
-- **Simple Discord RPC** - Shows Minecraft activity in your Discord status
-- **Discord-MC-Chat** - Bridges server chat with Discord channel (server-side)
+- **Simple Discord RPC** - Shows Minecraft activity in your Discord status (client-side)
+- **Fabricord** - Bridges server chat with Discord channel (server-side)
 
 ### Bundled Shaders
 - **BSL v10.0** - High visual quality (enabled by default)
@@ -127,7 +127,7 @@ MCServer/
    ```json
    {
      "project_id": "mcartsandcrafts",
-     "version_id": "0.9.8"
+     "version_id": "0.9.9"
    }
    ```
 3. Set server jar to `mrpack4server.jar`
@@ -141,6 +141,35 @@ MCServer/
 
 See [minecraft-college-setup-guide.md](docs/minecraft-college-setup-guide.md) for detailed Bloom.host instructions.
 
+### Fabricord Discord Setup
+
+After first server start, configure Discord integration:
+
+1. **Create a Discord Bot:**
+   - Go to [Discord Developer Portal](https://discord.com/developers/applications/)
+   - Create a new application → Bot → Copy the token
+   - Enable "Message Content Intent" under Bot settings
+   - Invite bot to your server with Send Messages + Read Message History permissions
+
+2. **Get Channel IDs:**
+   - Enable Developer Mode in Discord (Settings → App Settings → Advanced)
+   - Right-click your chat channel → Copy ID
+   - (Optional) Right-click a console channel → Copy ID
+
+3. **Edit server config:**
+   - Location: `config/limeshulkerbox/fabricord.json`
+   - Set these values:
+     ```json
+     {
+       "bot_token": "YOUR_BOT_TOKEN_HERE",
+       "chat_channel_id": "YOUR_CHAT_CHANNEL_ID",
+       "console_channel_id": "YOUR_CONSOLE_CHANNEL_ID",
+       "send_wrong_channel_message": false
+     }
+     ```
+
+4. **Restart the server**
+
 ## Mod Compatibility
 
 ### Client/Server Sides
@@ -148,7 +177,7 @@ See [minecraft-college-setup-guide.md](docs/minecraft-college-setup-guide.md) fo
 | Side | Mods |
 |------|------|
 | **Client-only** | Sodium, Iris, Controlling, Mouse Tweaks |
-| **Server-only** | Flan, Universal Graves |
+| **Server-only** | Flan, Universal Graves, Fabricord |
 | **Both** | Most content mods, Voice Chat, REI, JourneyMap |
 
 ### Not Available for 1.21.1

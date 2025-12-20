@@ -5,6 +5,10 @@ packwiz
 # Exported modpacks (can be regenerated)
 *.mrpack
 
+# mrpack4server deployment files
+mrpack4server*.jar
+local.mrpack
+
 # Windows artifacts
 nul
 
@@ -12,5 +16,14 @@ nul
 .idea/
 .vscode/
 
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment variables (contains secrets)
+.env
+.env.local
+
 # Sensitive configs (contains bot tokens)
 config/discord-mc-chat/discord-mc-chat.json
+config/limeshulkerbox/fabricord.json

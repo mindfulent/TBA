@@ -2,6 +2,26 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.10] - 2025-12-20
+
+### Added
+- **Fabricord** - Discord chat bridge for Fabric servers (replaces Discord-MC-Chat)
+
+### Changed
+- Mod count increased from 41 to 42
+
+## [0.9.9] - 2025-12-20
+
+### Removed
+- **Discord-MC-Chat** - Incompatible with 1.21.1 (no version between 1.20.4 and 1.21.4)
+
+### Fixed
+- **Athena** - Changed from client-only to both sides (required by Chipped on server)
+- Removed duplicate mod entries from partial CurseForge migration
+
+### Changed
+- Mod count reduced from 42 to 41
+
 ## [0.9.8] - 2025-12-20
 
 ### Added
