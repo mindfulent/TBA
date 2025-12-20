@@ -1,1 +1,5 @@
 guiScale:3
+renderDistance:32
+simulationDistance:32
+autoJump:false
+darkMojangStudiosBackground:true

@@ -232,7 +232,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "21afc39675c7aa19a59547e7752e77c102a5f1307643376d1f4404e7ded1cdab"
+hash = "bcdadded2fcdcaa4147fb73e8ce6e0b35e34fcd97d3d679bc2ec53c75aa4fdcf"
 
 [[files]]
 file = "shaderpacks/BSL_v10.0.zip"
