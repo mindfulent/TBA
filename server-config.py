@@ -438,6 +438,315 @@ def send_console_command(command):
 
 
 # =============================================================================
+# World Regeneration Functions
+# =============================================================================
+
+# Biome presets for single-biome worlds
+BIOME_PRESETS = {
+    "plains": {
+        "name": "Plains (Default)",
+        "level_type": "minecraft:flat",
+        "generator_settings": '{"biome":"minecraft:plains","layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":2},{"block":"minecraft:grass_block","height":1}],"features":true,"lakes":false,"structure_overrides":[]}'
+    },
+    "forest": {
+        "name": "Forest",
+        "level_type": "minecraft:flat",
+        "generator_settings": '{"biome":"minecraft:forest","layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":2},{"block":"minecraft:grass_block","height":1}],"features":true,"lakes":true,"structure_overrides":[]}'
+    },
+    "desert": {
+        "name": "Desert",
+        "level_type": "minecraft:flat",
+        "generator_settings": '{"biome":"minecraft:desert","layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:sandstone","height":2},{"block":"minecraft:sand","height":1}],"features":true,"lakes":false,"structure_overrides":[]}'
+    },
+    "snowy": {
+        "name": "Snowy Plains",
+        "level_type": "minecraft:flat",
+        "generator_settings": '{"biome":"minecraft:snowy_plains","layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":2},{"block":"minecraft:grass_block","height":1}],"features":true,"lakes":true,"structure_overrides":[]}'
+    },
+    "cherry": {
+        "name": "Cherry Grove",
+        "level_type": "minecraft:flat",
+        "generator_settings": '{"biome":"minecraft:cherry_grove","layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":2},{"block":"minecraft:grass_block","height":1}],"features":true,"lakes":false,"structure_overrides":[]}'
+    },
+    "normal": {
+        "name": "Normal World (Random Seed)",
+        "level_type": "minecraft:normal",
+        "generator_settings": ""
+    },
+    "amplified": {
+        "name": "Amplified Terrain",
+        "level_type": "minecraft:amplified",
+        "generator_settings": ""
+    },
+    "large_biomes": {
+        "name": "Large Biomes",
+        "level_type": "minecraft:large_biomes",
+        "generator_settings": ""
+    }
+}
+
+
+def delete_world_folders():
+    """Delete world folders on the server via SFTP"""
+    if not check_credentials():
+        return False
+
+    console.print(f"[cyan]Connecting to {hostname}:{port}...[/cyan]")
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+        ssh.connect(hostname, port=port, username=username, password=password)
+        console.print("[green]Connected![/green]")
+
+        sftp = ssh.open_sftp()
+
+        # World folders to delete (Fabric stores dimensions inside world/)
+        world_folders = ["world"]
+        deleted = []
+
+        for folder in world_folders:
+            try:
+                # Check if folder exists
+                sftp.stat(f"/{folder}")
+                console.print(f"[yellow]Deleting /{folder}...[/yellow]")
+
+                # Recursively delete folder
+                delete_recursive(sftp, f"/{folder}")
+                deleted.append(folder)
+                console.print(f"[green]✓ Deleted /{folder}[/green]")
+            except IOError:
+                console.print(f"[dim]/{folder} does not exist, skipping[/dim]")
+
+        sftp.close()
+        ssh.close()
+
+        if deleted:
+            console.print(f"\n[green]✓ Deleted {len(deleted)} world folder(s)[/green]")
+        else:
+            console.print("\n[yellow]No world folders found to delete[/yellow]")
+
+        return True
+
+    except Exception as e:
+        console.print(f"[red]Error: {e}[/red]")
+        return False
+
+
+def delete_recursive(sftp, path):
+    """Recursively delete a directory via SFTP"""
+    try:
+        files = sftp.listdir_attr(path)
+        for f in files:
+            filepath = f"{path}/{f.filename}"
+            if f.st_mode & 0o40000:  # Is directory
+                delete_recursive(sftp, filepath)
+            else:
+                sftp.remove(filepath)
+        sftp.rmdir(path)
+    except IOError as e:
+        console.print(f"[red]Error deleting {path}: {e}[/red]")
+
+
+def get_server_properties():
+    """Download and parse server.properties"""
+    if not check_credentials():
+        return None
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+        ssh.connect(hostname, port=port, username=username, password=password)
+        sftp = ssh.open_sftp()
+
+        with sftp.open("/server.properties", "r") as f:
+            content = f.read().decode('utf-8')
+
+        sftp.close()
+        ssh.close()
+
+        # Parse properties
+        props = {}
+        for line in content.split('\n'):
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, value = line.split('=', 1)
+                props[key.strip()] = value.strip()
+
+        return props
+
+    except Exception as e:
+        console.print(f"[red]Error reading server.properties: {e}[/red]")
+        return None
+
+
+def update_server_properties(updates):
+    """Update server.properties with new values"""
+    if not check_credentials():
+        return False
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+        ssh.connect(hostname, port=port, username=username, password=password)
+        sftp = ssh.open_sftp()
+
+        # Read current file
+        with sftp.open("/server.properties", "r") as f:
+            lines = f.read().decode('utf-8').split('\n')
+
+        # Update values
+        updated_keys = set()
+        new_lines = []
+
+        for line in lines:
+            if line.strip() and not line.strip().startswith('#') and '=' in line:
+                key = line.split('=', 1)[0].strip()
+                if key in updates:
+                    new_lines.append(f"{key}={updates[key]}")
+                    updated_keys.add(key)
+                else:
+                    new_lines.append(line)
+            else:
+                new_lines.append(line)
+
+        # Add any new keys that weren't in the file
+        for key, value in updates.items():
+            if key not in updated_keys:
+                new_lines.append(f"{key}={value}")
+
+        # Write back
+        with sftp.open("/server.properties", "w") as f:
+            f.write('\n'.join(new_lines).encode('utf-8'))
+
+        sftp.close()
+        ssh.close()
+
+        console.print("[green]✓ Updated server.properties[/green]")
+        return True
+
+    except Exception as e:
+        console.print(f"[red]Error updating server.properties: {e}[/red]")
+        return False
+
+
+def regenerate_world(preset_key=None, custom_seed=None, auto_confirm=False):
+    """Regenerate the world with specified settings"""
+    from rich.prompt import Prompt, Confirm
+    import time
+
+    console.print(Panel(
+        "[bold]World Regeneration[/bold]\n\n"
+        "[red]WARNING: This will DELETE the current world![/red]\n"
+        "All builds, player data, and progress will be lost.",
+        title="[yellow]⚠ Danger Zone[/yellow]",
+        border_style="red"
+    ))
+
+    # Check server status first
+    status = get_server_status()
+    if status == "running" or status == "starting":
+        console.print(f"\n[red]Server is currently {status}![/red]")
+        if not auto_confirm and not Confirm.ask("Stop the server first?"):
+            console.print("[yellow]Cancelled.[/yellow]")
+            return False
+        server_stop()
+        console.print("[cyan]Waiting for server to stop...[/cyan]")
+        for i in range(15):
+            time.sleep(2)
+            status = get_server_status()
+            if status == "offline":
+                break
+        if status != "offline":
+            console.print("[yellow]Server didn't stop gracefully, sending kill signal...[/yellow]")
+            send_power_action("kill")
+            for _ in range(10):
+                time.sleep(2)
+                status = get_server_status()
+                if status == "offline":
+                    break
+        if status != "offline":
+            console.print("[red]Server still not offline. Please stop manually.[/red]")
+            return False
+
+    # Select preset if not provided
+    if preset_key is None:
+        console.print("\n[bold]Available World Types:[/bold]\n")
+        table = Table(show_header=True, box=box.ROUNDED)
+        table.add_column("Key", style="cyan")
+        table.add_column("Name", style="white")
+        table.add_column("Type", style="yellow")
+
+        for key, preset in BIOME_PRESETS.items():
+            table.add_row(key, preset["name"], preset["level_type"].replace("minecraft:", ""))
+
+        console.print(table)
+        console.print()
+
+        preset_key = Prompt.ask(
+            "Select world type",
+            choices=list(BIOME_PRESETS.keys()),
+            default="normal"
+        )
+
+    preset = BIOME_PRESETS.get(preset_key)
+    if not preset:
+        console.print(f"[red]Unknown preset: {preset_key}[/red]")
+        return False
+
+    # Custom seed?
+    if custom_seed is None and not auto_confirm:
+        seed_input = Prompt.ask("Enter seed (leave blank for random)", default="")
+        custom_seed = seed_input if seed_input else ""
+    elif custom_seed is None:
+        custom_seed = ""
+
+    # Final confirmation
+    console.print(f"\n[bold]Configuration:[/bold]")
+    console.print(f"  World Type: [cyan]{preset['name']}[/cyan]")
+    console.print(f"  Level Type: [yellow]{preset['level_type']}[/yellow]")
+    console.print(f"  Seed: [green]{custom_seed if custom_seed else '(random)'}[/green]")
+
+    if not auto_confirm and not Confirm.ask("\n[red]DELETE current world and regenerate?[/red]"):
+        console.print("[yellow]Cancelled.[/yellow]")
+        return False
+
+    # Delete world folders
+    console.print("\n[bold]Step 1/3: Deleting world folders...[/bold]")
+    if not delete_world_folders():
+        console.print("[red]Failed to delete world folders[/red]")
+        return False
+
+    # Update server.properties
+    console.print("\n[bold]Step 2/3: Updating server.properties...[/bold]")
+    updates = {
+        "level-type": preset["level_type"],
+        "level-seed": custom_seed,
+    }
+    if preset["generator_settings"]:
+        updates["generator-settings"] = preset["generator_settings"]
+    else:
+        updates["generator-settings"] = ""
+
+    if not update_server_properties(updates):
+        console.print("[red]Failed to update server.properties[/red]")
+        return False
+
+    console.print("\n[bold]Step 3/3: Starting server...[/bold]")
+    server_start()
+
+    console.print("\n" + "="*50)
+    console.print("[bold green]✓ World regeneration initiated![/bold green]")
+    console.print("[yellow]The server will generate a new world on startup.[/yellow]")
+    console.print("="*50)
+
+    return True
+
+
+# =============================================================================
 # Deployment Functions
 # =============================================================================
 
@@ -567,12 +876,14 @@ def interactive_menu():
         table.add_row("6", "Restart Server")
         table.add_row("7", "Send Console Command")
         table.add_row("", "")
+        table.add_row("8", "[red]Regenerate World[/red]")
+        table.add_row("", "")
         table.add_row("q", "Quit")
 
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "q"], default="q")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "q"], default="q")
 
         if choice == "1":
             deploy_mrpack4server()
@@ -603,6 +914,10 @@ def interactive_menu():
             if cmd:
                 if send_console_command(cmd):
                     console.print("[green]✓ Command sent[/green]")
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "8":
+            regenerate_world()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "q":
@@ -637,6 +952,25 @@ if __name__ == "__main__":
             console.print(f"[cyan]Sending: {cmd}[/cyan]")
             if send_console_command(cmd):
                 console.print("[green]✓ Command sent[/green]")
+        elif command == "regenerate":
+            # Optional: python server-config.py regenerate <preset> [seed] [-y]
+            # Parse args (preset, seed, -y flag)
+            args = sys.argv[2:]
+            auto_yes = "-y" in args or "--yes" in args
+            args = [a for a in args if a not in ("-y", "--yes")]
+            preset = args[0] if len(args) > 0 else None
+            seed = args[1] if len(args) > 1 else None
+            regenerate_world(preset_key=preset, custom_seed=seed, auto_confirm=auto_yes)
+        elif command == "presets":
+            # List available presets
+            console.print("\n[bold]Available World Presets:[/bold]\n")
+            table = Table(show_header=True, box=box.ROUNDED)
+            table.add_column("Key", style="cyan")
+            table.add_column("Name", style="white")
+            table.add_column("Type", style="yellow")
+            for key, preset in BIOME_PRESETS.items():
+                table.add_row(key, preset["name"], preset["level_type"].replace("minecraft:", ""))
+            console.print(table)
         else:
             console.print("[yellow]Usage:[/yellow]")
             console.print("  python server-config.py          # Interactive menu")
@@ -648,5 +982,7 @@ if __name__ == "__main__":
             console.print("  python server-config.py stop     # Stop server")
             console.print("  python server-config.py restart  # Restart server")
             console.print("  python server-config.py cmd <command>  # Send command")
+            console.print("  python server-config.py regenerate [preset] [seed] [-y]  # Regenerate world")
+            console.print("  python server-config.py presets  # List world presets")
     else:
         interactive_menu()
