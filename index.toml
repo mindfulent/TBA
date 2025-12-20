@@ -14,7 +14,7 @@ hash = "70535e20ae4e0f3edff09d661bbe3b2d244290e4001af76c9547d409cc6270a6"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "7196557e677b2da65627d87c13c9ff4267fa18c40f3a938258a45c01ced683d9"
+hash = "eaa2f3845d36f4fe133e9ba961082624c6e0f27aed9e513365e181d946e2bb32"
 
 [[files]]
 file = "CLAUDE.md"
@@ -22,7 +22,7 @@ hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
 
 [[files]]
 file = "README.md"
-hash = "cb45621f0e72df63bb1213c5bf39727062a1b9b1f196d93c2834a1f987353246"
+hash = "faed23ebb3164913c40b43ef3603b69ad003e9c0c96ae724d5e80b800754102e"
 
 [[files]]
 file = "config/discord-mc-chat/discord-mc-chat.json"
@@ -291,7 +291,7 @@ hash = "3ec0b138ebbb89d95cb419648b4e569ae51e00c7724239cc012b7c8e630ad935"
 
 [[files]]
 file = "server.properties"
-hash = "85f44b55f2ab3c7fe7026f33318937fe08daa18ad0c4d9bfb0210c57be00ef87"
+hash = "00afe7fece2b78adee18cf2ea96e1ffdd3fb5ccfe1838be6dd671f7b03c5d0b4"
 
 [[files]]
 file = "shaderpacks/BSL_v10.0.zip"
