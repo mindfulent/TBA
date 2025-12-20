@@ -97,3 +97,7 @@ Sides are auto-detected from Modrinth metadata:
 3. **Players:** Import .mrpack via Prism Launcher
 
 See `docs/minecraft-college-setup-guide.md` for detailed deployment steps.
+
+## License
+
+This modpack configuration is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Individual mods retain their own licenses.
