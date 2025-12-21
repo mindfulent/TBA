@@ -65,7 +65,7 @@ The modpack comes pre-configured with sensible defaults:
 ### For Players
 
 1. Download [Prism Launcher](https://prismlauncher.org/)
-2. Get the latest `.mrpack` from [Releases](https://github.com/mindfulent/MCServer/releases)
+2. Get the latest `.mrpack` from [Releases](https://github.com/mindfulent/MCArtsAndCrafts/releases)
 3. In Prism: **Add Instance** → **Import** → Select the `.mrpack`
 4. Allocate 4-6GB RAM (Edit Instance → Settings → Memory)
 5. Connect to the server!
@@ -74,8 +74,8 @@ The modpack comes pre-configured with sensible defaults:
 
 ```bash
 # Clone the repository
-git clone https://github.com/mindfulent/MCServer.git
-cd MCServer
+git clone https://github.com/mindfulent/MCArtsAndCrafts.git
+cd MCArtsAndCrafts
 
 # Download Packwiz (Windows)
 # Get from: https://github.com/packwiz/packwiz/releases
@@ -108,7 +108,7 @@ cd MCServer
 ## Project Structure
 
 ```
-MCServer/
+MCArtsAndCrafts/
 ├── pack.toml                 # Pack metadata (name, version, MC version, loader)
 ├── index.toml                # File index with hashes
 ├── options.txt               # Default game options
