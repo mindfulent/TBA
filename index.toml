@@ -2732,6 +2732,11 @@ hash = "d40faa8d75ec7b4741146b033dca1d47368868985da3dcc6dc32fd9def5841d9"
 metafile = true
 
 [[files]]
+file = "mods/fabricord.pw.toml"
+hash = "5749724ac7f1331ec4bd6469e93b650501e3d4e455c750c7b9068f99c9574c9d"
+metafile = true
+
+[[files]]
 file = "mods/farmers-delight-refabricated.pw.toml"
 hash = "310deca3cd563b915d447e707bd138c3ff3ae0fd40f648daabacc7350437cd32"
 metafile = true
@@ -2839,11 +2844,6 @@ metafile = true
 [[files]]
 file = "mods/resourceful-lib.pw.toml"
 hash = "cb361ef34fb46e3fe719a08b08ba4ea8e0fda33927b8b23f1999c8e451bb02dc"
-metafile = true
-
-[[files]]
-file = "mods/sdlink.pw.toml"
-hash = "ac3aecaa7398c0b9dcb46abdaa1826562ea1494de43c740b6c7a8d5abd139420"
 metafile = true
 
 [[files]]
