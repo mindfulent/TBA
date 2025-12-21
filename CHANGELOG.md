@@ -2,6 +2,11 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.16] - 2025-12-20
+
+### Fixed
+- **BlueMap** - Downgraded to v5.6 for stability (v5.7 had issues)
+
 ## [0.9.15] - 2025-12-20
 
 ### Added

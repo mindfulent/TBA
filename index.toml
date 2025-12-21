@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "5229efb5e9617a66719637e9ee870d0b62748b1a42eb427496b3c280dad4cd47"
+hash = "b0cb646fb535ab68b2bf3d1f448faf949b2361aaf1de096db6d27a1d4d922134"
 
 [[files]]
 file = ".env"
@@ -14,7 +14,7 @@ hash = "70535e20ae4e0f3edff09d661bbe3b2d244290e4001af76c9547d409cc6270a6"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "3cd592f2c766054ec31fe988a1a5c166e9ab8868ce402704309a2606b1793bad"
+hash = "b7ece828691f294ddffb7ac0c5f49eb6657da3c43d61d16ef8bbfbab15a8bc2c"
 
 [[files]]
 file = "CLAUDE.md"
@@ -26,11 +26,19 @@ hash = "98d2c3c16836fcd6dcc509e9686423ea948e9df9f12182114e7093a030262e37"
 
 [[files]]
 file = "README.md"
-hash = "e2665f6e6fdd51e06b79c482bd708f7d85163d5001ab14622af51842118ea424"
+hash = "afb0c153691a1f6175bd3504903bd7063c9f41ca7e7e2207acffc56cef45828f"
 
 [[files]]
 file = "__pycache__/server-config.cpython-314.pyc"
 hash = "201e94729d6d646f5170573c954f1fd6a16d3d9a3ca532e1c9d80967d22a82cc"
+
+[[files]]
+file = "bluemap-5.6.jar"
+hash = "3cf6fe0779f660b0da62369aa2cbe0d67b671e2ec09bb0283d63abe041f989ce"
+
+[[files]]
+file = "bluemap.jar"
+hash = "67e7bd3037507c04ecfab8543222ad87552a81db85940c3c9935b2c517422fc4"
 
 [[files]]
 file = "config/discord-mc-chat/discord-mc-chat.json"
@@ -74,7 +82,7 @@ hash = "fb392fed200fb97a293972a79eb96fbce6104b3ebd2ec669a3b9c1a120447025"
 
 [[files]]
 file = "modpack-info.json"
-hash = "fc592b835a1b0c15a8cbcd02f06cc2d1d89379d940ac0087597a418b0d04cb77"
+hash = "edd0c0204f392a6afd8ce529ef4303c2b68b641b2f9e03b99a7534d8b0e205c7"
 
 [[files]]
 file = "mods/appleskin.pw.toml"
@@ -98,7 +106,7 @@ metafile = true
 
 [[files]]
 file = "mods/bluemap.pw.toml"
-hash = "0fab2a26e6692d71537da9565dd87137504ddb34653136fd9f7a7df084d47575"
+hash = "84d5506d7a81b89cb1abf6e2dd4d2cb0f5eed5b4587c19c73ffc2e954989019d"
 metafile = true
 
 [[files]]
