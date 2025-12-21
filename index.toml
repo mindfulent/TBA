@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "f07da8703cf15dff11a858b63196d7fcc408eae3534efab17a3fd933dc75b25a"
+hash = "f85e046ce3d8fc2470b0277ef4a463547905f3706d9c998248b32072ea426951"
 
 [[files]]
 file = ".env"
@@ -14,15 +14,23 @@ hash = "70535e20ae4e0f3edff09d661bbe3b2d244290e4001af76c9547d409cc6270a6"
 
 [[files]]
 file = "CHANGELOG.md"
-hash = "eaa2f3845d36f4fe133e9ba961082624c6e0f27aed9e513365e181d946e2bb32"
+hash = "56630598e87685f3cfcd2704bed1155360f6ec395ef1346d57f1411462e4a029"
 
 [[files]]
 file = "CLAUDE.md"
-hash = "d3f2ddad5271580f19b31bed47df929e6c790b0e0b67294994317d6d884409b2"
+hash = "7547522bf6744726757c64789501e16b57e4944291899eee74dc749ed32bfe13"
+
+[[files]]
+file = "LICENSE"
+hash = "98d2c3c16836fcd6dcc509e9686423ea948e9df9f12182114e7093a030262e37"
 
 [[files]]
 file = "README.md"
-hash = "faed23ebb3164913c40b43ef3603b69ad003e9c0c96ae724d5e80b800754102e"
+hash = "621065edbee644479d7dffff6e4914ec0288ec7fec6e36249a333aa7198a8500"
+
+[[files]]
+file = "__pycache__/server-config.cpython-314.pyc"
+hash = "201e94729d6d646f5170573c954f1fd6a16d3d9a3ca532e1c9d80967d22a82cc"
 
 [[files]]
 file = "config/discord-mc-chat/discord-mc-chat.json"
@@ -35,6 +43,14 @@ hash = "57c9f9eac24cdb072c858155ef63d353b708b728186455f45b9e2f09eb49a942"
 [[files]]
 file = "config/iris.properties"
 hash = "99ac8a2dfd17f7b4ed038c02255a279296ecad90e48a5b7196ac4f73260d57ee"
+
+[[files]]
+file = "config/worldedit/schematics/butler.schem"
+hash = "b3304afb33cd9ebfced2c06b990dd3e20675a64a35589c156b0b06630129d9f4"
+
+[[files]]
+file = "config/worldedit/schematics/mcc.schem"
+hash = "84a3c8848190eb4832f8e47798ba686a35d83e682f01f3d7ba8b228acce9f0e2"
 
 [[files]]
 file = "docs/minecraft-college-setup-guide.md"
@@ -51,6 +67,10 @@ hash = "95495226d48919c172eee4119a280275cdf0d63837a282878bce6ae4c66b14d5"
 [[files]]
 file = "journeymap/config/6.0/journeymap.minimap2.config"
 hash = "408e7f0df62763aa355abbca8293e5e4ee8fe3ac687657768fd51fd96f164d78"
+
+[[files]]
+file = "logo.png"
+hash = "fb392fed200fb97a293972a79eb96fbce6104b3ebd2ec669a3b9c1a120447025"
 
 [[files]]
 file = "mods/appleskin.pw.toml"
@@ -155,6 +175,11 @@ metafile = true
 [[files]]
 file = "mods/jade.pw.toml"
 hash = "f40b2722e2f26e50909aaa4579beac0d107a96a524adb5ffedac3bf183cceee2"
+metafile = true
+
+[[files]]
+file = "mods/journeymap-web-map.pw.toml"
+hash = "1e017d26a65b85ca2534de6fd2021e4c11012055738182db1816af500af58e06"
 metafile = true
 
 [[files]]
@@ -287,7 +312,7 @@ hash = "5f30cc88a38375250345b391ce650516f78b73d8b2c041da4fca72c09e0f679d"
 
 [[files]]
 file = "server-config.py"
-hash = "3ec0b138ebbb89d95cb419648b4e569ae51e00c7724239cc012b7c8e630ad935"
+hash = "6b3ac00f389367488ab1777935b71556d0c08d82874e8d723af5613f89f06c0d"
 
 [[files]]
 file = "server.properties"

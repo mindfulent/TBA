@@ -2,6 +2,14 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.13] - 2025-12-20
+
+### Added
+- **JourneyMap Web Map** - Browser-based map viewer for JourneyMap (access at localhost while in-game)
+
+### Changed
+- Mod count increased from 45 to 46
+
 ## [0.9.12] - 2025-12-20
 
 ### Added
