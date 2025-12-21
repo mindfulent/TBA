@@ -1,8 +1,8 @@
 {
-  "isSeasonTiedWithSystemTime": true,
+  "isSeasonTiedWithSystemTime": false,
   "hemisphere": "NORTH",
-  "isSeasonLocked": false,
+  "isSeasonLocked": true,
   "startingSeason": "WINTER",
-  "lockedSeason": "SPRING",
+  "lockedSeason": "WINTER",
   "seasonLength": 28
 }

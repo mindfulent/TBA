@@ -2,7 +2,7 @@
   <img src="logo.png" alt="MCArtsAndCrafts Logo" width="400">
 </p>
 
-# MCArtsAndCrafts v0.9.16
+# MCArtsAndCrafts v0.9.18
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -25,7 +25,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 ### Content
 - **Farmer's Delight Refabricated** - Cooking and farming expansion
 - **Storage Drawers** - Compact item storage system
-- **Fabric Seasons** - Four seasons synced to real-world calendar (Northern Hemisphere)
+- **Fabric Seasons** - Four seasons with visual and gameplay changes (currently locked to Winter)
 
 ### Quality of Life
 - **Roughly Enough Items (REI)** - Recipe viewer and item browser

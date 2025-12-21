@@ -2,6 +2,16 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.18] - 2025-12-21
+
+### Changed
+- **Fabric Seasons** - Locked to Winter indefinitely (disabled real-time sync)
+
+## [0.9.17] - 2025-12-21
+
+### Changed
+- **Pause on Lost Focus** - Disabled by default (game no longer pauses when alt-tabbing)
+
 ## [0.9.16] - 2025-12-20
 
 ### Fixed
