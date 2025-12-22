@@ -1,0 +1,13 @@
+name = "Sawmill"
+filename = "sawmill-1.21-1.7.2-fabric.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/WRaRZdTd/versions/Chlvvr2l/sawmill-1.21-1.7.2-fabric.jar"
+hash-format = "sha512"
+hash = "fc59d428c3d8d79a7200e821d7ec25368d94809cb961a0d1f45dba76dafc19b73463637481db5f184ce29b8406cb473c1e8179eb49a1a3f81270b93f0db39401"
+
+[update]
+[update.modrinth]
+mod-id = "WRaRZdTd"
+version = "Chlvvr2l"

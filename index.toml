@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = ".claude/settings.local.json"
-hash = "7f6419fcbfff6d3a82944e7864b9f7ffb6e8b3782d49b1da0d42b231b0c32b7f"
+hash = "2e62584c43a99178e8b9551dcfd4bab1cf6ece3bf2cf9ff1749e0d3195e95663"
 
 [[files]]
 file = ".env"
@@ -2697,6 +2697,11 @@ hash = "a112512699928e5504f2e826194c60881f949902fee6c6bef5f3539fcb90db75"
 metafile = true
 
 [[files]]
+file = "mods/connectiblechains.pw.toml"
+hash = "e28f40d34c30c32d4bd05cfb80215c907b59e43d7e593ead73b3a04bb959bd4a"
+metafile = true
+
+[[files]]
 file = "mods/controlling.pw.toml"
 hash = "a2316b374cef47920604f89b1ce784aa3e1e4c80088259e7704ce5fe47c14721"
 metafile = true
@@ -2777,6 +2782,16 @@ hash = "8ecd67f8269c6317a0dc59edebcb9d6b3730f3adf26532e3a6c664804983c4ec"
 metafile = true
 
 [[files]]
+file = "mods/lets-do-bakery-farmcharm-compat.pw.toml"
+hash = "8d79f55134e2eeb31242a21db1bb59b4b7b6da028bf3ef798af2e8ad684d44ea"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-farm-charm.pw.toml"
+hash = "1eaf02cf7c937ca8d1cf8c559af2b57fe896e0dac324effd54b9cf402dbe28a4"
+metafile = true
+
+[[files]]
 file = "mods/lithium.pw.toml"
 hash = "0f8827c966b0d439692f3b8d578a47c203cd0aec0043ea4fd3fc00025a13ab79"
 metafile = true
@@ -2824,6 +2839,11 @@ metafile = true
 [[files]]
 file = "mods/modernfix.pw.toml"
 hash = "941a5aac1b441e2b4bd0c8465ea7e9f5c6826b4f99aa8c4ba63b3b657b6e7530"
+metafile = true
+
+[[files]]
+file = "mods/moonlight.pw.toml"
+hash = "73c8968e0a12b2303c59f0991290fd0d6d7ac0566299314200beed9777f0fdc8"
 metafile = true
 
 [[files]]
@@ -2877,8 +2897,18 @@ hash = "7ce16912c8ffa23e398c93c8060634ed3ded1fa4fe40384216b53193a1fd8a08"
 metafile = true
 
 [[files]]
+file = "mods/underlay.pw.toml"
+hash = "5e4972504aea845c8a84cc1c81c27ea22b1a8ddfd7475289f964f0446f9d8a68"
+metafile = true
+
+[[files]]
 file = "mods/universal-graves.pw.toml"
 hash = "177cfd45dd255736ca80f81e7a38e907dcce205e6d4cd2f8aa98602d92a57a30"
+metafile = true
+
+[[files]]
+file = "mods/universal-sawmill.pw.toml"
+hash = "5b27aeb2db9d4a77b78ec6d0b86a4b5c71d14b844e281731cbf07c6133ca88ef"
 metafile = true
 
 [[files]]
