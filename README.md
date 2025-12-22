@@ -2,7 +2,7 @@
   <img src="logo.png" alt="MCArtsAndCrafts Logo" width="400">
 </p>
 
-# MCArtsAndCrafts v0.9.19
+# MCArtsAndCrafts v0.9.20
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -17,10 +17,16 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Iris Shaders** - OptiFine shader compatibility
 - **Distant Horizons** - LOD rendering for extended view distances
 
+### Building Tools
+- **Litematica** - Schematic mod for displaying build guides/holograms
+- **Effortless Structure** - Mirrors, arrays, build modes, block randomizer
+
 ### Building & Decoration
 - **Chipped** - 11,000+ decorative block variants with connected textures
 - **Handcrafted** - 250+ furniture pieces (fantasy, steampunk, medieval styles)
 - **Macaw's Suite** - Doors, Windows, Bridges, Roofs, Fences, Trapdoors, Furniture, Lights
+- **Excessive Building** - 100+ vanilla-style blocks (mosaic wood, vertical stairs), hammer/wrench tools
+- **Adorn** - Furniture (chairs, sofas, tables, shelves, kitchen blocks)
 - **Connectible Chains** - Decorative chain links between fences and walls
 - **Underlay** - Place carpets and blocks under chests, beds, stairs
 
@@ -29,6 +35,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Storage Drawers** - Compact item storage system
 - **Universal Sawmill** - Sawmill workstation with Carpenter villager
 - **[Let's Do] Bakery** - Pastries, cakes, and baking stations (includes Farm & Charm)
+- **[Let's Do] Vinery** - Vineyard and wine themed content
 - **Fabric Seasons** - Four seasons with visual and gameplay changes (currently locked to Winter)
 
 ### Web Map

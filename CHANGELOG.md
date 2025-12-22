@@ -2,6 +2,20 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.20] - 2025-12-22
+
+### Added
+- **Litematica** v0.19.59 - Schematic mod for displaying build guides/holograms
+- **MaLiLib** v0.21.9 - Library for Litematica
+- **Effortless Structure** v3.4.0 - Mirrors, arrays, build modes, block randomizer
+- **Excessive Building** v3.3.10 - 100+ vanilla-style blocks (mosaic wood, vertical stairs), hammer/wrench tools
+- **[Let's Do] Vinery** v1.5.2 - Vineyard and wine themed content
+- **Adorn** v6.1.2 - Furniture (chairs, sofas, tables, shelves, kitchen blocks)
+- **Forge Config API Port** v21.1.6 - Dependency for Excessive Building
+
+### Changed
+- Mod count increased from 52 to 59
+
 ## [0.9.19] - 2025-12-22
 
 ### Added
