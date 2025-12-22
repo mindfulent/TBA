@@ -2,6 +2,14 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.22] - 2025-12-22
+
+### Added
+- **Joy of Painting** v1.0.1 - Paint your own pictures on canvases (1×1, 1×2, 2×1, 2×2) and hang them like vanilla paintings
+
+### Changed
+- Mod count increased from 60 to 61
+
 ## [0.9.21] - 2025-12-22
 
 ### Changed

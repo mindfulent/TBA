@@ -2,7 +2,7 @@
   <img src="logo.png" alt="MCArtsAndCrafts Logo" width="400">
 </p>
 
-# MCArtsAndCrafts v0.9.21
+# MCArtsAndCrafts v0.9.22
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -37,6 +37,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **[Let's Do] Bakery** - Pastries, cakes, and baking stations (includes Farm & Charm)
 - **[Let's Do] Vinery** - Vineyard and wine themed content
 - **Fabric Seasons** - Four seasons with visual and gameplay changes (currently locked to Winter)
+- **Joy of Painting** - Paint custom pictures on canvases and display them like vanilla paintings
 
 ### Web Map
 - **BlueMap** - Live 3D web map of the server world (port 8100)

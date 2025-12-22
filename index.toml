@@ -177,6 +177,11 @@ hash = "67fe6ad4a8c1b5f64a8b2ecd0aac7bcd7103447494df8f08fd8a4124411229a5"
 metafile = true
 
 [[files]]
+file = "mods/joy-of-painting.pw.toml"
+hash = "250a60ad345454a739a4ed90779501c31c90f5be387c3e52816ced6713012e98"
+metafile = true
+
+[[files]]
 file = "mods/krypton.pw.toml"
 hash = "8ecd67f8269c6317a0dc59edebcb9d6b3730f3adf26532e3a6c664804983c4ec"
 metafile = true
