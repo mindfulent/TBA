@@ -37,6 +37,11 @@ file = "modpack-info.json"
 hash = "c7c96045fba79e85c9ba939d325faf3583c688fe56a26c1ac3664b1101474528"
 
 [[files]]
+file = "mods/adorn.pw.toml"
+hash = "977a19edbdb8cb2cd58449a64e3bd4caca780bb2b670ef843886198ae5766b7f"
+metafile = true
+
+[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "e9dbd0306dd34da5fe43f5880de09950d312ba7ab60880c69b555b197e2a1007"
 metafile = true
@@ -97,6 +102,16 @@ hash = "b9cb49dc2d791b759ac553cf28ca33a6440d219f48ebc0ba4eb100df37c73889"
 metafile = true
 
 [[files]]
+file = "mods/effortless.pw.toml"
+hash = "fb15c2081315f5d57a085056246f0f2c221e318bb81564ca631220fea650bb35"
+metafile = true
+
+[[files]]
+file = "mods/excessive-building.pw.toml"
+hash = "07a95b7ec52fdfec7b28c93bec7dc5f1df4eaed698ac5d5bb692eaad8a88b951"
+metafile = true
+
+[[files]]
 file = "mods/fabric-api.pw.toml"
 hash = "27c4150b810e326b1097a7768c593c93e89484fcee0b8c4a8f3d48a6896cf649"
 metafile = true
@@ -137,6 +152,11 @@ hash = "945c52db21b5c778f7292bbb4979fb844b2255168b15bf1eee2285c7ce5b6217"
 metafile = true
 
 [[files]]
+file = "mods/forge-config-api-port.pw.toml"
+hash = "238b3ceb4214a682480ce00eefae5d34efa299ff6ff667e4b2f2ed503c6e76ee"
+metafile = true
+
+[[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "830613b40e4ceb047d011b00190f57c350d30fbc1d244c56722f4617ae2a57de"
 metafile = true
@@ -169,6 +189,16 @@ metafile = true
 [[files]]
 file = "mods/lets-do-farm-charm.pw.toml"
 hash = "1eaf02cf7c937ca8d1cf8c559af2b57fe896e0dac324effd54b9cf402dbe28a4"
+metafile = true
+
+[[files]]
+file = "mods/lets-do-vinery.pw.toml"
+hash = "d92ff27b876a352db391134ef6ebab2738ff9068641f1dde588ec07890c9b2f1"
+metafile = true
+
+[[files]]
+file = "mods/litematica.pw.toml"
+hash = "804bd885dd40336596175503d631ab7f529ad12e152872462b1c25f15b2f89bd"
 metafile = true
 
 [[files]]
@@ -214,6 +244,11 @@ metafile = true
 [[files]]
 file = "mods/macaws-windows.pw.toml"
 hash = "0b1d715cd850c6ce4c1bd42fdb331f5f79ff2e0e7b5138812f2156cdb5f60694"
+metafile = true
+
+[[files]]
+file = "mods/malilib.pw.toml"
+hash = "d9221689ffa47dcd27e6c0590ba7b3227f83d48a6e9592cd09e1835f143d793a"
 metafile = true
 
 [[files]]

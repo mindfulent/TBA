@@ -1,0 +1,13 @@
+name = "Excessive Building"
+filename = "[1.21] Excessive Building-fabric-3.3.10.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/2vsx0HYf/versions/rLXfiyI1/%5B1.21%5D%20Excessive%20Building-fabric-3.3.10.jar"
+hash-format = "sha512"
+hash = "352e6f302fd30a97e0c77491677147a7193bad6bdacc5729182e3ecb31d859f2385f985121d71df728a0d30d458f263d21b1df43713a6f9ce15d44c752bc335c"
+
+[update]
+[update.modrinth]
+mod-id = "2vsx0HYf"
+version = "rLXfiyI1"
