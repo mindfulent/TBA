@@ -2,6 +2,14 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.23] - 2025-12-23
+
+### Added
+- **Advanced Backups** v3.7.1 - Automated world backups with configurable scheduling (uptime or real-time based), incremental/differential backup support, and automatic purging policies (server-side)
+
+### Changed
+- Mod count increased from 61 to 62
+
 ## [0.9.22] - 2025-12-22
 
 ### Added

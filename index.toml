@@ -42,6 +42,11 @@ hash = "977a19edbdb8cb2cd58449a64e3bd4caca780bb2b670ef843886198ae5766b7f"
 metafile = true
 
 [[files]]
+file = "mods/advanced-backups.pw.toml"
+hash = "bea7f27b65c3c952c789b7e663d5842575193acb528b7b2eaec4a9461acb72f8"
+metafile = true
+
+[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "e9dbd0306dd34da5fe43f5880de09950d312ba7ab60880c69b555b197e2a1007"
 metafile = true

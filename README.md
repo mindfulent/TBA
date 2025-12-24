@@ -2,7 +2,7 @@
   <img src="logo.png" alt="MCArtsAndCrafts Logo" width="400">
 </p>
 
-# MCArtsAndCrafts v0.9.22
+# MCArtsAndCrafts v0.9.23
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -56,6 +56,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
 - **WorldEdit** - In-game map editor for terrain and building (server-side)
+- **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
 
 ### Discord Integration
 - **Simple Discord RPC** - Shows Minecraft activity in your Discord status (client-side)
@@ -95,12 +96,12 @@ Place the downloaded `DistantHorizons.sqlite` file in your Prism Launcher instan
 
 **Windows** (Win+R, paste, replace `{username}` with your Windows username):
 ```
-C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCArtsAndCrafts-0.9.22\minecraft
+C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCArtsAndCrafts-0.9.23\minecraft
 ```
 
 **macOS** (Finder → Go → Go to Folder, replace `{username}`):
 ```
-/Users/{username}/Library/Application Support/PrismLauncher/instances/MCArtsAndCrafts-0.9.22/minecraft
+/Users/{username}/Library/Application Support/PrismLauncher/instances/MCArtsAndCrafts-0.9.23/minecraft
 ```
 
 **Alternative:** In Prism Launcher, right-click the instance → "Folder" → drop the file there.
