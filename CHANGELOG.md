@@ -2,6 +2,29 @@
 
 All notable changes to MCArtsAndCrafts will be documented in this file.
 
+## [0.9.24] - 2025-12-23
+
+### Added
+- **Immersive Aircraft** v1.4.1 - Flyable planes, airships, and helicopters with custom models
+- **Reintegrated: Arts and Crafts** v1.0.1 - Dyeable copper blocks from 1.21 snapshot (bulk tinting with copper ingots)
+- **Just Zoom** v2.1.0 - Configurable camera zoom (C key by default)
+- **Camerapture** v1.10.8 - Take in-game photos and hang them as pictures
+- **Supplementaries** v3.5.14 - Jars, signs, clocks, pulleys, cages, and 100+ decorative/utility items
+- **Little Joys** v21.1.9 - Small ambient details (clovers, rocks, fallen leaves, butterflies)
+- **Armor Statues** v21.1.0 - Pose and customize armor stands with a book interface
+- **ItemSwapper** v0.8.5 - Quick item palette for swapping similar blocks (hold your key, pick variant)
+- **Fairy Lights** v1.1.0 - Decorative string lights for buildings and events
+- **ReFramed** v1.6.6 - Copy any block's appearance onto stairs, slabs, fences, and more
+
+### Dependencies Added
+- Lithostitched v1.5.4 (Arts and Crafts)
+- Konkrete v1.9.9 (Just Zoom)
+- Balm v21.0.55 (Little Joys)
+- Puzzles Lib v21.1.39 (Armor Statues)
+
+### Changed
+- Mod count increased from 62 to 76
+
 ## [0.9.23] - 2025-12-23
 
 ### Added

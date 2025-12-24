@@ -2,7 +2,7 @@
   <img src="logo.png" alt="MCArtsAndCrafts Logo" width="400">
 </p>
 
-# MCArtsAndCrafts v0.9.23
+# MCArtsAndCrafts v0.9.24
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -27,8 +27,14 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Macaw's Suite** - Doors, Windows, Bridges, Roofs, Fences, Trapdoors, Furniture, Lights
 - **Excessive Building** - 100+ vanilla-style blocks (mosaic wood, vertical stairs), hammer/wrench tools
 - **Adorn** - Furniture (chairs, sofas, tables, shelves, kitchen blocks)
+- **Supplementaries** - Jars, signs, clocks, pulleys, cages, and 100+ decorative/utility items
 - **Connectible Chains** - Decorative chain links between fences and walls
 - **Underlay** - Place carpets and blocks under chests, beds, stairs
+- **Reintegrated: Arts and Crafts** - Dyeable copper blocks (bulk tinting with copper ingots)
+- **ReFramed** - Copy any block's appearance onto stairs, slabs, fences, and more
+- **Armor Statues** - Pose and customize armor stands with a book interface
+- **Fairy Lights** - Decorative string lights for buildings and events
+- **Little Joys** - Small ambient details (clovers, rocks, fallen leaves, butterflies)
 
 ### Content
 - **Farmer's Delight Refabricated** - Cooking and farming expansion
@@ -38,6 +44,8 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **[Let's Do] Vinery** - Vineyard and wine themed content
 - **Fabric Seasons** - Four seasons with visual and gameplay changes (currently locked to Winter)
 - **Joy of Painting** - Paint custom pictures on canvases and display them like vanilla paintings
+- **Camerapture** - Take in-game photos and hang them as pictures
+- **Immersive Aircraft** - Flyable planes, airships, and helicopters with custom models
 
 ### Web Map
 - **BlueMap** - Live 3D web map of the server world (port 8100)
@@ -49,6 +57,8 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **AppleSkin** - Food/hunger visualization
 - **Mouse Tweaks** - Enhanced inventory controls
 - **Controlling** - Searchable keybinds with conflict detection
+- **Just Zoom** - Configurable camera zoom (C key by default)
+- **ItemSwapper** - Quick item palette for swapping similar blocks
 
 ### Multiplayer
 - **Simple Voice Chat** - Proximity-based voice communication
@@ -96,12 +106,12 @@ Place the downloaded `DistantHorizons.sqlite` file in your Prism Launcher instan
 
 **Windows** (Win+R, paste, replace `{username}` with your Windows username):
 ```
-C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCArtsAndCrafts-0.9.23\minecraft
+C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCArtsAndCrafts-0.9.24\minecraft
 ```
 
 **macOS** (Finder → Go → Go to Folder, replace `{username}`):
 ```
-/Users/{username}/Library/Application Support/PrismLauncher/instances/MCArtsAndCrafts-0.9.23/minecraft
+/Users/{username}/Library/Application Support/PrismLauncher/instances/MCArtsAndCrafts-0.9.24/minecraft
 ```
 
 **Alternative:** In Prism Launcher, right-click the instance → "Folder" → drop the file there.

@@ -1,0 +1,13 @@
+name = "Fairy Lights"
+filename = "fairylights-1.1.0+1.21.1_fabric.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/OuLVx5LM/versions/266A25yS/fairylights-1.1.0%2B1.21.1_fabric.jar"
+hash-format = "sha512"
+hash = "2248126dd1e2debff9ad4d1102ceeef44c46db0432ef158ea30e5db38b9d1d26fd0837ae1bfe7645da8a657c26287d9655f250771645a8dc4cc52b155ca40126"
+
+[update]
+[update.modrinth]
+mod-id = "OuLVx5LM"
+version = "266A25yS"

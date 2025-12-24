@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "DistantHorizons.sqlite"
+hash = "6cf6e4733d08ed6119716848ccd503e2d11441a6771847cc12eb9d04a4aea92b"
+
+[[files]]
+file = "config/AdvancedBackups.properties"
+hash = "5f286c969eaf7c31c3958b6ff8417333421e98844621b39ec23dc9d04396c4f8"
+
+[[files]]
 file = "config/bluemap/core.conf"
 hash = "b942611c074c37431c5c24d6d63faaf731e5e3b0a4f210370f3237617031b89e"
 
@@ -57,6 +65,11 @@ hash = "5b9618476350398ad0d25b5bf3a41521dd015baa22e4bfe8db685625a3a2c697"
 metafile = true
 
 [[files]]
+file = "mods/armor-statues.pw.toml"
+hash = "73b0a6af0d4be59882d8ae1b0edd62e65c35171277cc9b3082331ad4b6c76850"
+metafile = true
+
+[[files]]
 file = "mods/athena-ctm.pw.toml"
 hash = "dbc1220d5b4e4a1615ccecfb7d482349020919700ad9bafb5f690c2d4adbb5b2"
 metafile = true
@@ -67,6 +80,11 @@ hash = "6ff12e37227232226f2fe51c0e34386540d417d06c75cb951eac01f8947bea68"
 metafile = true
 
 [[files]]
+file = "mods/balm.pw.toml"
+hash = "6e39e7712a94830fbc2bd0b6ec73e03f54de5edfcca85da6e89a0021e9a3bf1a"
+metafile = true
+
+[[files]]
 file = "mods/better-sleep.pw.toml"
 hash = "642e862f4be77db00a3afd2105efb10b81d874e0afc32c621cf1bb7f087fe410"
 metafile = true
@@ -74,6 +92,11 @@ metafile = true
 [[files]]
 file = "mods/bluemap.pw.toml"
 hash = "84d5506d7a81b89cb1abf6e2dd4d2cb0f5eed5b4587c19c73ffc2e954989019d"
+metafile = true
+
+[[files]]
+file = "mods/camerapture.pw.toml"
+hash = "3cc79a406a67f07707ed8676b1b5786d2112547dca4df21757ea5e54c7cfe72d"
 metafile = true
 
 [[files]]
@@ -147,6 +170,11 @@ hash = "5749724ac7f1331ec4bd6469e93b650501e3d4e455c750c7b9068f99c9574c9d"
 metafile = true
 
 [[files]]
+file = "mods/fairy-lights-fabric.pw.toml"
+hash = "8909d8ae6c75018bd0ee408eb0980b55a0995d2e42e5729e398e6ec99319edb7"
+metafile = true
+
+[[files]]
 file = "mods/farmers-delight-refabricated.pw.toml"
 hash = "310deca3cd563b915d447e707bd138c3ff3ae0fd40f648daabacc7350437cd32"
 metafile = true
@@ -172,8 +200,18 @@ hash = "830613b40e4ceb047d011b00190f57c350d30fbc1d244c56722f4617ae2a57de"
 metafile = true
 
 [[files]]
+file = "mods/immersive-aircraft.pw.toml"
+hash = "ab5b5ecade1d9cf981d11fee68d5f42e5d933a4e4d9b15b2657d8da2a4f8304a"
+metafile = true
+
+[[files]]
 file = "mods/iris.pw.toml"
 hash = "c86e0fe57fbe042c8444a9c63933e89b5fdd50f325bb8a9796d0e7cca8735c89"
+metafile = true
+
+[[files]]
+file = "mods/itemswapper.pw.toml"
+hash = "ad866f3cb389c13ccf4022931956c97a0f82a0f6b7940f8842a83e3b47a0a653"
 metafile = true
 
 [[files]]
@@ -184,6 +222,16 @@ metafile = true
 [[files]]
 file = "mods/joy-of-painting.pw.toml"
 hash = "250a60ad345454a739a4ed90779501c31c90f5be387c3e52816ced6713012e98"
+metafile = true
+
+[[files]]
+file = "mods/just-zoom.pw.toml"
+hash = "bc39b827e5b14bf4a7a797b5aa72b03a09a25b229ba33da1fc0bea447cefafa1"
+metafile = true
+
+[[files]]
+file = "mods/konkrete.pw.toml"
+hash = "34d75daff8b8260780d97bbc2dc545739399df1d5ac304eeb2f80e23354cf3af"
 metafile = true
 
 [[files]]
@@ -214,6 +262,16 @@ metafile = true
 [[files]]
 file = "mods/lithium.pw.toml"
 hash = "0f8827c966b0d439692f3b8d578a47c203cd0aec0043ea4fd3fc00025a13ab79"
+metafile = true
+
+[[files]]
+file = "mods/lithostitched.pw.toml"
+hash = "93a9d609533082c74458d94232b4883d0b77d88176c98a3824e2a5acb1a92d85"
+metafile = true
+
+[[files]]
+file = "mods/little-joys.pw.toml"
+hash = "4ba391dbb479324546527815c0a59cb1dce8e8da3177f91c64b991e415e4ba97"
 metafile = true
 
 [[files]]
@@ -282,8 +340,23 @@ hash = "72888447d9d18619c6260001033c1a8c81d27687717e920dea86147792ff1f73"
 metafile = true
 
 [[files]]
+file = "mods/puzzles-lib.pw.toml"
+hash = "44a6662d6ac604b2173a8bc426a10c0d621c8ba99d37d1b72525c140c42cb358"
+metafile = true
+
+[[files]]
+file = "mods/reframed.pw.toml"
+hash = "b6021cd52db0eee9a48d1aa31552d1158bf8b454b424ea0ddda9011e324efa0b"
+metafile = true
+
+[[files]]
 file = "mods/rei.pw.toml"
 hash = "7775fd30aa27e84dbc3acb28ce34e4f703d1cd503786da5cb84f2813a57acf15"
+metafile = true
+
+[[files]]
+file = "mods/reintegrated-arts-and-crafts.pw.toml"
+hash = "a53f75beeb9d58db3a34febc79ae5f9f1c6bc3d31eaf2c218985ca2e74850b62"
 metafile = true
 
 [[files]]
@@ -319,6 +392,11 @@ metafile = true
 [[files]]
 file = "mods/storagedrawers.pw.toml"
 hash = "7ce16912c8ffa23e398c93c8060634ed3ded1fa4fe40384216b53193a1fd8a08"
+metafile = true
+
+[[files]]
+file = "mods/supplementaries.pw.toml"
+hash = "27670ced0491777862fb15dbf598df3b0dfc86b73f19874419dff12dc29e3c15"
 metafile = true
 
 [[files]]

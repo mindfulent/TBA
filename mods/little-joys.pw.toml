@@ -1,0 +1,13 @@
+name = "Little Joys"
+filename = "littlejoys-fabric-1.21.1-21.1.9.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/v0j2ftEp/versions/swI4JLeG/littlejoys-fabric-1.21.1-21.1.9.jar"
+hash-format = "sha512"
+hash = "1d7ae2049ef2825065c6cefe04e6870edd9feb6555a40c2d7bbe6f73d6b2bcea9c72392bb336b7b2b9f9aa49d25eae2bf92ba7abdd029816edf45e51af2c2704"
+
+[update]
+[update.modrinth]
+mod-id = "v0j2ftEp"
+version = "swI4JLeG"
