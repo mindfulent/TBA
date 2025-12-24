@@ -70,6 +70,11 @@ hash = "73b0a6af0d4be59882d8ae1b0edd62e65c35171277cc9b3082331ad4b6c76850"
 metafile = true
 
 [[files]]
+file = "mods/artsandcrafts.pw.toml"
+hash = "1d1af91a94e0b73686f7d2556659a6e6e4316a3d37315d0d227e0dea661e6720"
+metafile = true
+
+[[files]]
 file = "mods/athena-ctm.pw.toml"
 hash = "dbc1220d5b4e4a1615ccecfb7d482349020919700ad9bafb5f690c2d4adbb5b2"
 metafile = true
@@ -207,6 +212,11 @@ metafile = true
 [[files]]
 file = "mods/itemswapper.pw.toml"
 hash = "ad866f3cb389c13ccf4022931956c97a0f82a0f6b7940f8842a83e3b47a0a653"
+metafile = true
+
+[[files]]
+file = "mods/jinxedlib.pw.toml"
+hash = "2aa483960df75b01d3a1e08fcce318e53da714d26b0109463721f8eb6c7e062b"
 metafile = true
 
 [[files]]
