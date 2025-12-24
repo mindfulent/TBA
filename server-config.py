@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MCArtsAndCrafts Server Manager
+MCC Server Manager
 Bloom.host Server Control & mrpack4server Deployment
 
 Usage:
@@ -753,7 +753,7 @@ def regenerate_world(preset_key=None, custom_seed=None, auto_confirm=False):
 def deploy_mrpack4server():
     """Deploy mrpack4server.jar and local.mrpack to the server"""
     console.print(Panel(
-        "[bold]Deploying MCArtsAndCrafts to Bloom.host[/bold]\n\n"
+        "[bold]Deploying MCC to Bloom.host[/bold]\n\n"
         "This will upload:\n"
         f"  • mrpack4server-0.5.0.jar\n"
         f"  • local.mrpack\n\n"
@@ -770,7 +770,7 @@ def deploy_mrpack4server():
 
     if not os.path.exists(MRPACK_FILE):
         console.print(f"[red]Error: {MRPACK_FILE} not found![/red]")
-        console.print("[yellow]Run: copy MCArtsAndCrafts-0.9.8.mrpack local.mrpack[/yellow]")
+        console.print("[yellow]Run: copy MCC-0.9.8.mrpack local.mrpack[/yellow]")
         return False
 
     console.print("\n[bold]Step 1/2: Uploading mrpack4server.jar[/bold]")
@@ -797,7 +797,7 @@ def update_modpack_info(version):
     """Update modpack-info.json on server to point to a GitHub release"""
     import hashlib
 
-    mrpack_file = os.path.join(SCRIPT_DIR, f"MCArtsAndCrafts-{version}.mrpack")
+    mrpack_file = os.path.join(SCRIPT_DIR, f"MCC-{version}.mrpack")
 
     if not os.path.exists(mrpack_file):
         console.print(f"[red]Error: {mrpack_file} not found![/red]")
@@ -818,12 +818,12 @@ def update_modpack_info(version):
     file_hash = sha512.hexdigest()
 
     # Build the config
-    github_url = f"https://github.com/mindfulent/MCArtsAndCrafts/releases/download/v{version}/MCArtsAndCrafts-{version}.mrpack"
+    github_url = f"https://github.com/mindfulent/MCC/releases/download/v{version}/MCC-{version}.mrpack"
 
     new_config = {
-        "project_id": "mcartsandcrafts",
+        "project_id": "mcc",
         "version_id": version,
-        "display_name": "MCArtsAndCrafts",
+        "display_name": "MCC",
         "display_version": version,
         "url": github_url,
         "size": file_size,
@@ -931,7 +931,7 @@ def interactive_menu():
     while True:
         console.clear()
         console.print(Panel.fit(
-            "[bold cyan]MCArtsAndCrafts Server Manager[/bold cyan]\n"
+            "[bold cyan]MCC Server Manager[/bold cyan]\n"
             "[dim]Bloom.host Deployment & Control[/dim]",
             border_style="cyan"
         ))

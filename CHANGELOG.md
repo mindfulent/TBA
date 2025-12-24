@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to MCArtsAndCrafts will be documented in this file.
+All notable changes to MCC will be documented in this file.
 
 ## [0.9.27] - 2025-12-23
 

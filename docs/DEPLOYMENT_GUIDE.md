@@ -1,4 +1,4 @@
-# MCArtsAndCrafts Deployment Guide
+# MCC Deployment Guide
 
 This guide documents the complete workflow for updating the modpack and deploying changes to the Bloom.host server.
 
@@ -30,11 +30,11 @@ mrpack4server looks for modpack configuration in this priority order:
 
 ```json
 {
-  "project_id": "mcartsandcrafts",
+  "project_id": "mcc",
   "version_id": "0.9.19",
-  "display_name": "MCArtsAndCrafts",
+  "display_name": "MCC",
   "display_version": "0.9.19",
-  "url": "https://github.com/mindfulent/MCArtsAndCrafts/releases/download/v0.9.19/MCArtsAndCrafts-0.9.19.mrpack",
+  "url": "https://github.com/mindfulent/MCC/releases/download/v0.9.19/MCC-0.9.19.mrpack",
   "size": 1567913,
   "sha512": "66043d9cbe0c0a719a6b1c672cac29d6...",
   "whitelisted_domains": ["github.com", "objects.githubusercontent.com"],
@@ -68,7 +68,7 @@ version = "0.9.20"  # Increment from previous
 
 ```bash
 ./packwiz.exe modrinth export
-# Creates: MCArtsAndCrafts-0.9.20.mrpack
+# Creates: MCC-0.9.20.mrpack
 ```
 
 ### Step 4: Commit and Push
@@ -82,7 +82,7 @@ git push
 ### Step 5: Create GitHub Release
 
 ```bash
-gh release create v0.9.20 MCArtsAndCrafts-0.9.20.mrpack --title "v0.9.20" --notes "Release notes here"
+gh release create v0.9.20 MCC-0.9.20.mrpack --title "v0.9.20" --notes "Release notes here"
 ```
 
 ### Step 6: Update Server Configuration
@@ -115,7 +115,7 @@ The server will:
 # Full deployment (after making changes)
 ./packwiz.exe modrinth export
 git add -A && git commit -m "v0.9.X - description" && git push
-gh release create v0.9.X MCArtsAndCrafts-0.9.X.mrpack --title "v0.9.X"
+gh release create v0.9.X MCC-0.9.X.mrpack --title "v0.9.X"
 python server-config.py update-pack 0.9.X
 python server-config.py restart
 ```

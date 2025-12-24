@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="logo.png" alt="MCArtsAndCrafts Logo" width="400">
+  <img src="logo.png" alt="MCC Logo" width="400">
 </p>
 
-# MCArtsAndCrafts v0.9.27
+# MCC v0.9.27
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -91,7 +91,7 @@ The modpack comes pre-configured with sensible defaults:
 ### For Players
 
 1. Download [Prism Launcher](https://prismlauncher.org/)
-2. Get the latest `.mrpack` from [Releases](https://github.com/mindfulent/MCArtsAndCrafts/releases)
+2. Get the latest `.mrpack` from [Releases](https://github.com/mindfulent/MCC/releases)
 3. In Prism: **Add Instance** → **Import** → Select the `.mrpack`
 4. Allocate 4-6GB RAM (Edit Instance → Settings → Memory)
 5. Connect to the server!
@@ -106,12 +106,12 @@ Place the downloaded `DistantHorizons.sqlite` file in your Prism Launcher instan
 
 **Windows** (Win+R, paste, replace `{username}` with your Windows username):
 ```
-C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCArtsAndCrafts-0.9.27\minecraft
+C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCC-0.9.27\minecraft
 ```
 
 **macOS** (Finder → Go → Go to Folder, replace `{username}`):
 ```
-/Users/{username}/Library/Application Support/PrismLauncher/instances/MCArtsAndCrafts-0.9.27/minecraft
+/Users/{username}/Library/Application Support/PrismLauncher/instances/MCC-0.9.27/minecraft
 ```
 
 **Alternative:** In Prism Launcher, right-click the instance → "Folder" → drop the file there.
@@ -120,8 +120,8 @@ C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCArtsAndCrafts-0.9.
 
 ```bash
 # Clone the repository
-git clone https://github.com/mindfulent/MCArtsAndCrafts.git
-cd MCArtsAndCrafts
+git clone https://github.com/mindfulent/MCC.git
+cd MCC
 
 # Download Packwiz (Windows)
 # Get from: https://github.com/packwiz/packwiz/releases
@@ -154,7 +154,7 @@ cd MCArtsAndCrafts
 ## Project Structure
 
 ```
-MCArtsAndCrafts/
+MCC/
 ├── pack.toml                 # Pack metadata (name, version, MC version, loader)
 ├── index.toml                # File index with hashes
 ├── options.txt               # Default game options
@@ -181,7 +181,7 @@ The server uses **mrpack4server** which downloads modpacks from GitHub releases.
 # After making changes:
 ./packwiz.exe modrinth export
 git add -A && git commit -m "v0.9.X - description" && git push
-gh release create v0.9.X MCArtsAndCrafts-0.9.X.mrpack --title "v0.9.X"
+gh release create v0.9.X MCC-0.9.X.mrpack --title "v0.9.X"
 python server-config.py update-pack 0.9.X
 python server-config.py restart
 ```

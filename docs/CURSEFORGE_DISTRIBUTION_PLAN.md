@@ -1,6 +1,6 @@
 # CurseForge Distribution Plan
 
-This document outlines everything required to publish MCArtsAndCrafts on CurseForge as a secondary distribution channel alongside Modrinth.
+This document outlines everything required to publish MCC on CurseForge as a secondary distribution channel alongside Modrinth.
 
 **Current Status:** Not pursued (as of v0.9.21)
 **Effort Estimate:** Medium-High initial setup, ongoing maintenance overhead
@@ -39,7 +39,7 @@ This document outlines everything required to publish MCArtsAndCrafts on CurseFo
 ### Current Architecture
 
 ```
-MCArtsAndCrafts/
+MCC/
 ├── mods/*.pw.toml          # All have Modrinth metadata (update.modrinth section)
 ├── pack.toml               # References Modrinth as primary
 └── Exports to .mrpack      # Modrinth format
@@ -48,7 +48,7 @@ MCArtsAndCrafts/
 ### Target Architecture for Dual Distribution
 
 ```
-MCArtsAndCrafts/
+MCC/
 ├── mods/*.pw.toml          # Would need BOTH modrinth AND curseforge metadata
 ├── pack.toml               # No changes needed
 ├── Exports to .mrpack      # For Modrinth
@@ -69,7 +69,7 @@ MCArtsAndCrafts/
 ### 2. Project Configuration
 
 Required information for CurseForge project:
-- **Project name:** MCArtsAndCrafts
+- **Project name:** MCC
 - **Summary:** Fabric 1.21.1 modpack for building, decoration, and multiplayer
 - **Description:** Full markdown description with mod list, features, requirements
 - **Categories:** Fabric, Multiplayer, Building, Decoration
@@ -159,10 +159,10 @@ For mods NOT on CurseForge, you have three options:
 ```bash
 # Export CurseForge format
 ./packwiz.exe cf export
-# Creates MCArtsAndCrafts-0.9.21.zip
+# Creates MCC-0.9.21.zip
 
 # Verify manifest.json has project IDs (not bundled JARs)
-unzip -p MCArtsAndCrafts-0.9.21.zip manifest.json | head -50
+unzip -p MCC-0.9.21.zip manifest.json | head -50
 
 # Test import in CurseForge app or compatible launcher
 ```
@@ -367,7 +367,7 @@ If maintaining both Modrinth and CurseForge:
 
 ### Current Recommendation
 
-For MCArtsAndCrafts serving the Minecraft College community:
+For MCC serving the Minecraft College community:
 
 **Modrinth + GitHub releases is sufficient** because:
 - Community members can be directed to specific download methods
