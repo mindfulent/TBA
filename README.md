@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="mcc_com.png" alt="MCC Logo" width="400">
+  <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
 # MCC (MinecraftCollege.com) v0.9.28
