@@ -2,7 +2,7 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.28
+# MCC (MinecraftCollege.com) v0.9.29
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -71,6 +71,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 ### Discord Integration
 - **Simple Discord RPC** - Shows Minecraft activity in your Discord status (client-side)
 - **Fabricord** - Bridges server chat with Discord channel (server-side)
+- **AutoWhitelist** - Discord-based whitelist: `/register <username>` to join (server-side)
 
 ### Bundled Shaders
 - **BSL v10.0** - High visual quality (enabled by default)
@@ -94,7 +95,8 @@ The modpack comes pre-configured with sensible defaults:
 2. Get the latest `.mrpack` from [Releases](https://github.com/mindfulent/MCC/releases)
 3. In Prism: **Add Instance** → **Import** → Select the `.mrpack`
 4. Allocate 4-6GB RAM (Edit Instance → Settings → Memory)
-5. Connect to the server!
+5. **Get whitelisted:** Use `/register <your-minecraft-username>` in our Discord
+6. Connect to the server!
 
 ### Pre-Generated LOD Data (Optional)
 

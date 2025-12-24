@@ -2,6 +2,20 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.29] - 2025-12-24
+
+### Added
+- **AutoWhitelist** v1.3.2 - Discord-based whitelist management (server-side)
+- **Fabric Language Kotlin** v1.13.8 (dependency)
+
+### Features
+- Players use `/register <username>` in Discord to whitelist themselves
+- Auto-removes whitelist when player leaves Discord server
+- Tied to Discord membership via `@everyone` role
+
+### Changed
+- Mod count increased from 78 to 80
+
 ## [0.9.28] - 2025-12-23
 
 ### Changed
