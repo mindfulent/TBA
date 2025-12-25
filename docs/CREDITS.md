@@ -141,7 +141,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|----------|--------|
 | [Fabric Seasons](https://modrinth.com/mod/fabric-seasons) | D4rkness_King (lucaargolo) | 2.4.2-BETA | Oct 6, 2024 | - |
 | [Fabric Seasons: Extras](https://modrinth.com/mod/fabric-seasons-extras) | D4rkness_King (lucaargolo) | 1.3.2-BETA | Sep 29, 2024 | - |
-| [Distant Horizons](https://modrinth.com/mod/distanthorizons) | jeseibel | 2.4.3-b | Dec 18, 2025 | [Ko-fi](https://ko-fi.com/distanthorizons) |
+| [Distant Horizons](https://modrinth.com/mod/distanthorizons) | jeseibel | 2.4.5-b | Dec 25, 2025 | [Ko-fi](https://ko-fi.com/distanthorizons) |
 | [Simple Discord RPC](https://modrinth.com/mod/simple-discord-rpc) | HypherionSA | 4.0.5 | Dec 5, 2025 | [Ko-fi](https://ko-fi.com/hypherionsa) |
 
 ## Scripting & Automation

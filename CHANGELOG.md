@@ -2,6 +2,11 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.34] - 2025-12-25
+
+### Updated
+- **Distant Horizons** 2.4.3-b → 2.4.5-b
+
 ## [0.9.33] - 2025-12-25
 
 ### Added
