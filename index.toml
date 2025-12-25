@@ -353,6 +353,11 @@ hash = "d9221689ffa47dcd27e6c0590ba7b3227f83d48a6e9592cd09e1835f143d793a"
 metafile = true
 
 [[files]]
+file = "mods/minescript.pw.toml"
+hash = "45187479a5fc3e3133c79d099f0e469469e4fd47ffef4618d22c3cbc7538ac4a"
+metafile = true
+
+[[files]]
 file = "mods/modernfix.pw.toml"
 hash = "941a5aac1b441e2b4bd0c8465ea7e9f5c6826b4f99aa8c4ba63b3b657b6e7530"
 metafile = true

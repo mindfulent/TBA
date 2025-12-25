@@ -2,7 +2,7 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.32
+# MCC (MinecraftCollege.com) v0.9.33
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -62,6 +62,9 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Just Zoom** - Configurable camera zoom (C key by default)
 - **ItemSwapper** - Quick item palette for swapping similar blocks
 - **Gamemode Unrestrictor** - Use F3+F4 gamemode menu even when cheats are disabled
+
+### Scripting & Automation
+- **Minescript** - Python scripting for Minecraft (run scripts from chat with `\scriptname`)
 
 ### Multiplayer
 - **Simple Voice Chat** - Proximity-based voice communication

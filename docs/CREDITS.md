@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** December 24, 2025
-**Modpack Version:** 0.9.32 (87 mods)
+**Last Updated:** December 25, 2025
+**Modpack Version:** 0.9.33 (88 mods)
 
 ---
 
@@ -143,6 +143,12 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Fabric Seasons: Extras](https://modrinth.com/mod/fabric-seasons-extras) | D4rkness_King (lucaargolo) | 1.3.2-BETA | Sep 29, 2024 | - |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | jeseibel | 2.4.3-b | Dec 18, 2025 | [Ko-fi](https://ko-fi.com/distanthorizons) |
 | [Simple Discord RPC](https://modrinth.com/mod/simple-discord-rpc) | HypherionSA | 4.0.5 | Dec 5, 2025 | [Ko-fi](https://ko-fi.com/hypherionsa) |
+
+## Scripting & Automation
+
+| Mod | Author(s) | Version | Released | Donate |
+|-----|-----------|---------|----------|--------|
+| [Minescript](https://modrinth.com/mod/minescript) | maxuser0 | 4.0 | Sep 26, 2024 | - |
 
 ---
 

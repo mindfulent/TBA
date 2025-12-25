@@ -1,0 +1,13 @@
+name = "Minescript"
+filename = "minescript-fabric-1.21.1-4.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/KcpXWngB/versions/zqDGKDwY/minescript-fabric-1.21.1-4.0.jar"
+hash-format = "sha512"
+hash = "197f65002c48e3a3920ccc906b5798110c0f52c2b26e6a449a6a600fb70404a83c16d8082f1149a751b0da105369d646ad3b3d3f0b656e3989b3f6eb2c6e8019"
+
+[update]
+[update.modrinth]
+mod-id = "KcpXWngB"
+version = "zqDGKDwY"

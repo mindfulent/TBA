@@ -2,6 +2,14 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.33] - 2025-12-25
+
+### Added
+- **Minescript** v4.0 - Python scripting for Minecraft (run scripts from chat with `\scriptname`, requires Python 3 installed)
+
+### Changed
+- Mod count increased from 87 to 88
+
 ## [0.9.32] - 2025-12-24
 
 ### Added
