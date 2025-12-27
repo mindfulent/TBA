@@ -2,7 +2,7 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.35
+# MCC (MinecraftCollege.com) v0.9.36
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -18,6 +18,7 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Distant Horizons** - LOD rendering for extended view distances
 
 ### Building Tools
+- **Axiom** - All-in-one building/editing tool with real-time previews, terraforming, sculpting (Right-Shift for Editor Mode)
 - **Litematica** - Schematic mod for displaying build guides/holograms
 - **Effortless Structure** - Mirrors, arrays, build modes, block randomizer
 
@@ -71,7 +72,6 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights
-- **WorldEdit** - In-game map editor for terrain and building (server-side)
 - **Advanced Backups** - Automated world backups with scheduling and retention policies (server-side)
 
 ### Discord Integration
@@ -231,7 +231,7 @@ After first server start, configure Discord integration:
 | Side | Mods |
 |------|------|
 | **Client-only** | Sodium, Iris, Controlling, Mouse Tweaks |
-| **Server-only** | Flan, Universal Graves, Fabricord, WorldEdit |
+| **Server-only** | Flan, Universal Graves, Fabricord |
 | **Both** | Most content mods, Voice Chat, REI, JourneyMap |
 
 ### Not Available for 1.21.1

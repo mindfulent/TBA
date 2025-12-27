@@ -2,6 +2,15 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.36] - 2025-12-26
+
+### Changed
+- **Replaced WorldEdit with Axiom** v5.2.1 - Modern building/editing tool with real-time previews, terraforming, sculpting, and 3D software-style controls (Right-Shift for Editor Mode)
+
+### Notes
+- Axiom requires both client and server installation for full functionality
+- Free for non-commercial use (singleplayer, localhost, plot servers)
+
 ## [0.9.35] - 2025-12-25
 
 ### Fixed

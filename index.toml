@@ -102,6 +102,11 @@ hash = "3a631fd09fe5973933295b7ad068366d6015c10c97a4d098c4993b3e4e77ce2a"
 metafile = true
 
 [[files]]
+file = "mods/axiom.pw.toml"
+hash = "3ac96c797cca7691c93e820e2873da48d4f73c3d7f111d672ccaa35c9eb74eb3"
+metafile = true
+
+[[files]]
 file = "mods/badpackets.pw.toml"
 hash = "6ff12e37227232226f2fe51c0e34386540d417d06c75cb951eac01f8947bea68"
 metafile = true
@@ -479,11 +484,6 @@ metafile = true
 [[files]]
 file = "mods/windchime-unofficial-continued.pw.toml"
 hash = "29ea6f0446cc4cb26ec396ac761d95dca3378e3ffff1a4c23b64640c5f4c0357"
-metafile = true
-
-[[files]]
-file = "mods/worldedit.pw.toml"
-hash = "f1670113ba6c7687790c33c13521505caf0fb59a50a253e9533e9f6ebe3cf8c9"
 metafile = true
 
 [[files]]

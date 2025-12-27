@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** December 25, 2025
-**Modpack Version:** 0.9.33 (88 mods)
+**Last Updated:** December 26, 2025
+**Modpack Version:** 0.9.36 (88 mods)
 
 ---
 
@@ -61,9 +61,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
+| [Axiom](https://modrinth.com/mod/axiom) | Moulberry | 5.2.1 | Dec 2025 | [Patreon](https://www.patreon.com/moulberry), [PayPal](https://www.paypal.com/paypalme/moulberry) |
 | [Litematica](https://modrinth.com/mod/litematica) | masa, sakura-ryoko | 0.19.59 | Jun 22, 2025 | [PayPal](https://paypal.me/maruohon) |
 | [Effortless Structure](https://modrinth.com/mod/effortless) | Huskyraft | 3.4.0 | Feb 9, 2025 | - |
-| [WorldEdit](https://modrinth.com/mod/worldedit) | EngineHub (me4502, wizjany, octylFractal) | 7.3.8 | Oct 21, 2024 | [Open Collective](https://opencollective.com/enginehub), [GitHub Sponsors](https://github.com/sponsors/EngineHub) |
 
 ## Building & Decoration Mods
 
