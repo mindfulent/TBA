@@ -3,11 +3,11 @@ filename = "Camerapture-1.10.8+mc1.21.1-fabric.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/9dzLWnmZ/versions/EoCccWQx/Camerapture-1.10.8%2Bmc1.21.1-fabric.jar"
-hash-format = "sha512"
-hash = "8476f78b5b90a6cea156f71f3bee2500996e147b54c07ae52a9fbe7ca368f725cadba9a6f817bd95d988426fca87b441e9ce0787aea1b29b5910f8b3b4b72134"
+hash-format = "sha1"
+hash = "09273ebbe9b2ab302437977bfeb1d37d2254c4d1"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "9dzLWnmZ"
-version = "EoCccWQx"
+[update.curseforge]
+file-id = 7078859
+project-id = 1051342

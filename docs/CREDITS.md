@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** December 26, 2025
-**Modpack Version:** 0.9.36 (88 mods)
+**Last Updated:** December 27, 2025
+**Modpack Version:** 0.9.37 (87 mods)
 
 ---
 
@@ -90,7 +90,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Reintegrated: Arts and Crafts](https://modrinth.com/mod/reintegrated-arts-and-crafts) | Apollo | 1.0.1 | Dec 2025 | - |
 | [ReFramed](https://modrinth.com/mod/reframed) | Adrien1106 | 1.6.6 | Nov 2025 | - |
 | [Armor Statues](https://modrinth.com/mod/armor-statues) | Fuzs | 21.1.0 | Jul 18, 2025 | [Patreon](https://www.patreon.com/heyitsfuzs) |
-| [Fairy Lights](https://modrinth.com/mod/fairy-lights-fabric) | lucalabs-de | 1.1.0 | Dec 10, 2025 | - |
 | [Little Joys](https://modrinth.com/mod/little-joys) | BlayTheNinth | 21.1.9 | Apr 19, 2025 | [Ko-fi](https://ko-fi.com/blaytheninth), [Patreon](https://www.patreon.com/blay09) |
 | [WindChime Unofficial Continued](https://modrinth.com/mod/windchime-unofficial-continued) | NightEpiphany0401 | 1.3.7 | Dec 2025 | - |
 

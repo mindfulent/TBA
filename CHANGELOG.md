@@ -2,6 +2,17 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.37] - 2025-12-27
+
+### Removed
+- **Fairy Lights** - Removed for CurseForge compatibility (Modrinth-only mod)
+
+### Changed
+- Mod count reduced from 88 to 87
+
+### Fixed
+- CurseForge modpack export now works correctly (excluded server plugins folder, fixed Voice Chat duplication)
+
 ## [0.9.36] - 2025-12-26
 
 ### Changed

@@ -3,11 +3,11 @@ filename = "underlay-0.9.9-fabric-mc1.21.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/iltKD9qU/versions/IxPrqXpP/underlay-0.9.9-fabric-mc1.21.jar"
-hash-format = "sha512"
-hash = "72e597cbde1c11db405df18f6ffde1cbfd84d632eaaf2ee43a6e8291e0df071e85ab0980c3c547a93d17b4459119274d93aa98c60f79cf6cd6c1fda279d9e27b"
+hash-format = "sha1"
+hash = "fb4a3dc37b070cb9fc4ceeb34d2a3abc69a47d76"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "iltKD9qU"
-version = "IxPrqXpP"
+[update.curseforge]
+file-id = 7316152
+project-id = 1263531

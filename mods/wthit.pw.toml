@@ -3,11 +3,11 @@ filename = "wthit-1.21.1-fabric-12.8.3.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/6AQIaxuO/versions/vZanBQ2e/wthit-1.21.1-fabric-12.8.3.jar"
-hash-format = "sha512"
-hash = "b74e719441cf3e4b698c35cd799a079c069b89151ddff6b0cb9970d44ee448dfca20e8e2ec8b4f08aca8fdd7ab1662d3ef03a37fd460137aab641d46e8d317d9"
+hash-format = "sha1"
+hash = "d66b942bcc06fb0bb5a04d8aca872773cc59b222"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "6AQIaxuO"
-version = "vZanBQ2e"
+[update.curseforge]
+file-id = 7290885
+project-id = 440979

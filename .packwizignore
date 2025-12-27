@@ -41,6 +41,12 @@ bluemap*.jar
 # Backups
 backup_*/
 
+# Server plugins (Bukkit/Paper - not for client)
+plugins/
+
+# Large LOD cache (optional download)
+DistantHorizons.sqlite
+
 # Git
 .git/
 .gitignore

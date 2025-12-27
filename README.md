@@ -2,7 +2,7 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.36
+# MCC (MinecraftCollege.com) v0.9.37
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
@@ -35,7 +35,6 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Arts & Crafts** - Dyeable decorated pots, chalk, terracotta shingles, soapstone
 - **ReFramed** - Copy any block's appearance onto stairs, slabs, fences, and more
 - **Armor Statues** - Pose and customize armor stands with a book interface
-- **Fairy Lights** - Decorative string lights for buildings and events
 - **Little Joys** - Small ambient details (clovers, rocks, fallen leaves, butterflies)
 - **WindChime** - Decorative wind chimes (bamboo, glass, amethyst, copper, and more)
 

@@ -1,0 +1,13 @@
+name = "Chunky (Bukkit)"
+filename = "Chunky-Bukkit-1.4.40.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7c196c5bebd6017880f3c2a38fc297b3b99f5f93"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6677879
+project-id = 408295

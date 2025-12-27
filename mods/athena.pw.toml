@@ -1,0 +1,13 @@
+name = "Athena"
+filename = "athena-fabric-1.21-4.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d79183521f9bcb043ebdc6438f1987e46c12a067"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6669523
+project-id = 841890

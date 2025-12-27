@@ -3,11 +3,11 @@ filename = "ArmorStatues-v21.1.0-1.21.1-Fabric.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/bbGCtEvb/versions/X9wdRi3p/ArmorStatues-v21.1.0-1.21.1-Fabric.jar"
-hash-format = "sha512"
-hash = "6c09e743b52ca86f35a3e05a2da033dd3bdfeeff7c6bae24436af8d2445e191aec72d1bd0c25bbc76df71938256f199dc1b2e4abef4713ad829253fc1a65785e"
+hash-format = "sha1"
+hash = "1afab31be284195f8925b4689bb2a7540ec9c782"
+mode = "metadata:curseforge"
 
 [update]
-[update.modrinth]
-mod-id = "bbGCtEvb"
-version = "X9wdRi3p"
+[update.curseforge]
+file-id = 5732768
+project-id = 682566
