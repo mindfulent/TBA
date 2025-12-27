@@ -4,6 +4,8 @@ packwiz
 
 # Exported modpacks (can be regenerated)
 *.mrpack
+*-curseforge.zip
+*-cf-fixed.zip
 
 # mrpack4server deployment files
 mrpack4server*.jar
