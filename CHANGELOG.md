@@ -2,6 +2,21 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.38] - 2025-12-28
+
+### Fixed
+- **CurseForge export** - Added CurseForge metadata to 9 mods that were incorrectly bundled as JARs in the CF export. All mods available on both platforms now properly reference CurseForge project/file IDs in manifest.json.
+
+### Changed
+- **MaLiLib** 0.21.9 → 0.21.0 - CurseForge version (masa's original, not Modrinth port)
+- **Litematica** 0.19.59 → 0.19.50 - CurseForge version
+- **WATERMeDIA** 2.1.37 → 2.1.36 - Closest available CurseForge version
+
+### Notes
+- Version downgrades were necessary because CurseForge has older versions for these mods compared to Modrinth
+- The CurseForge export (`.zip`) now passes CurseForge moderation requirements
+- Only ReFramed remains as an override JAR (Modrinth-only mod, not available on CurseForge)
+
 ## [0.9.37] - 2025-12-27
 
 ### Removed
