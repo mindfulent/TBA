@@ -2,6 +2,20 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.40] - 2025-12-28
+
+### Fixed
+- **ReplayMod compatibility** - Downgraded Supplementaries, Moonlight Lib, and Amendments to resolve "Received attachment change for unknown target" crash when playing back replays
+
+### Changed
+- **Supplementaries** 3.5.14 → 3.4.18
+- **Moonlight Lib** 2.29.2 → 2.28.0
+- **Amendments** 2.0.13 → 2.0.8
+
+### Notes
+- This is a compatibility fix release - no new features
+- Players must update to avoid client/server mismatch errors
+
 ## [0.9.39] - 2025-12-28
 
 ### Added

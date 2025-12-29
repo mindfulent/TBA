@@ -64,7 +64,7 @@ metafile = true
 
 [[files]]
 file = "mods/amendments.pw.toml"
-hash = "6fcdc289a55f3d7c83a23be77f0eb62ae9d69c86fa5eeb24b41b2875de9bc85f"
+hash = "bc649f0960b84625957f2f81b3db0ddbe0b0cca0efb3169d54382916c5f062ea"
 metafile = true
 
 [[files]]
@@ -184,7 +184,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "0e28ba15ba1769864a4af0b2f7ffaa3c90017b49633bef2a843b14a46e9a791d"
+hash = "446f8047ee9168b65fe9d4600f82cb915c7aa0d0f049a344177ba340a5b93a8a"
 metafile = true
 
 [[files]]
@@ -368,6 +368,11 @@ hash = "756e9021d46a85cc4a8f89e9f71c0ac6031e8e40b41004fd2915bf2cbe64cd99"
 metafile = true
 
 [[files]]
+file = "mods/moonlight.pw.toml"
+hash = "ec6446fe61c3162acb490c067b781171608088e39d974103bc543505db6c9b6e"
+metafile = true
+
+[[files]]
 file = "mods/mouse-tweaks.pw.toml"
 hash = "3cd8155341a4233955ff9892a3b7b5da6dc6d8d892863b2f544328f2731f7f03"
 metafile = true
@@ -418,11 +423,6 @@ hash = "795a73207734f08e5cece4da342c509d2210787ea8f0df9ea7ee440719a53cf3"
 metafile = true
 
 [[files]]
-file = "mods/selene.pw.toml"
-hash = "d4a9adedb76dd0331ace24c1b3ad5883ffca3f644906911f2271fdcf97cf259f"
-metafile = true
-
-[[files]]
 file = "mods/simple-discord-rpc.pw.toml"
 hash = "e481880fef8eb75f680175d3485055d339d806516254081e66dc51c9a78c1a4d"
 metafile = true
@@ -454,7 +454,7 @@ metafile = true
 
 [[files]]
 file = "mods/supplementaries.pw.toml"
-hash = "124f4508c67f28ea329df65f34de0f7200f8acf6d101daba3f674232c2b2d013"
+hash = "a0eb4458c2bd923add2ea132822a8634b763b892ddd08dd1d1087fc691797f06"
 metafile = true
 
 [[files]]
