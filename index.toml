@@ -64,7 +64,7 @@ metafile = true
 
 [[files]]
 file = "mods/amendments.pw.toml"
-hash = "bc649f0960b84625957f2f81b3db0ddbe0b0cca0efb3169d54382916c5f062ea"
+hash = "6fcdc289a55f3d7c83a23be77f0eb62ae9d69c86fa5eeb24b41b2875de9bc85f"
 metafile = true
 
 [[files]]
@@ -184,7 +184,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "446f8047ee9168b65fe9d4600f82cb915c7aa0d0f049a344177ba340a5b93a8a"
+hash = "0e28ba15ba1769864a4af0b2f7ffaa3c90017b49633bef2a843b14a46e9a791d"
 metafile = true
 
 [[files]]
@@ -368,11 +368,6 @@ hash = "756e9021d46a85cc4a8f89e9f71c0ac6031e8e40b41004fd2915bf2cbe64cd99"
 metafile = true
 
 [[files]]
-file = "mods/moonlight.pw.toml"
-hash = "ec6446fe61c3162acb490c067b781171608088e39d974103bc543505db6c9b6e"
-metafile = true
-
-[[files]]
 file = "mods/mouse-tweaks.pw.toml"
 hash = "3cd8155341a4233955ff9892a3b7b5da6dc6d8d892863b2f544328f2731f7f03"
 metafile = true
@@ -398,8 +393,8 @@ hash = "b8a110174a694146b0d6fa1673c4dfde9ed7a3143dd807fdbb5b982718f908ca"
 metafile = true
 
 [[files]]
-file = "mods/replaymod.pw.toml"
-hash = "452a0cef80ef10e0f8af550b34513e857a5c769842808ec2213aa554b8c59713"
+file = "mods/replay-mod-fabric-and-forge.pw.toml"
+hash = "741f6a0f1c902b514328c766b6625cd7217df91b06d5b3066baebd31cb47a88a"
 metafile = true
 
 [[files]]
@@ -420,6 +415,11 @@ metafile = true
 [[files]]
 file = "mods/searchables.pw.toml"
 hash = "795a73207734f08e5cece4da342c509d2210787ea8f0df9ea7ee440719a53cf3"
+metafile = true
+
+[[files]]
+file = "mods/selene.pw.toml"
+hash = "9417e41cbe6fa5c3ef5c8029c3c0de5312dd033738d1012267adab56051244b8"
 metafile = true
 
 [[files]]
@@ -444,7 +444,7 @@ metafile = true
 
 [[files]]
 file = "mods/stable-cam.pw.toml"
-hash = "fb43e8aae9618228fc0f34b92aef033c7d350635f16df6648b312491a438a421"
+hash = "22b55922b5522f11193643f92671dc609fe50edd6875b375856d8cb85c7ba02f"
 metafile = true
 
 [[files]]
@@ -454,7 +454,7 @@ metafile = true
 
 [[files]]
 file = "mods/supplementaries.pw.toml"
-hash = "a0eb4458c2bd923add2ea132822a8634b763b892ddd08dd1d1087fc691797f06"
+hash = "e1d42f2792ffbd3afc16bfa617a48b852c4ae7e320bf4e0427633bef78b34555"
 metafile = true
 
 [[files]]
