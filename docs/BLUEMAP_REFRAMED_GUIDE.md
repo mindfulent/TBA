@@ -67,19 +67,25 @@ Create this folder structure in your BlueMap config:
 
 ```
 config/bluemap/packs/
-└── reframed-compat/
+└── zzz-reframed-compat/          ← 'zzz' prefix helps with load order
     ├── pack.mcmeta
     └── assets/
         └── reframed/
-            ├── blockstates/
-            │   └── (extracted files)
+            ├── blockstates/          ← Standard blockstates (fallback)
+            │   └── (static blockstates)
+            ├── bluemap/              ← CRITICAL: BlueMap override folder
+            │   └── blockstates/      ← These take priority over mod's blockstates
+            │       └── (static blockstates)
             ├── models/
             │   └── block/
-            │       └── (extracted files)
+            │       └── (static models with frame texture)
             ├── textures/
-            │   └── (extracted files, if any)
+            │   └── block/
+            │       └── (frame textures)
             └── blockProperties.json
 ```
+
+**IMPORTANT:** The `bluemap/` subfolder is the key to making this work! BlueMap's override system checks `assets/<namespace>/bluemap/blockstates/` FIRST, which takes priority over blockstates from mod JARs. Without this folder, the mod's original blockstates (which reference dynamic `*_special` models) will be used instead.
 
 ### Step 3: Create pack.mcmeta
 
@@ -161,19 +167,21 @@ Copy the pack to your server and reload BlueMap:
 
 ### Blocks Still Invisible
 
-1. **Check folder structure** - Must be `packs/reframed-compat/assets/reframed/blockstates/`, not `packs/reframed-compat/reframed/blockstates/`
+1. **Check for `bluemap/` subfolder** - The most common issue! Blockstates MUST be in `assets/reframed/bluemap/blockstates/`, not just `assets/reframed/blockstates/`. Without the `bluemap/` folder, the mod's original blockstates override yours.
 
-2. **Check BlueMap logs** for parsing errors:
+2. **Check folder structure** - Must be `packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/`, not `packs/zzz-reframed-compat/reframed/blockstates/`
+
+3. **Check BlueMap logs** for parsing errors:
    ```
    bluemap/logs/debug.log
    ```
 
-3. **Validate JSON syntax:**
+4. **Validate JSON syntax:**
    ```bash
    python -c "import json; json.load(open('blockstates/cube.json'))"
    ```
 
-4. **Verify purge completed** - Render cache must be cleared
+5. **Verify purge completed** - Render cache must be cleared
 
 ### Pink/Black Textures
 
