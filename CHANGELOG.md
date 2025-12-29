@@ -2,6 +2,32 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.41] - 2025-12-28
+
+### Added
+- **Bundled options.txt** - Pre-resolved keybind configuration included in modpack. New players get conflict-free keybinds out of the box.
+
+### Changed (Keybind Resolutions)
+| Key | Function | Mod |
+|-----|----------|-----|
+| **C** | Mute Microphone | Voice Chat (moved from M) |
+| **F7** | Disable Voice Chat | Voice Chat (moved from N) |
+| **U** | Quiver | Supplementaries (moved from V) |
+| **F4** | Toggle Replace Mode | Axiom (moved from R) |
+| **F10** | Reload Shaders | Iris (moved from R) |
+| **Right Alt** | Context Menu | Axiom (moved from Left Alt) |
+| **Y** | Shader Selection | Iris (moved from O) |
+| **]** | Undo | Effortless (moved from [) |
+| **\\** | Redo | Effortless (moved from ]) |
+| **'** | Minimap Preset | JourneyMap (moved from \\) |
+| **.** | Chat Position | JourneyMap (moved from C) |
+| **F9** | Play/Pause Replay | ReplayMod (moved from P) |
+
+### Notes
+- ReplayMod hotkeys mostly unbound (use in-game menus) to avoid conflicts during normal gameplay
+- Use the Controlling mod (Options → Controls → Search) to find or remap any keybind
+- Players with existing installations keep their settings; this only affects new installs
+
 ## [0.9.40] - 2025-12-28
 
 ### Fixed
