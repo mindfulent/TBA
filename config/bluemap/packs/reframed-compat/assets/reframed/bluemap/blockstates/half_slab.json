@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": {"model": "reframed:bluemap/block/step"}
+    "": {"model": "reframed:block/step"}
   }
 }

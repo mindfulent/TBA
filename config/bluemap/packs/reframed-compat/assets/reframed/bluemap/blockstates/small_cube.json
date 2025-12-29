@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": {"model": "reframed:bluemap/block/small_cube"}
+    "": {"model": "reframed:block/small_cube"}
   }
 }
