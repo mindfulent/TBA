@@ -2,6 +2,14 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.49] - 2025-12-31
+
+### Removed
+- **Fox Nap** - Caused creative mode crash (DecoderException on set_creative_mode_slot packet when dragging items to inventory)
+
+### Notes
+- Mod count: 124 total (121 client, 3 server-only)
+
 ## [0.9.48] - 2025-12-31
 
 ### Added

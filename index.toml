@@ -757,11 +757,6 @@ hash = "d0e586bf4b4f9f003b1de1a3e18f67540233a0295b487009047056198f694f0f"
 metafile = true
 
 [[files]]
-file = "mods/fox-nap.pw.toml"
-hash = "dbe389da03f9c3d31a0f898df36dc8e7e83a1ce720c4690101fb0ff95d4e675a"
-metafile = true
-
-[[files]]
 file = "mods/fzzy-config.pw.toml"
 hash = "ead97a80bf8d23771fcae23bb2b019f512b0c83f6cce0b7b62858cfe22a440cb"
 metafile = true
