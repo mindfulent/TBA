@@ -1,12 +1,452 @@
 hash-format = "sha256"
 
 [[files]]
+file = "compare.png"
+hash = "344126d90b3422b2a08b16ea11adfa8e76c5dd4e1be3363fdf09d8e686503bd9"
+
+[[files]]
 file = "config/AdvancedBackups.properties"
 hash = "28b1af7e1ccd9695166ec1df33e0d08c1ec078e6e186e0b2e8c0228fe9e10acf"
 
 [[files]]
 file = "config/bluemap/core.conf"
 hash = "b942611c074c37431c5c24d6d63faaf731e5e3b0a4f210370f3237617031b89e"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockProperties.json"
+hash = "122f593312b218a68084eca9015a737c2b63fbf0ab1df002dedef81074eafba7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/button.json"
+hash = "baeda4d0d454a009edbac2c1471dc9142eb04222230af9a44696d212b5a9b7ad"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/cube.json"
+hash = "e5fc59d3571175c2c248136f20f75b52f25bfc9f8a8cb2481946efcf81811db7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/door.json"
+hash = "6fb31c25a71a971cd4f0ff5d0b49e4d3de6ad10bd3eb2a7c3bc8e5d45dd94d9d"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/fence.json"
+hash = "178c829913f2fb5712bc0fcfcea0d9219353325d2632e1c0fe07126de1421d79"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_layer.json"
+hash = "be46afee2c8b5e11e0199bb55f37ab0aec94cf5422c331a4dcd18cfea08293e9"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_slab.json"
+hash = "941c281b10b2b1e3521289093757318233d12fded85e552bc6201d4d822140d6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_slabs_slab.json"
+hash = "4de2e9ad9ea2a83b053e041b1f383c09c9b0ba582bd7160bde3395b28abdb158"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_stair.json"
+hash = "91105584e683f767a22bd3396b83ccf168ff6eb3355d9cd45a7dec576fd6cf0b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_stairs_cube_stair.json"
+hash = "e5fc59d3571175c2c248136f20f75b52f25bfc9f8a8cb2481946efcf81811db7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_stairs_slab.json"
+hash = "4de2e9ad9ea2a83b053e041b1f383c09c9b0ba582bd7160bde3395b28abdb158"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_stairs_stair.json"
+hash = "91105584e683f767a22bd3396b83ccf168ff6eb3355d9cd45a7dec576fd6cf0b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/half_stairs_step_stair.json"
+hash = "91105584e683f767a22bd3396b83ccf168ff6eb3355d9cd45a7dec576fd6cf0b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/layer.json"
+hash = "2f35b3cbd0742abbd402cb3ed96289c791ff7805edfa23316807fbb4384c974c"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/pane.json"
+hash = "3004c1a01e3a5bcdbd043e5a11cbe9e020fa1aca55f92161998da90bab76cba0"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/pillar.json"
+hash = "a3fc98ae80a129c81224beda85967d782fc515b8b233ddacfd47d8b6a2408a15"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/pillars_wall.json"
+hash = "ef7125155cd11cab63e3eb940701299d9a1e13531f473a09645e82612868f526"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/post.json"
+hash = "1bc1b65a27df50f167e558bab49f9e5ecd064c1f26b93cd6543a5f8c6b9d0029"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/post_fence.json"
+hash = "178c829913f2fb5712bc0fcfcea0d9219353325d2632e1c0fe07126de1421d79"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/slab.json"
+hash = "5a3120d956219efc3e83d8fe153bc4b7914440246913f94780e24bba12273ee6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/slabs_cube.json"
+hash = "e5fc59d3571175c2c248136f20f75b52f25bfc9f8a8cb2481946efcf81811db7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/slabs_half_layer.json"
+hash = "4de2e9ad9ea2a83b053e041b1f383c09c9b0ba582bd7160bde3395b28abdb158"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/slabs_inner_stair.json"
+hash = "51e11fd61919b6d0541b7c533c7a026fed4b9e650d1edfbe53005e9af207c664"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/slabs_layer.json"
+hash = "4de2e9ad9ea2a83b053e041b1f383c09c9b0ba582bd7160bde3395b28abdb158"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/slabs_outer_stair.json"
+hash = "6837118eb580df1ceda31f2cf4156999bb43ab0dff8cc919547c498f433add88"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/slabs_stair.json"
+hash = "91105584e683f767a22bd3396b83ccf168ff6eb3355d9cd45a7dec576fd6cf0b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/small_cube.json"
+hash = "f532d7da15589672be1d20623b7c4ee3d46356ab11c40abd65b9c3864e844e41"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/small_cubes_step.json"
+hash = "941c281b10b2b1e3521289093757318233d12fded85e552bc6201d4d822140d6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/stair.json"
+hash = "91105584e683f767a22bd3396b83ccf168ff6eb3355d9cd45a7dec576fd6cf0b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/stairs_cube.json"
+hash = "e5fc59d3571175c2c248136f20f75b52f25bfc9f8a8cb2481946efcf81811db7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/step.json"
+hash = "941c281b10b2b1e3521289093757318233d12fded85e552bc6201d4d822140d6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/steps_cross.json"
+hash = "4de2e9ad9ea2a83b053e041b1f383c09c9b0ba582bd7160bde3395b28abdb158"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/steps_half_layer.json"
+hash = "941c281b10b2b1e3521289093757318233d12fded85e552bc6201d4d822140d6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/steps_slab.json"
+hash = "4de2e9ad9ea2a83b053e041b1f383c09c9b0ba582bd7160bde3395b28abdb158"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/trapdoor.json"
+hash = "b45994a37bf405d2d2b80a3a8ba97295c6cdb62d05f50eaa0927daeedc85b598"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/blockstates/wall.json"
+hash = "ef7125155cd11cab63e3eb940701299d9a1e13531f473a09645e82612868f526"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/button.json"
+hash = "cce311496ab2be3fccfce6e1b20bf896fca6406306eaaf08e2c89f7a4101ad8f"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/cube.json"
+hash = "e5fc59d3571175c2c248136f20f75b52f25bfc9f8a8cb2481946efcf81811db7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/door.json"
+hash = "c65038eb1170d0987ed358a603219d0b39e22a140f9815cf4374e896c5a87e33"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/fence.json"
+hash = "b9c21413485a714b5e1464728a9a0f7063478d92e5c3feca74886b8c93d6a25b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_layer.json"
+hash = "9120e6a0c4cd141a8587856e68b1376cc7dc97e1190cf3c73f8b5453bce74fa6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_slab.json"
+hash = "19953bfe3023c68dba08fac7f21a2a956dfb966af2dec4a5d1deab1a5a3da7b0"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_slabs_slab.json"
+hash = "2b0d5b1c0e622fe328fab0625e1dcda8d6e169744fcdee62997e3ba71d56ac97"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_stair.json"
+hash = "ca94dcec7307305f68b53695f9a54711b20f1487b7b5200b381cf1010d899d2b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_stairs_cube_stair.json"
+hash = "10b17bbca4b76d6ab7fb436a37a33090d67999e04d04570703a0fee2b79f1639"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_stairs_slab.json"
+hash = "54e997e651c92b10390153ca53c9e5bd3cb3b8a62614dfb4851ed0c181c4bdf2"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_stairs_stair.json"
+hash = "af1629c8408f9990121559e5419da3464058a3d340ea64801337e1c8243d41ad"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/half_stairs_step_stair.json"
+hash = "70386b80ce0a011e10608dbd187f6600b9ee0ebb261bd867537e98947c914ca9"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/layer.json"
+hash = "b6b8d1804d4bd021fad7a2e1c83b7847a1e453c6c88e0090e9f0c5a5f3657cd0"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/pane.json"
+hash = "6f8b75ee055e459c449b3483dd73c32f64907e4fe43929002657f5dcc3a653c9"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/pillar.json"
+hash = "d9d132c83bb8ffbe5ac22688554437bb257d810f538870d9af72ec4171f7c7f7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/pillars_wall.json"
+hash = "fc3d951b07f94d6a64136d2b9925bb3f20355b73e4e6931c4342b17e41e78090"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/post.json"
+hash = "c0fc28ff6e2ad337f96adb32e84a723eb996dd5a4910d5877e6bcd63762dccb6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/post_fence.json"
+hash = "56378f716d8d93b57622e9863cb2d59356199e7f898c6d09b0f7f4e23512fa46"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/slab.json"
+hash = "4de2e9ad9ea2a83b053e041b1f383c09c9b0ba582bd7160bde3395b28abdb158"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/slabs_cube.json"
+hash = "12b7e944e8014010294fc613185a890d7cc4b2d0a96394e96cae9eb82e2ab660"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/slabs_half_layer.json"
+hash = "50e2dd2960cdbde9d42166cf74e2982c5d559505d2733c35c1aa7d435b34bd4e"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/slabs_inner_stair.json"
+hash = "6865b49cbb6ca0d0290d38dbd42e58a8955b0ad0fd18bb9066f37e125d845157"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/slabs_layer.json"
+hash = "3265b9fe89c0d4391dafa0f92089091a93828b49fe73363b04fee9f97e3d54b1"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/slabs_outer_stair.json"
+hash = "3eb4d3a46641b64481e6065914bde049e37005ba9a579c842a26fd490d51b67f"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/slabs_stair.json"
+hash = "0ce1b3a1cf1dda9b0592e1f579dd39e0b35d5a285fb0b3f1496107654337c95b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/small_cube.json"
+hash = "7fcc901136604b1085db9d2093937b30b79c85252a1707d93b353ace4d930df5"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/small_cubes_step.json"
+hash = "d747a9739a332647de66c7639d13f9b61b55c118381c5f1e19a85f340f9a69f3"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/stair.json"
+hash = "91105584e683f767a22bd3396b83ccf168ff6eb3355d9cd45a7dec576fd6cf0b"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/stairs_cube.json"
+hash = "78ad779fafd8e8e3a36b53d2539a2914fe688241d88fd3b081c00cddaf46edf4"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/step.json"
+hash = "ee2da060d4b5ec48b8f38ef1fe16d6d1ea744e3539790cbba15dfa0c0910ac4f"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/steps_cross.json"
+hash = "5c70912335bc254d65db0a24521c32765c193b3f69b96f017afb5e16766ac18d"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/steps_half_layer.json"
+hash = "b26bd8acaf9376cb4bbc08200eebb505cdc21ecacf6ea777e24fa749215be48a"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/steps_slab.json"
+hash = "35f87bdadf54cd5fb06093e88b8c43abcf189ece4c927fa34f4d89576a8a4f55"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/trapdoor.json"
+hash = "9032d086c39d95553381e4baf713e31ab063f95835ee6a4b171dd09827746f39"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/bluemap/blockstates/wall.json"
+hash = "a885f8caaa8c842daa432de38dddac8e7dd976aaa2f43f57b42cead212e9aa7a"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/button.json"
+hash = "3c82168df541e0a092cc13b8675cfa239aab28f29009e2558bcdb387f6e042b2"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/button_pressed.json"
+hash = "e085bcacd533e5f996dd19f45791f72f49d090690b5c7b53d0d365b360993239"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/cube.json"
+hash = "2e21bbc919652e55c60db78e45f4f24b512689e350048157b99c58beb4cfe166"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_bottom_left.json"
+hash = "625f8b5776f978658fd204a562cf3992856b6123c85e6cffb5da0776c9512bdf"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_bottom_left_open.json"
+hash = "ab58ce540bb7d52a6809341bc7239bc6e11e9cb916c9bc3907e15fabbb80db27"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_bottom_right.json"
+hash = "2486fc12af08b869e53927bed3f76dac8f1459f19e8d3fe67e3ab652e2b0e09f"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_bottom_right_open.json"
+hash = "556adeb60df5b27e517cd8b25102c906fce2655d6b1049845b6c1d1acbc18895"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_top_left.json"
+hash = "a132c829a4cf42496f7cc1304fe561f5b7f8957643e758b62c95edfd5fd92cf1"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_top_left_open.json"
+hash = "f30b60598df2e5800717771426a39b430d9ba0bfa7e3d8a50a9c47d8f6f02c65"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_top_right.json"
+hash = "17fb0ce89b213f7a433ba3cd4c9e244b5024ec43cc6eef78dac55c5b063709fd"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/door_top_right_open.json"
+hash = "90712191ab4b358f76bf54e7fff8f3d1baad629a079c57bf3ec90b575a1795e2"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/fence_post.json"
+hash = "7eb54a0b2156a27ff0691b16a13452d757272bc0d2b614dc1db0d611940bb2be"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/fence_side.json"
+hash = "030c9bb118bf8c450bf507890edad70c41261d3866b797ea51b202116b57c832"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/inner_stairs.json"
+hash = "47f515bf1ba44e6e84eddf9a4a9935d7988ef1f2b47dd5c34780d47b7cec51a1"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/layer_2.json"
+hash = "b50cec1ae7f13b70408be9bf9fa47cc68d633c478bfb5ec7daeeffaaf166af50"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/layer_4.json"
+hash = "b599ffae14460feb715449a01ff80d5843f5be87a54a7e6c6857bb48b11823a8"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/outer_stairs.json"
+hash = "790d4572165fb9b4c2487b4e96f3bb439361288b0789a9acbf314dc98f379b25"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/pane_noside.json"
+hash = "7b0e3c2bba81a48e16c9b5691bc23d93bfb1d0b78da28b6818599f21a33d41f7"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/pane_noside_alt.json"
+hash = "d9e69d92d4e3cb4289bf4aba860b9fffc9a65508218f85dce9c38ec9a4c7d85f"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/pane_post.json"
+hash = "0e91cca2d942840e57da0d22872d2b19aa739b8a60de1b20556277a2578754c8"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/pane_side.json"
+hash = "3699d8c257eaf213348fe5ff01dcc2ff29e497087d5e0e76f917d489f1dd31ab"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/pane_side_alt.json"
+hash = "a899a7a2c08cb9f16807a9e591c9a6550327de529061a69c1b3f9a5a5e6c0aef"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/pillar.json"
+hash = "1934c601b6710f8648d863a80ad8c5c6a02c3e5f6d3f2ff2d4fb66827e41ec9c"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/post.json"
+hash = "489fcfd1c1182e0037b978405f776d5584847a1eab8ba16e633cd83f939e012d"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/slab.json"
+hash = "6fcdd63f511d8acda4f208789c47b17c86a533c7ff4956467540671b1c0d4a06"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/slab_top.json"
+hash = "86e059100f3e74d383d74c607e3e17f77a50437b699ab3404eee5035668d0f9c"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/small_cube.json"
+hash = "ebac6ad35861246e9c3e884494a5f0282b10ff5b9cd31bbea6467773dbf21ddf"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/stairs.json"
+hash = "7ea0f0b0abd22f38ed25afdf404d4643be6ed715c9bcb2f311cdda78045fb5b4"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/step.json"
+hash = "cc2d8a8fb0aedf22ae33f874a72da7ab0b6fb97b6c64137ce9afbdde4eef8bc4"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/trapdoor_bottom.json"
+hash = "880d38e2b7a0a2f34022265fcdb163201dec6f77b6aaea0017f588e368d99903"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/trapdoor_open.json"
+hash = "21e519e3e72b1c4cdd6ecb41626338952ee29766af790636b35d9f01a5d30a79"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/trapdoor_top.json"
+hash = "c758022685f7eb6bd954cd9b84c6d97b0d35c752094f3e25a6a2df24f951674c"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/wall_post.json"
+hash = "0770042a05beab5936707578e9180bdbf350543503769a071d1432d65d3b1ad8"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/wall_side.json"
+hash = "0a57fcf8a56f2efd5b33e44a2b5bf6fcaa7f6fb18460b74c8c3dca8857debac6"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/models/block/wall_side_tall.json"
+hash = "0d488961e5e0782f4a7cd9ea7c103d5067f466fce8f16d031d7af1560dbc2770"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/textures/block/framed_accent_block.png"
+hash = "a9f1dd6c30d8679e30e99aa0fd6250382ac86c3de244996ffe2b9822473dcd51"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/assets/reframed/textures/block/framed_block.png"
+hash = "4cda4c744b8448c1ad7f75c2282c49df32269dbc47332b7cac9e55db8e422648"
+
+[[files]]
+file = "config/bluemap/packs/zzz-reframed-compat/pack.mcmeta"
+hash = "53002fa5eac2c14cd920d26e93f502e0ba7e74d7bbfeb2b4e7b914d3f0b3676a"
 
 [[files]]
 file = "config/bluemap/webserver.conf"
@@ -19,6 +459,10 @@ hash = "892f326e5494be3b5fded6a644f0243d5a48583651d2b8ae675e671f792b7bd8"
 [[files]]
 file = "config/iris.properties"
 hash = "99ac8a2dfd17f7b4ed038c02255a279296ecad90e48a5b7196ac4f73260d57ee"
+
+[[files]]
+file = "config/replaymod.json"
+hash = "b9f0990f980d4af317ff4ff5a79ed117515aba7ad3ddeeebd401c06dc20875b9"
 
 [[files]]
 file = "config/worldedit/schematics/butler.schem"

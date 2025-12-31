@@ -2,6 +2,14 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.44] - 2025-12-31
+
+### Changed
+- **ReplayMod auto-recording disabled by default** - New players no longer have recording start automatically when joining. Recording can still be enabled in ReplayMod settings.
+
+### Added
+- Bundled `config/replaymod.json` with `autoStartRecording: false`
+
 ## [0.9.43] - 2025-12-28
 
 ### Fixed
