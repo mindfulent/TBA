@@ -942,11 +942,6 @@ hash = "ae0783f3455e72023fac34f0ebe965ad1b3dbd813f155e2f7fb97e2da029e103"
 metafile = true
 
 [[files]]
-file = "mods/owo-lib.pw.toml"
-hash = "59f3b2e1679e710e694b04e712b2f79be11ec4f1591d831c3adaa86e16d0c1ef"
-metafile = true
-
-[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "0d3e127187193d803aa350bc5843fa7c794433afbc994fe5de9d5ff8d61e6031"
 metafile = true
@@ -1074,11 +1069,6 @@ metafile = true
 [[files]]
 file = "mods/universal-graves.pw.toml"
 hash = "8876ed7fdc1ad94eb650e0ce6b1dc45b35c3b7b607d0b51c4d58b839335894c0"
-metafile = true
-
-[[files]]
-file = "mods/vinurl.pw.toml"
-hash = "498e8cb09f3a692d89057ba7d64cf75b348219ff3d21bae4fabddd9eb0b63ef9"
 metafile = true
 
 [[files]]

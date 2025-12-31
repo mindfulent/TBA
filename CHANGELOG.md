@@ -2,6 +2,16 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.52] - 2025-12-31
+
+### Removed
+- **VinURL** - Caused creative mode crash (same DecoderException as Fox Nap - known Fabric 1.21 server issue with custom item NBT serialization)
+- **owo-lib** - No longer needed (was VinURL dependency)
+
+### Notes
+- Mod count: 123 total (120 client, 3 server-only)
+- Photon shader remains bundled (4 shaders total)
+
 ## [0.9.51] - 2025-12-31
 
 ### Removed

@@ -2,11 +2,11 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.50
+# MCC (MinecraftCollege.com) v0.9.52
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**126 mods total** (123 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
+**123 mods total** (120 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -54,7 +54,6 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 ### Content
 - **Farmer's Delight Refabricated** - Cooking and farming expansion
 - **More Delight** - Additional foods and recipes for Farmer's Delight
-- **Brewin' And Chewin'** - Brewing addon for Farmer's Delight with kegs and alcoholic beverages
 - **Storage Drawers** - Compact item storage system
 - **Traveler's Backpack** - Wearable backpacks with fluid storage and tool slots
 - **Universal Sawmill** - Sawmill workstation with Carpenter villager
@@ -65,7 +64,6 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Camerapture** - Take in-game photos and hang them as pictures
 - **WaterFrames** - Display images and videos from URLs on in-game frames and projectors
 - **Immersive Paintings** - Upload custom images as paintings in any size
-- **VinURL** - Play audio from URLs on note blocks (YouTube, SoundCloud, direct links)
 - **Lootr** - Per-player loot in chests, barrels, and minecarts (no stealing!)
 
 ### Web Map
