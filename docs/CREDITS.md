@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** December 31, 2025
-**Modpack Version:** 0.9.46 (119 mods total — 116 client, 3 server-only)
+**Modpack Version:** 0.9.47 (121 mods total — 118 client, 3 server-only)
 
 ---
 
@@ -55,6 +55,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Entity Model Features](https://www.curseforge.com/minecraft/mc-mods/entity-model-features) | Traben | 3.0.10 | Dec 2025 | - |
 | [Entity Texture Features](https://www.curseforge.com/minecraft/mc-mods/entity-texture-features-fabric) | Traben | 7.0.8 | Dec 2025 | - |
 | [Text Placeholder API](https://www.curseforge.com/minecraft/mc-mods/placeholder-api) | Patbox | 2.4.2 | Dec 2024 | [Ko-fi](https://ko-fi.com/patbox) |
+| [YetAnotherConfigLib](https://www.curseforge.com/minecraft/mc-mods/yacl) | isXander | 3.8.1 | Dec 2025 | [Ko-fi](https://ko-fi.com/isxander) |
+| [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) | KosmX | 2.0.4 | Dec 2025 | - |
+| [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) | Tslat, Gecko, AzureDoom | 4.8.2 | Dec 2025 | [Ko-fi](https://ko-fi.com/geckolib) |
 
 ## Map Mods
 
@@ -131,7 +134,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Just Zoom](https://modrinth.com/mod/just-zoom) | Keksuccino | 2.1.0 | Apr 25, 2025 | - |
 | [ItemSwapper](https://modrinth.com/plugin/itemswapper) | tr7zw | 0.8.5 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
 | [Gamemode Unrestrictor](https://modrinth.com/mod/gamemode-unrestrictor) | Attie | 1.0.2 | Dec 2025 | - |
-| [Mouse Wheelie](https://www.curseforge.com/minecraft/mc-mods/mouse-wheelie) | Siphalor | 1.15.0 | Dec 2025 | - |
 | [InvMove](https://www.curseforge.com/minecraft/mc-mods/invmove) | PieKing1215 | 0.9.2 | Dec 2025 | - |
 | [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu) | Prospector, TerraformersMC | 11.0.3 | Nov 2024 | - |
 | [Carry On](https://www.curseforge.com/minecraft/mc-mods/carry-on) | Tschipp | 2.2.4.4 | Dec 2025 | - |
@@ -202,8 +204,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 
 | Shader | Author(s) | Donate |
 |--------|-----------|--------|
-| Complementary Reimagined | EminGT | [Patreon](https://www.patreon.com/emingt) |
 | BSL Shaders | CaptTatsu | [Patreon](https://www.patreon.com/capttatsu) |
+| Complementary Reimagined | EminGT | [Patreon](https://www.patreon.com/emingt) |
+| Solas Shader | septonious | [Patreon](https://www.patreon.com/septonious) |
 
 ---
 
