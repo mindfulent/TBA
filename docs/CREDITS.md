@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** December 31, 2025
-**Modpack Version:** 0.9.45 (117 mods total — 114 client, 3 server-only)
+**Modpack Version:** 0.9.46 (119 mods total — 116 client, 3 server-only)
 
 ---
 
@@ -117,6 +117,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [More Delight](https://www.curseforge.com/minecraft/mc-mods/more-delight-fabric) | axperty | 25.01.13 | Jan 2025 | - |
 | [Traveler's Backpack](https://www.curseforge.com/minecraft/mc-mods/travelers-backpack-fabric) | Tiviacz1337 | 10.1.29 | Dec 2025 | - |
 | [Lootr](https://www.curseforge.com/minecraft/mc-mods/lootr-fabric) | noobanidus | 1.11.36.108 | Dec 2025 | - |
+| [Brewin' And Chewin'](https://modrinth.com/mod/brewin-and-chewin) | ThatGravyBoat (port) | 4.4.1 | Dec 2025 | - |
 
 ## Quality of Life Mods
 
@@ -183,6 +184,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
 | [Sound Physics Remastered](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered) | henkelmax | 1.4.10 | Nov 2024 | - |
+| [AmbientSounds](https://modrinth.com/mod/ambientsounds) | CreativeMD | 6.3.1 | Dec 2025 | [Patreon](https://www.patreon.com/creativemd) |
 | [Subtle Effects](https://www.curseforge.com/minecraft/mc-mods/subtle-effects) | Fzzy | 1.13.2 | Dec 2025 | - |
 
 ## Camera & Animation

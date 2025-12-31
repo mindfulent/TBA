@@ -512,6 +512,11 @@ hash = "eec26a02ae733113e66a324e471eb01c24fb8739804592cd5c65c8d6a9ee9a72"
 metafile = true
 
 [[files]]
+file = "mods/ambientsounds.pw.toml"
+hash = "3fab60aca0fee9153c49b40e1b06b1deebb23800dce7b8b8f471e23f43f3efe5"
+metafile = true
+
+[[files]]
 file = "mods/amendments.pw.toml"
 hash = "7df47bca45f8cc678cf5b32361db50653b98631e93ac9d201daa0124503a1a50"
 metafile = true
@@ -582,6 +587,11 @@ hash = "6f530660a6b3bc694db34a852c17f4c67f64264fb22e33b0b45c46facbb7fbb2"
 metafile = true
 
 [[files]]
+file = "mods/brewin-and-chewin.pw.toml"
+hash = "4030ef46ebf2eb0396c9eb6c9f228fe6be4556be0d8632ef3d9e7d0f3c27b74a"
+metafile = true
+
+[[files]]
 file = "mods/camera-utils.pw.toml"
 hash = "055d69e9a0a5607b59b7340d606002b0580ed28b72aacce0ca646dea4a870c6a"
 metafile = true
@@ -643,7 +653,7 @@ metafile = true
 
 [[files]]
 file = "mods/creativecore.pw.toml"
-hash = "7112f698dda447ec4f1c6474683308487d51e93ec8dbe26c7f81d0fdd4c9fdb0"
+hash = "31535a06bf76553e83bd982eb3df9158b815cb7d0207a3fc719758d020d683b7"
 metafile = true
 
 [[files]]
@@ -683,7 +693,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "0e28ba15ba1769864a4af0b2f7ffaa3c90017b49633bef2a843b14a46e9a791d"
+hash = "446f8047ee9168b65fe9d4600f82cb915c7aa0d0f049a344177ba340a5b93a8a"
 metafile = true
 
 [[files]]
