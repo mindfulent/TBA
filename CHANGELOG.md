@@ -5,12 +5,12 @@ All notable changes to MCC will be documented in this file.
 ## [0.9.46] - 2025-12-31
 
 ### Added
-- **AmbientSounds** v6.3.1 - Dynamic ambient soundscapes based on biome, weather, and time of day (Modrinth-only: CF version 6.1.3 doesn't support 1.21.1)
+- **AmbientSounds** v6.3.1 - Dynamic ambient soundscapes based on biome, weather, and time of day
 - **Brewin' And Chewin'** v4.4.1 - Brewing addon for Farmer's Delight with kegs and alcoholic beverages (Modrinth-only: external Fabric port, not on CurseForge)
 
 ### Notes
 - Mod count: 119 total
-- These mods will be bundled as overrides in CurseForge exports until CF-compatible versions are available
+- Brewin' And Chewin' bundled as override in CurseForge exports (not available on CF)
 
 ## [0.9.45] - 2025-12-31
 

@@ -184,7 +184,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | Mod | Author(s) | Version | Released | Donate |
 |-----|-----------|---------|----------|--------|
 | [Sound Physics Remastered](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered) | henkelmax | 1.4.10 | Nov 2024 | - |
-| [AmbientSounds](https://modrinth.com/mod/ambientsounds) | CreativeMD | 6.3.1 | Dec 2025 | [Patreon](https://www.patreon.com/creativemd) |
+| [AmbientSounds](https://www.curseforge.com/minecraft/mc-mods/ambientsounds) | CreativeMD | 6.3.1 | Dec 2025 | [Patreon](https://www.patreon.com/creativemd) |
 | [Subtle Effects](https://www.curseforge.com/minecraft/mc-mods/subtle-effects) | Fzzy | 1.13.2 | Dec 2025 | - |
 
 ## Camera & Animation
