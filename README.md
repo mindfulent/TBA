@@ -146,12 +146,12 @@ Place the downloaded `DistantHorizons.sqlite` file in your Prism Launcher instan
 
 **Windows** (Win+R, paste, replace `{username}` with your Windows username):
 ```
-C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCC-0.9.27\minecraft
+C:\Users\{username}\AppData\Roaming\PrismLauncher\instances\MCC\minecraft
 ```
 
 **macOS** (Finder → Go → Go to Folder, replace `{username}`):
 ```
-/Users/{username}/Library/Application Support/PrismLauncher/instances/MCC-0.9.27/minecraft
+/Users/{username}/Library/Application Support/PrismLauncher/instances/MCC/minecraft
 ```
 
 **Alternative:** In Prism Launcher, right-click the instance → "Folder" → drop the file there.
@@ -203,7 +203,8 @@ MCC/
 │   └── iris.properties       # Shader settings (BSL enabled)
 ├── shaderpacks/              # Bundled shaders
 │   ├── BSL_v10.0.zip
-│   └── ComplementaryReimagined_r5.6.1.zip
+│   ├── ComplementaryReimagined_r5.6.1.zip
+│   └── Solas_Shader_v3.1c.zip
 ├── journeymap/config/6.0/    # JourneyMap config (minimap hidden)
 └── docs/
     ├── CREDITS.md            # Mod creators and donation links
@@ -313,3 +314,4 @@ This modpack configuration is open source. Individual mods retain their respecti
 - [Modrinth](https://modrinth.com/) - Mod hosting platform
 - [BSL Shaders](https://modrinth.com/shader/bsl-shaders) - Default shader
 - [Complementary Shaders](https://modrinth.com/shader/complementary-reimagined) - Alternative shader
+- [Solas Shader](https://www.curseforge.com/minecraft/shaders/solas-shader) - Fantasy stylized shader
