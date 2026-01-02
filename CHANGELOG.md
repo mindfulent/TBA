@@ -2,6 +2,15 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.53] - 2026-01-01
+
+### Fixed
+- **Advanced Backups** - Fixed wrong JAR variant: was using Spigot version (non-functional on Fabric) instead of Fabric version. This may have caused item-related crashes including the Immersive Paintings hotbar crash.
+
+### Notes
+- Mod count: 123 total (120 client, 3 server-only)
+- Critical fix: Backups now actually work on the server
+
 ## [0.9.52] - 2025-12-31
 
 ### Removed
