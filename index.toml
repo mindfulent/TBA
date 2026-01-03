@@ -497,6 +497,10 @@ file = "minescript/config.txt"
 hash = "4dcf7855abb3439f00d76ba676653eeb01ffc529babc0a2bdd1bb37d144a6833"
 
 [[files]]
+file = "modified_stats_sonar6ix.json"
+hash = "605ef244f96db8bc88c65d08644243e4ae980e2b08b40e7963118051c0135757"
+
+[[files]]
 file = "modpack-info.json"
 hash = "9e539863bea59d041fa9b6109bf750c21f6e22357fe0e9eeb4fcb96afd73e3e6"
 
@@ -811,11 +815,6 @@ hash = "e969c54f8b34ce0c793672e47ded8de32b40a71f4e9a73ca0947c5ce6390d63f"
 metafile = true
 
 [[files]]
-file = "mods/just-zoom.pw.toml"
-hash = "9b854e39b03b0b813b1ebb8834297ef39ae79195799e00a3b96c50cfa5ea9c38"
-metafile = true
-
-[[files]]
 file = "mods/konkrete-fabric.pw.toml"
 hash = "c51a2b21847608f50773378886e3503e4ae22b55b8a69cc9bd9016f089f84995"
 metafile = true
@@ -1112,7 +1111,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "a9ed7dac7f9d1bcde22a65a200c58e1de1c9933b6e567ef8dbc1ad71566ef6fb"
+hash = "9df959fad0598d92a7c1aee718731e9d23b27e93d201a2edbaac4d14c86c5e46"
 
 [[files]]
 file = "server.properties"
@@ -1133,3 +1132,11 @@ hash = "188d2b058210d3e4df1f98c770df3d7022fba930f7c0cfc6ca4490efb0bc2f88"
 [[files]]
 file = "shaderpacks/photon_v1.2a.zip"
 hash = "a7134a10138f6e5fe523dafa23bd266ba2e53621ac65a5e23294fe9a125b9d73"
+
+[[files]]
+file = "temp_modpack_info.json"
+hash = "1c7980231bba2a5c381eab7fc27c480a727929a4b43595a3b792aa7ec846fc70"
+
+[[files]]
+file = "temp_stats_f36cf7dc-9742-45ba-862d-0597d523fda1.json"
+hash = "ec2fcef186414e0f37e4ea7fbbd401f849993f43bec618b83d1538c51ac59576"

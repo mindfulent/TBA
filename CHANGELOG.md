@@ -2,6 +2,20 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.58] - 2026-01-03
+
+### Removed
+- **Just Zoom** - Removed due to conflicts with other zoom utilities
+
+### Changed
+- **Keybinds**:
+  - Camera Utils Zoom: Unbound → Z (replaces Just Zoom)
+  - Toggle Cinematic Camera: Unbound → F8
+
+### Notes
+- Mod count: 121 total (118 client, 3 server-only)
+- Camera keys: F5 (perspective), F6 (stable cam), F8 (cinematic), Z (zoom)
+
 ## [0.9.57] - 2026-01-03
 
 ### Changed

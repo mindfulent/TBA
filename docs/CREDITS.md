@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** December 31, 2025
-**Modpack Version:** 0.9.52 (123 mods total — 120 client, 3 server-only)
+**Last Updated:** January 3, 2026
+**Modpack Version:** 0.9.58 (121 mods total — 118 client, 3 server-only)
 
 ---
 
@@ -132,7 +132,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [AppleSkin](https://modrinth.com/mod/appleskin) | squeek502 | 3.0.6 | Nov 1, 2024 | [GitHub Sponsors](https://github.com/sponsors/squeek502) |
 | [Mouse Tweaks](https://modrinth.com/mod/mouse-tweaks) | YaLTeR | 2.26 | Jun 17, 2024 | [GitHub Sponsors](https://github.com/sponsors/YaLTeR) |
 | [Controlling](https://modrinth.com/mod/controlling) | jaredlll08 | 19.0.5 | Mar 30, 2025 | - |
-| [Just Zoom](https://modrinth.com/mod/just-zoom) | Keksuccino | 2.1.0 | Apr 25, 2025 | - |
 | [ItemSwapper](https://modrinth.com/plugin/itemswapper) | tr7zw | 0.8.5 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
 | [Gamemode Unrestrictor](https://modrinth.com/mod/gamemode-unrestrictor) | Attie | 1.0.2 | Dec 2025 | - |
 | [InvMove](https://www.curseforge.com/minecraft/mc-mods/invmove) | PieKing1215 | 0.9.2 | Dec 2025 | - |
@@ -234,7 +233,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 - **MehVahdJukaar** - Moonlight Lib, Supplementaries, Universal Sawmill, Farmer's Delight contributions
 - **Fuzs** - Puzzles Lib, Armor Statues, Forge Config API Port (multi-loader infrastructure)
 - **BlayTheNinth** - Balm, Little Joys, Waystones, Cooking for Blockheads (12+ years of modding)
-- **Keksuccino** - Konkrete, Just Zoom, FancyMenu (library and utility mods)
+- **Keksuccino** - Konkrete, FancyMenu (library and utility mods)
 - **Apollo** - Lithostitched, Reintegrated series (worldgen compatibility)
 
 ---
