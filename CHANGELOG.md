@@ -2,6 +2,18 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.57] - 2026-01-03
+
+### Changed
+- **Audio Defaults** - Adjusted default sound levels for new players:
+  - Weather: 100% → 50%
+  - Hostile mobs: 100% → 0%
+  - Friendly mobs: 100% → 0%
+  - Ambient: 100% → 25%
+
+### Notes
+- Mod count: 122 total (119 client, 3 server-only)
+
 ## [0.9.56] - 2026-01-03
 
 ### Changed
