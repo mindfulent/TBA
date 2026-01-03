@@ -1028,17 +1028,134 @@ NON_CRITICAL_FOLDERS = [
     "bluemap",  # BlueMap tiles - can regenerate
 ]
 
+# World folder mappings (remote, local)
+WORLD_FOLDERS = [
+    ("/world", "world-production"),
+    ("/world_nether", "world-production_nether"),
+    ("/world_the_end", "world-production_the_end"),
+]
+
+
+def get_directory_size(path):
+    """Get total size of a directory in bytes."""
+    total = 0
+    for dirpath, dirnames, filenames in os.walk(path):
+        for filename in filenames:
+            filepath = os.path.join(dirpath, filename)
+            try:
+                total += os.path.getsize(filepath)
+            except (OSError, IOError):
+                pass
+    return total
+
+
+def format_size(size_bytes):
+    """Format bytes as human-readable size."""
+    if size_bytes > 1024 * 1024 * 1024:
+        return f"{size_bytes / (1024*1024*1024):.2f} GB"
+    elif size_bytes > 1024 * 1024:
+        return f"{size_bytes / (1024*1024):.1f} MB"
+    elif size_bytes > 1024:
+        return f"{size_bytes / 1024:.1f} KB"
+    else:
+        return f"{size_bytes} B"
+
+
+def world_sync_status():
+    """Show status of local world backups."""
+    from datetime import datetime
+
+    console.print(Panel(
+        "[bold]Local World Backup Status[/bold]\n\n"
+        "Shows when world data was last downloaded from production.",
+        title="[cyan]World Sync Status[/cyan]",
+        border_style="cyan"
+    ))
+
+    local_base = LOCALSERVER_DIR
+
+    if not os.path.exists(local_base):
+        console.print(f"\n[red]LocalServer directory not found![/red]")
+        console.print(f"[yellow]Expected: {local_base}[/yellow]")
+        return
+
+    console.print()
+
+    table = Table(title="Local World Backups", box=box.ROUNDED)
+    table.add_column("World", style="cyan")
+    table.add_column("Status", style="white")
+    table.add_column("Size", style="yellow", justify="right")
+    table.add_column("Last Modified", style="green")
+    table.add_column("Age", style="dim")
+
+    any_exists = False
+    oldest_time = None
+
+    # Display name mapping
+    world_names = {
+        "/world": "Overworld",
+        "/world_nether": "Nether",
+        "/world_the_end": "The End",
+    }
+
+    for remote_path, local_name in WORLD_FOLDERS:
+        local_path = os.path.join(local_base, local_name)
+        world_display = world_names.get(remote_path, remote_path)
+
+        if os.path.exists(local_path):
+            any_exists = True
+            # Get directory stats
+            size = get_directory_size(local_path)
+            size_str = format_size(size)
+
+            # Get most recent modification time from any file in the directory
+            latest_mtime = 0
+            for dirpath, dirnames, filenames in os.walk(local_path):
+                for filename in filenames:
+                    filepath = os.path.join(dirpath, filename)
+                    try:
+                        mtime = os.path.getmtime(filepath)
+                        if mtime > latest_mtime:
+                            latest_mtime = mtime
+                    except (OSError, IOError):
+                        pass
+
+            if latest_mtime > 0:
+                dt = datetime.fromtimestamp(latest_mtime)
+                date_str = dt.strftime("%Y-%m-%d %H:%M")
+
+                # Calculate age
+                age_seconds = (datetime.now() - dt).total_seconds()
+                if age_seconds < 3600:
+                    age_str = f"{int(age_seconds / 60)} min ago"
+                elif age_seconds < 86400:
+                    age_str = f"{int(age_seconds / 3600)} hours ago"
+                else:
+                    age_str = f"{int(age_seconds / 86400)} days ago"
+
+                if oldest_time is None or latest_mtime < oldest_time:
+                    oldest_time = latest_mtime
+            else:
+                date_str = "Unknown"
+                age_str = ""
+
+            table.add_row(world_display, "[green]✓ Downloaded[/green]", size_str, date_str, age_str)
+        else:
+            table.add_row(world_display, "[red]✗ Not found[/red]", "-", "-", "-")
+
+    console.print(table)
+
+    if any_exists and oldest_time:
+        dt = datetime.fromtimestamp(oldest_time)
+        console.print(f"\n[dim]Backup location: {local_base}[/dim]")
+    elif not any_exists:
+        console.print("\n[yellow]No local backups found. Run 'Download World' to create one.[/yellow]")
+
 
 def world_download(backup_existing=True, auto_confirm=False):
     """Download world data from production server to LocalServer."""
     from rich.prompt import Confirm
     import shutil
-
-    WORLD_FOLDERS = [
-        ("/world", "world-production"),
-        ("/world_nether", "world-production_nether"),
-        ("/world_the_end", "world-production_the_end"),
-    ]
 
     local_base = LOCALSERVER_DIR
 
@@ -1568,47 +1685,52 @@ def backup_menu():
 
         # Primary strategy - World Sync
         table.add_row("", "[bold green]World Sync (Primary)[/bold green]")
-        table.add_row("1", "Download World (Production → LocalServer)")
-        table.add_row("2", "[yellow]Upload World (LocalServer → Production)[/yellow]")
+        table.add_row("1", "View Local Backup Status")
+        table.add_row("2", "Download World (Production → LocalServer)")
+        table.add_row("3", "[yellow]Upload World (LocalServer → Production)[/yellow]")
         table.add_row("", "")
 
         # Secondary strategy - Advanced Backups
         table.add_row("", "[bold blue]Advanced Backups (Secondary)[/bold blue]")
-        table.add_row("3", "List Server Backups")
-        table.add_row("4", "Create Server Backup")
-        table.add_row("5", "Create Snapshot (immune to purge)")
-        table.add_row("6", "[yellow]Restore from Server Backup[/yellow]")
+        table.add_row("4", "List Server Backups")
+        table.add_row("5", "Create Server Backup")
+        table.add_row("6", "Create Snapshot (immune to purge)")
+        table.add_row("7", "[yellow]Restore from Server Backup[/yellow]")
         table.add_row("", "")
         table.add_row("b", "← Back to Main Menu")
 
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "b"], default="b")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "b"], default="b")
 
         if choice == "1":
-            world_download(auto_confirm=False)
+            world_sync_status()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "2":
-            world_upload(auto_confirm=False)
+            world_download(auto_confirm=False)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "3":
-            backup_list()
+            world_upload(auto_confirm=False)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "4":
+            backup_list()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "5":
             comment = Prompt.ask("Backup comment (optional)", default="")
             backup_create(comment)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
-        elif choice == "5":
+        elif choice == "6":
             comment = Prompt.ask("Snapshot comment (optional)", default="")
             backup_snapshot(comment)
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
-        elif choice == "6":
+        elif choice == "7":
             backup_restore()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
@@ -2035,6 +2157,8 @@ if __name__ == "__main__":
                     backup_restore(backup_index, auto_confirm)
                 else:
                     console.print(f"[red]Unknown backup command: {subcmd}[/red]")
+        elif command == "world-status":
+            world_sync_status()
         elif command == "world-download":
             # Parse args: world-download [--no-backup] [-y]
             args = sys.argv[2:] if len(sys.argv) > 2 else []
@@ -2062,6 +2186,7 @@ if __name__ == "__main__":
             console.print("  python server-config.py list         # List production server files")
             console.print("")
             console.print("[yellow]World Sync (Primary Backup):[/yellow]")
+            console.print("  python server-config.py world-status                       # View local backup status")
             console.print("  python server-config.py world-download [--no-backup] [-y]  # Download production → LocalServer")
             console.print("  python server-config.py world-upload [-y]                  # Upload LocalServer → production")
             console.print("")

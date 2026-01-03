@@ -36,6 +36,20 @@ The recommended backup strategy uses `world-download` and `world-upload` command
 3. **Fast restore** - Two-phase upload minimizes server downtime
 4. **Testable** - Can run LocalServer with production world before restoring
 
+### Check Backup Status
+
+```bash
+cd MCC
+python server-config.py world-status
+```
+
+Shows the status of local world backups including:
+- Which dimensions exist (Overworld, Nether, The End)
+- Size of each backup
+- Last modified time and age
+
+Use this to quickly check when you last downloaded the production world.
+
 ### Download Production World
 
 ```bash

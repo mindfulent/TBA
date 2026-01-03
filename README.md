@@ -248,6 +248,7 @@ python server-config.py restart                     # Restart server
 python server-config.py cmd "say Hello"             # Send console command
 
 # World Sync (primary backup strategy)
+python server-config.py world-status                # View local backup status
 python server-config.py world-download              # Download production → LocalServer
 python server-config.py world-upload                # Upload LocalServer → production
 
