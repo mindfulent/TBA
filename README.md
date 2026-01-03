@@ -2,11 +2,11 @@
   <img src="mcc_com.png" alt="MCC Logo" width="100%">
 </p>
 
-# MCC (MinecraftCollege.com) v0.9.58
+# MCC (MinecraftCollege.com) v0.9.59
 
 A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**121 mods total** (118 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
+**119 mods total** (116 client-side, 3 server-only) — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -78,7 +78,6 @@ A curated Fabric 1.21.1 modpack for the Minecraft College CMP, built with [Packw
 - **Controlling** - Searchable keybinds with conflict detection
 - **ItemSwapper** - Quick item palette for swapping similar blocks
 - **Gamemode Unrestrictor** - Use F3+F4 gamemode menu even when cheats are disabled
-- **Creative Block Replacer** - Replace blocks in creative mode by clicking with replacement block
 - **InvMove** - Move while inventory is open
 - **Mod Menu** - Browse and configure mods from the title screen
 - **Carry On** - Pick up and carry blocks, chests, and entities

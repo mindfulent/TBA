@@ -2,6 +2,15 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.59] - 2026-01-03
+
+### Removed
+- **Creative Block Replacer** - Removed
+- **Collective** - No longer needed (was Creative Block Replacer dependency)
+
+### Notes
+- Mod count: 119 total (116 client, 3 server-only)
+
 ## [0.9.58] - 2026-01-03
 
 ### Removed

@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** January 3, 2026
-**Modpack Version:** 0.9.58 (121 mods total — 118 client, 3 server-only)
+**Modpack Version:** 0.9.59 (119 mods total — 116 client, 3 server-only)
 
 ---
 
@@ -58,7 +58,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [YetAnotherConfigLib](https://www.curseforge.com/minecraft/mc-mods/yacl) | isXander | 3.8.1 | Dec 2025 | [Ko-fi](https://ko-fi.com/isxander) |
 | [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) | KosmX | 2.0.4 | Dec 2025 | - |
 | [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) | Tslat, Gecko, AzureDoom | 4.8.2 | Dec 2025 | [Ko-fi](https://ko-fi.com/geckolib) |
-| [Collective](https://www.curseforge.com/minecraft/mc-mods/collective) | Serilum | 8.13 | Dec 2025 | - |
 
 ## Map Mods
 
@@ -141,7 +140,6 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Actually Harvest](https://www.curseforge.com/minecraft/mc-mods/actually-harvest) | MorenPlue | 1.1.7.0 | Dec 2025 | - |
 | [Universal Bone Meal](https://www.curseforge.com/minecraft/mc-mods/universal-bone-meal) | Fuzss | 21.1.0 | Oct 2024 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Better Climbing](https://www.curseforge.com/minecraft/mc-mods/better-climbing) | MoriyaShiine | 3 | Jun 2023 | - |
-| [Creative Block Replacer](https://www.curseforge.com/minecraft/mc-mods/creative-block-replacer) | Serilum | 2.6 | Dec 2025 | - |
 
 ## Multiplayer Mods
 
