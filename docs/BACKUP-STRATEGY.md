@@ -68,7 +68,7 @@ This will:
 - `-y` or `--yes` - Skip confirmation prompts
 - `--no-backup` - Skip backing up existing local world
 
-**Storage location:** `../LocalServer/world-production/` (and `_nether`, `_the_end`)
+**Storage location:** `../LocalServer/world-production/` (includes all dimensions)
 
 ### Local Testing with Backup Preservation
 
@@ -76,7 +76,9 @@ When you run LocalServer in production mode, **the backup is preserved**:
 
 ```
 world-production/  ← Pristine backup (never modified by LocalServer)
-world-local/       ← Working copy for local testing
+world-local/       ← Working copy for Production mode testing
+world-fresh/       ← Fresh World mode (clean slate, all mods)
+world-vanilla/     ← Vanilla Debug mode (Fabric only)
 ```
 
 **Workflow:**
@@ -86,6 +88,10 @@ world-local/       ← Working copy for local testing
 4. To reset: `reset-local` (LocalServer) → Re-copies from backup
 
 This means you can break things locally, then reset to the clean backup state anytime.
+
+**Other LocalServer modes** (for testing without production data):
+- `mode fresh` - New world with all mods (test mod initialization)
+- `mode vanilla` - New world with Fabric only (isolate mod issues)
 
 ### Upload World to Production
 
@@ -226,11 +232,14 @@ If everything is lost:
 
 | Data | Production (Bloom.host) | Local Backup |
 |------|------------------------|--------------|
-| Overworld | `/world/` | `../LocalServer/world-production/` |
-| Nether | `/world_nether/` | `../LocalServer/world-production_nether/` |
-| The End | `/world_the_end/` | `../LocalServer/world-production_the_end/` |
+| World (all dimensions) | `/world/` | `../LocalServer/world-production/` |
+| └ Overworld | `/world/region/` | `../LocalServer/world-production/region/` |
+| └ Nether | `/world/DIM-1/` | `../LocalServer/world-production/DIM-1/` |
+| └ The End | `/world/DIM1/` | `../LocalServer/world-production/DIM1/` |
 | Advanced Backups | `/backups/world/` | N/A (on-server only) |
 | Mods/Configs | GitHub releases | MCC repo |
+
+**Note:** Vanilla Minecraft stores all dimensions inside the main world folder (DIM-1 = Nether, DIM1 = The End).
 
 ## Non-Critical Files
 
