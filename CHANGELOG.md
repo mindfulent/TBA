@@ -2,6 +2,29 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.56] - 2026-01-03
+
+### Changed
+- **Keybinds** - Resolved multiple keybind conflicts:
+  - Create Waypoint (JourneyMap): B → K
+  - JourneyMap fullscreen pan (N/S/E/W): Arrow keys → Unmapped
+  - Disable Shaders (Iris): K → F12
+  - Third Person Camera 1 (Camera Utils): F6 → Unmapped
+  - Third Person Camera 2 (Camera Utils): F7 → Unmapped
+  - Camera Utils Zoom: Z → Unmapped (duplicate of Just Zoom)
+  - Toggle Firstperson (First-person Model): F6 → Unmapped
+  - Open Backpack (Traveler's Backpack): Stays on B
+  - Cycle Tool (Traveler's Backpack): Z → Unmapped
+
+### Notes
+- Mod count: 122 total (119 client, 3 server-only)
+- Z: Just Zoom only
+- F6: Stable Cam only
+- F7: Disable Voice Chat only
+- F11: Toggle Fullscreen (vanilla)
+- F12: Disable Shaders (Iris)
+- K: Create Waypoint (JourneyMap)
+
 ## [0.9.55] - 2026-01-03
 
 ### Changed
