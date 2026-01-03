@@ -1081,75 +1081,64 @@ def world_sync_status():
 
     console.print()
 
-    table = Table(title="Local World Backups", box=box.ROUNDED)
-    table.add_column("World", style="cyan")
-    table.add_column("Status", style="white")
-    table.add_column("Size", style="yellow", justify="right")
-    table.add_column("Last Modified", style="green")
-    table.add_column("Age", style="dim")
+    # Check main world folder (contains all dimensions in vanilla structure)
+    world_path = os.path.join(local_base, "world-production")
 
-    any_exists = False
-    oldest_time = None
+    if os.path.exists(world_path):
+        # Get directory stats
+        size = get_directory_size(world_path)
+        size_str = format_size(size)
 
-    # Display name mapping
-    world_names = {
-        "/world": "Overworld",
-        "/world_nether": "Nether",
-        "/world_the_end": "The End",
-    }
+        # Get most recent modification time
+        latest_mtime = 0
+        for dirpath, dirnames, filenames in os.walk(world_path):
+            for filename in filenames:
+                filepath = os.path.join(dirpath, filename)
+                try:
+                    mtime = os.path.getmtime(filepath)
+                    if mtime > latest_mtime:
+                        latest_mtime = mtime
+                except (OSError, IOError):
+                    pass
 
-    for remote_path, local_name in WORLD_FOLDERS:
-        local_path = os.path.join(local_base, local_name)
-        world_display = world_names.get(remote_path, remote_path)
+        if latest_mtime > 0:
+            dt = datetime.fromtimestamp(latest_mtime)
+            date_str = dt.strftime("%Y-%m-%d %H:%M")
 
-        if os.path.exists(local_path):
-            any_exists = True
-            # Get directory stats
-            size = get_directory_size(local_path)
-            size_str = format_size(size)
-
-            # Get most recent modification time from any file in the directory
-            latest_mtime = 0
-            for dirpath, dirnames, filenames in os.walk(local_path):
-                for filename in filenames:
-                    filepath = os.path.join(dirpath, filename)
-                    try:
-                        mtime = os.path.getmtime(filepath)
-                        if mtime > latest_mtime:
-                            latest_mtime = mtime
-                    except (OSError, IOError):
-                        pass
-
-            if latest_mtime > 0:
-                dt = datetime.fromtimestamp(latest_mtime)
-                date_str = dt.strftime("%Y-%m-%d %H:%M")
-
-                # Calculate age
-                age_seconds = (datetime.now() - dt).total_seconds()
-                if age_seconds < 3600:
-                    age_str = f"{int(age_seconds / 60)} min ago"
-                elif age_seconds < 86400:
-                    age_str = f"{int(age_seconds / 3600)} hours ago"
-                else:
-                    age_str = f"{int(age_seconds / 86400)} days ago"
-
-                if oldest_time is None or latest_mtime < oldest_time:
-                    oldest_time = latest_mtime
+            # Calculate age
+            age_seconds = (datetime.now() - dt).total_seconds()
+            if age_seconds < 3600:
+                age_str = f"{int(age_seconds / 60)} min ago"
+            elif age_seconds < 86400:
+                age_str = f"{int(age_seconds / 3600)} hours ago"
             else:
-                date_str = "Unknown"
-                age_str = ""
-
-            table.add_row(world_display, "[green]✓ Downloaded[/green]", size_str, date_str, age_str)
+                age_str = f"{int(age_seconds / 86400)} days ago"
         else:
-            table.add_row(world_display, "[red]✗ Not found[/red]", "-", "-", "-")
+            date_str = "Unknown"
+            age_str = ""
 
-    console.print(table)
+        # Check for dimensions inside world folder
+        dimensions = ["Overworld"]
+        if os.path.exists(os.path.join(world_path, "DIM-1")):
+            dimensions.append("Nether")
+        if os.path.exists(os.path.join(world_path, "DIM1")):
+            dimensions.append("The End")
 
-    if any_exists and oldest_time:
-        dt = datetime.fromtimestamp(oldest_time)
-        console.print(f"\n[dim]Backup location: {local_base}[/dim]")
-    elif not any_exists:
-        console.print("\n[yellow]No local backups found. Run 'Download World' to create one.[/yellow]")
+        # Display table
+        table = Table(title="Local World Backup", box=box.ROUNDED)
+        table.add_column("Status", style="white")
+        table.add_column("Size", style="yellow", justify="right")
+        table.add_column("Last Modified", style="green")
+        table.add_column("Age", style="dim")
+
+        table.add_row("[green]✓ Downloaded[/green]", size_str, date_str, age_str)
+
+        console.print(table)
+        console.print(f"\n[green]✓ Dimensions:[/green] {', '.join(dimensions)}")
+        console.print(f"[dim]Backup location: {world_path}[/dim]")
+    else:
+        console.print("[yellow]No local backup found.[/yellow]")
+        console.print("[dim]Run 'Download World' to create one.[/dim]")
 
 
 def world_download(backup_existing=True, auto_confirm=False):
@@ -1193,6 +1182,7 @@ def world_download(backup_existing=True, auto_confirm=False):
     folder_info = []
     total_files = 0
     total_size = 0
+    dimensions_in_world = []  # Track dimensions found inside /world
 
     for remote_path, local_name in WORLD_FOLDERS:
         file_count, size = get_remote_directory_info(sftp, remote_path)
@@ -1205,8 +1195,24 @@ def world_download(backup_existing=True, auto_confirm=False):
             })
             total_files += file_count
             total_size += size
+
+            # Check for dimensions inside main world folder (vanilla structure)
+            if remote_path == "/world":
+                try:
+                    world_contents = sftp.listdir("/world")
+                    if "DIM-1" in world_contents:
+                        dimensions_in_world.append("Nether")
+                    if "DIM1" in world_contents:
+                        dimensions_in_world.append("The End")
+                except:
+                    pass
         else:
-            console.print(f"[dim]  {remote_path} (not found, skipping)[/dim]")
+            # Only show "not found" for separate dimension folders if they're expected
+            # (i.e., if we didn't find them inside /world)
+            if remote_path in ["/world_nether", "/world_the_end"]:
+                pass  # Will report dimensions from /world instead
+            else:
+                console.print(f"[dim]  {remote_path} (not found, skipping)[/dim]")
 
     if not folder_info:
         console.print("[red]No world folders found on remote server![/red]")
@@ -1230,6 +1236,11 @@ def world_download(backup_existing=True, auto_confirm=False):
 
     console.print()
     console.print(table)
+
+    # Show dimensions found inside main world folder
+    if dimensions_in_world:
+        dims_str = ", ".join(dimensions_in_world)
+        console.print(f"\n[green]✓ Dimensions included in /world:[/green] {dims_str}")
 
     # Check for local server running
     session_lock = os.path.join(local_base, "world-production", "session.lock")
