@@ -461,6 +461,10 @@ file = "config/iris.properties"
 hash = "99ac8a2dfd17f7b4ed038c02255a279296ecad90e48a5b7196ac4f73260d57ee"
 
 [[files]]
+file = "config/litematica.json"
+hash = "2713ff4ccebedfb83d66ca559287b6aba3fef07bb1e751cf683ad20985678ae4"
+
+[[files]]
 file = "config/replaymod.json"
 hash = "b9f0990f980d4af317ff4ff5a79ed117515aba7ad3ddeeebd401c06dc20875b9"
 
@@ -1108,7 +1112,7 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "c2823d1766e4494102b37ccade086a4768e73844b709bb88e5d46bcfa3e9d9b2"
+hash = "cc665c770c518fc1d1f7b122f03b18eecd40d833d668265f0d364e731e121315"
 
 [[files]]
 file = "server.properties"

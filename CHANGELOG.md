@@ -2,6 +2,16 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.55] - 2026-01-03
+
+### Changed
+- **Keybinds** - Resolved M key conflict between minimap and Litematica:
+  - Litematica main menu: M → L
+  - Advancements: L → Unmapped
+
+### Notes
+- Mod count: 122 total (119 client, 3 server-only)
+
 ## [0.9.54] - 2026-01-01
 
 ### Removed
