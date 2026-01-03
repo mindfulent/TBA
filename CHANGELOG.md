@@ -2,6 +2,18 @@
 
 All notable changes to MCC will be documented in this file.
 
+## [0.9.60] - 2026-01-03
+
+### Added
+- **Accurate Block Placement Reborn** v1.3.9 - Place blocks in the direction you're facing
+- **BetterF3** v11.0.3 - Enhanced F3 debug screen with customizable modules
+- **Entity Culling** v1.9.5 - Performance: skip rendering off-screen entities
+- **Genshin Instruments** v5.0.1 - Playable musical instruments (Lyre, Zither, etc.)
+- **Ledger** v1.3.5 - Server-side block/entity logging for grief rollback (ops only)
+
+### Notes
+- Mod count: 124 total (121 client, 3 server-only)
+
 ## [0.9.59] - 2026-01-03
 
 ### Removed

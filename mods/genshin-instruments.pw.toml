@@ -1,0 +1,13 @@
+name = "Genshin Instruments"
+filename = "genshinstrument-fabric-1.21-1.21.1-5.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "11916ffedd89bfae5c5b95e9b31fc09acee3c254"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6421606
+project-id = 848761

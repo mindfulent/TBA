@@ -505,6 +505,11 @@ file = "modpack-info.json"
 hash = "9e539863bea59d041fa9b6109bf750c21f6e22357fe0e9eeb4fcb96afd73e3e6"
 
 [[files]]
+file = "mods/accurate-block-placement-reborn.pw.toml"
+hash = "735f625ebad611e66c9e9c8d8c4bda7888b080d1f12cb1da95db4e91157fa62f"
+metafile = true
+
+[[files]]
 file = "mods/actually-harvest.pw.toml"
 hash = "b2fb455da3b5a7d722acf325c1eef7627fc77081585a8716a4fb7029f0af193d"
 metafile = true
@@ -587,6 +592,11 @@ metafile = true
 [[files]]
 file = "mods/better-third-person.pw.toml"
 hash = "b66725db066c3e4fd9ef0cd579aab4deb7d1175b44e17ddd534f9ecb5bc6355f"
+metafile = true
+
+[[files]]
+file = "mods/betterf3.pw.toml"
+hash = "5fe7e26e9534cf3d7829e8c4937c7b700d2084b6345aed901c1c3de9a80f49fa"
 metafile = true
 
 [[files]]
@@ -690,6 +700,11 @@ hash = "c87624b6bb030922148c12c8aad7e3e415ca3f26d1f4355806a31b77aa3b1c42"
 metafile = true
 
 [[files]]
+file = "mods/entityculling.pw.toml"
+hash = "068520363709db9632207ee223dcdc9dc3a33b295806b07b0f4e6b0556b9009a"
+metafile = true
+
+[[files]]
 file = "mods/excessive-building.pw.toml"
 hash = "6d6eb5f612975125b74850e8bafda5d8d521c543e9f749d9a015d830ba38c123"
 metafile = true
@@ -765,6 +780,11 @@ hash = "eba84c0fa4bdcc4ebca816482af78ab50cba8362591d4354b490da8f563bbe89"
 metafile = true
 
 [[files]]
+file = "mods/genshin-instruments.pw.toml"
+hash = "178c2e785063de9598e849624be7ccac1ca12645d4274cba25d5ab9ec528ebd0"
+metafile = true
+
+[[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "00eaafc399810122b7522b172e12aec41f8d8b787192a78362f77e1274c21451"
 metafile = true
@@ -812,6 +832,11 @@ metafile = true
 [[files]]
 file = "mods/krypton.pw.toml"
 hash = "e8775813abb0b1d5e69d8345a3bdb83174510b5d6a2b943c4818734e00090cc1"
+metafile = true
+
+[[files]]
+file = "mods/ledger.pw.toml"
+hash = "c868004214230d14b80ae2b4f4c3bdd12481947625fc5f01f1aa1884be36b8c7"
 metafile = true
 
 [[files]]
