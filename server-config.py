@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """
 MCC Server Manager
-Bloom.host Server Control & mrpack4server Deployment
+Bloom.host Server Control & Modpack Deployment
 
 Usage:
-    python server-config.py          # Interactive menu
-    python server-config.py status   # Check server status
-    python server-config.py start    # Start server
-    python server-config.py stop     # Stop server
-    python server-config.py deploy   # Deploy mrpack4server + local.mrpack
+    python server-config.py              # Interactive menu
+    python server-config.py status       # Check server status
+    python server-config.py update-pack <version>  # Update to GitHub release
+    python server-config.py restart      # Restart server
 """
 
 import paramiko
@@ -61,9 +60,8 @@ PTERODACTYL_SERVER_ID = os.environ.get("PTERODACTYL_SERVER_ID", "")
 
 # Local paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-MRPACK_FILE = os.path.join(SCRIPT_DIR, "local.mrpack")
-MRPACK4SERVER_JAR = os.path.join(SCRIPT_DIR, "mrpack4server-0.5.0.jar")
 CONFIG_DIR = os.path.join(SCRIPT_DIR, "config")
+LOCALSERVER_DIR = os.path.join(SCRIPT_DIR, "..", "LocalServer")
 
 
 class RichProgressTracker:
@@ -317,6 +315,101 @@ def upload_directory(local_dir, remote_dir):
     except Exception as e:
         console.print(f"\n[red]✗ Error: {e}[/red]")
         return False
+
+
+def get_remote_directory_info(sftp, path):
+    """Calculate total size and file count of a remote directory recursively."""
+    total_size = 0
+    file_count = 0
+
+    def scan_recursive(remote_path):
+        nonlocal total_size, file_count
+        try:
+            for item in sftp.listdir_attr(remote_path):
+                item_path = f"{remote_path}/{item.filename}"
+                if item.st_mode & 0o40000:
+                    scan_recursive(item_path)
+                else:
+                    total_size += item.st_size
+                    file_count += 1
+        except IOError:
+            pass
+
+    try:
+        sftp.stat(path)
+        scan_recursive(path)
+    except IOError:
+        pass
+
+    return file_count, total_size
+
+
+def download_directory_recursive(sftp, remote_path, local_path, tracker, base_path=None):
+    """Download a remote directory recursively to local path with progress tracking."""
+    if base_path is None:
+        base_path = local_path
+
+    os.makedirs(local_path, exist_ok=True)
+
+    try:
+        for item in sftp.listdir_attr(remote_path):
+            remote_item = f"{remote_path}/{item.filename}"
+            local_item = os.path.join(local_path, item.filename)
+
+            if item.st_mode & 0o40000:
+                download_directory_recursive(sftp, remote_item, local_item, tracker, base_path)
+            else:
+                try:
+                    rel_path = os.path.relpath(local_item, base_path)
+                    tracker.start_file(rel_path, item.st_size)
+                    sftp.get(remote_item, local_item, callback=progress_callback(tracker))
+                    tracker.file_complete(success=True)
+                except Exception as e:
+                    tracker.file_complete(success=False)
+                    console.print(f"[red]Error downloading {item.filename}: {e}[/red]")
+    except IOError as e:
+        console.print(f"[red]Error accessing {remote_path}: {e}[/red]")
+
+
+def upload_directory_recursive(sftp, local_path, remote_path, tracker, base_path=None, skip_files=None):
+    """Upload a local directory recursively to remote path with progress tracking.
+
+    Args:
+        skip_files: List of filenames to skip (for Phase 2 uploads)
+    """
+    if base_path is None:
+        base_path = local_path
+    if skip_files is None:
+        skip_files = []
+
+    # Ensure remote directory exists
+    try:
+        sftp.mkdir(remote_path)
+    except IOError:
+        pass
+
+    try:
+        for item in os.listdir(local_path):
+            if item in skip_files:
+                continue
+
+            local_item = os.path.join(local_path, item)
+            remote_item = f"{remote_path}/{item}"
+
+            if os.path.isdir(local_item):
+                upload_directory_recursive(sftp, local_item, remote_item, tracker, base_path, skip_files)
+            else:
+                try:
+                    file_size = os.path.getsize(local_item)
+                    rel_path = os.path.relpath(local_item, base_path)
+                    tracker.start_file(rel_path, file_size)
+                    sftp.put(local_item, remote_item, callback=progress_callback(tracker))
+                    tracker.file_complete(success=True)
+                except Exception as e:
+                    tracker.file_complete(success=False)
+                    console.print(f"[red]Error uploading {item}: {e}[/red]")
+    except OSError as e:
+        console.print(f"[red]Error accessing {local_path}: {e}[/red]")
 
 
 # =============================================================================
@@ -764,76 +857,97 @@ def regenerate_world(preset_key=None, custom_seed=None, auto_confirm=False):
 # Deployment Functions
 # =============================================================================
 
-def deploy_mrpack4server():
-    """Deploy mrpack4server.jar and local.mrpack to the server"""
+def update_modpack_info(version, production=False):
+    """Update modpack-info.json to point to a GitHub release.
+
+    Args:
+        version: The version string (e.g., "0.9.54")
+        production: If True, update Bloom.host server. If False (default), update LocalServer.
+    """
+    import hashlib
+    import tempfile
+
+    target_name = "Bloom.host (production)" if production else "LocalServer"
+    github_url = f"https://github.com/mindfulent/MCC/releases/download/v{version}/MCC-{version}.mrpack"
+    mrpack_file = os.path.join(SCRIPT_DIR, f"MCC-{version}.mrpack")
+
     console.print(Panel(
-        "[bold]Deploying MCC to Bloom.host[/bold]\n\n"
-        "This will upload:\n"
-        f"  • mrpack4server-0.5.0.jar\n"
-        f"  • local.mrpack\n\n"
-        "[yellow]The server will auto-install mods on first start.[/yellow]",
-        title="[cyan]mrpack4server Deployment[/cyan]",
+        f"[bold]Updating modpack to v{version}[/bold]\n"
+        f"Target: [{'red' if production else 'cyan'}]{target_name}[/{'red' if production else 'cyan'}]",
         border_style="cyan"
     ))
 
-    # Check files exist
-    if not os.path.exists(MRPACK4SERVER_JAR):
-        console.print(f"[red]Error: {MRPACK4SERVER_JAR} not found![/red]")
-        console.print("[yellow]Download from: https://github.com/Patbox/mrpack4server/releases[/yellow]")
+    # For production, check SFTP credentials
+    if production and not check_credentials():
         return False
 
-    if not os.path.exists(MRPACK_FILE):
-        console.print(f"[red]Error: {MRPACK_FILE} not found![/red]")
-        console.print("[yellow]Run: copy MCC-0.9.8.mrpack local.mrpack[/yellow]")
-        return False
+    # For local, check LocalServer directory exists
+    if not production:
+        local_modpack_info = os.path.join(LOCALSERVER_DIR, "modpack-info.json")
+        if not os.path.exists(LOCALSERVER_DIR):
+            console.print(f"[red]Error: LocalServer directory not found![/red]")
+            console.print(f"[yellow]Expected: {LOCALSERVER_DIR}[/yellow]")
+            return False
 
-    console.print("\n[bold]Step 1/2: Uploading mrpack4server.jar[/bold]")
-    if not upload_file(MRPACK4SERVER_JAR, "/mrpack4server-0.5.0.jar"):
-        return False
+    # Check if local file exists, otherwise download from GitHub
+    if os.path.exists(mrpack_file):
+        console.print(f"[cyan]Using local file: {os.path.basename(mrpack_file)}[/cyan]")
+        source_file = mrpack_file
+        temp_file = None
+    else:
+        console.print(f"[cyan]Downloading from GitHub release v{version}...[/cyan]")
+        try:
+            # Download to temp file
+            temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".mrpack")
+            temp_file.close()
 
-    console.print("\n[bold]Step 2/2: Uploading local.mrpack[/bold]")
-    if not upload_file(MRPACK_FILE, "/local.mrpack"):
-        return False
+            req = urllib.request.Request(github_url, headers={"User-Agent": "MCC-Server-Config"})
+            with urllib.request.urlopen(req) as response:
+                total_size = int(response.headers.get('content-length', 0))
+                downloaded = 0
 
-    console.print("\n" + "="*50)
-    console.print("[bold green]✓ Deployment complete![/bold green]")
-    console.print("\n[yellow]Next steps in Bloom.host panel:[/yellow]")
-    console.print("  1. Go to Startup tab")
-    console.print("  2. Set Java Version to Java 21")
-    console.print("  3. Set Server Jar to: mrpack4server-0.5.0.jar")
-    console.print("  4. Start the server")
-    console.print("="*50)
+                with open(temp_file.name, 'wb') as f:
+                    while True:
+                        chunk = response.read(8192)
+                        if not chunk:
+                            break
+                        f.write(chunk)
+                        downloaded += len(chunk)
+                        if total_size:
+                            pct = downloaded / total_size * 100
+                            console.print(f"  Downloaded: {downloaded / (1024*1024):.1f} / {total_size / (1024*1024):.1f} MB ({pct:.0f}%)", end="\r")
 
-    return True
+                console.print()  # Newline after progress
 
+            source_file = temp_file.name
+            console.print(f"[green]✓ Downloaded {total_size / (1024*1024):.1f} MB[/green]")
 
-def update_modpack_info(version):
-    """Update modpack-info.json on server to point to a GitHub release"""
-    import hashlib
-
-    mrpack_file = os.path.join(SCRIPT_DIR, f"MCC-{version}.mrpack")
-
-    if not os.path.exists(mrpack_file):
-        console.print(f"[red]Error: {mrpack_file} not found![/red]")
-        console.print("[yellow]Run: ./packwiz.exe modrinth export[/yellow]")
-        return False
-
-    if not check_credentials():
-        return False
+        except urllib.error.HTTPError as e:
+            console.print(f"[red]Error: GitHub release v{version} not found (HTTP {e.code})[/red]")
+            console.print(f"[yellow]Check: {github_url}[/yellow]")
+            return False
+        except Exception as e:
+            console.print(f"[red]Error downloading: {e}[/red]")
+            return False
 
     # Calculate hash and size
-    console.print(f"[cyan]Calculating hash for {os.path.basename(mrpack_file)}...[/cyan]")
-    file_size = os.path.getsize(mrpack_file)
+    console.print(f"[cyan]Calculating SHA512 hash...[/cyan]")
+    file_size = os.path.getsize(source_file)
 
     sha512 = hashlib.sha512()
-    with open(mrpack_file, 'rb') as f:
+    with open(source_file, 'rb') as f:
         for chunk in iter(lambda: f.read(8192), b''):
             sha512.update(chunk)
     file_hash = sha512.hexdigest()
 
-    # Build the config
-    github_url = f"https://github.com/mindfulent/MCC/releases/download/v{version}/MCC-{version}.mrpack"
+    # Clean up temp file if we downloaded
+    if temp_file:
+        try:
+            os.unlink(temp_file.name)
+        except:
+            pass
 
+    # Build the config
     new_config = {
         "project_id": "mcc",
         "version_id": version,
@@ -850,40 +964,455 @@ def update_modpack_info(version):
         ]
     }
 
-    # Upload to server
-    console.print(f"[cyan]Connecting to {hostname}:{port}...[/cyan]")
+    if production:
+        # Upload to Bloom.host via SFTP
+        console.print(f"[cyan]Uploading modpack-info.json to Bloom.host...[/cyan]")
+
+        ssh = paramiko.SSHClient()
+        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+        try:
+            ssh.connect(hostname, port=port, username=username, password=password)
+            sftp = ssh.open_sftp()
+
+            with sftp.open("/modpack-info.json", "w") as f:
+                f.write(json.dumps(new_config, indent=2).encode())
+
+            sftp.close()
+            ssh.close()
+
+        except Exception as e:
+            console.print(f"[red]Error: {e}[/red]")
+            return False
+    else:
+        # Write to LocalServer directory
+        console.print(f"[cyan]Writing modpack-info.json to LocalServer...[/cyan]")
+        try:
+            with open(local_modpack_info, 'w') as f:
+                json.dump(new_config, f, indent=2)
+        except Exception as e:
+            console.print(f"[red]Error: {e}[/red]")
+            return False
+
+    console.print(Panel(
+        f"[bold green]✓ Updated modpack-info.json to v{version}[/bold green]\n\n"
+        f"Target: {target_name}\n"
+        f"URL: {github_url}\n"
+        f"Size: {file_size / (1024*1024):.2f} MB\n"
+        f"SHA512: {file_hash[:32]}...",
+        title="[cyan]Modpack Info Updated[/cyan]",
+        border_style="green"
+    ))
+
+    if production:
+        console.print("\n[yellow]Next step:[/yellow]")
+        console.print("  Run: python server-config.py restart")
+    else:
+        console.print("\n[yellow]Next step:[/yellow]")
+        console.print("  Start LocalServer to test the new version")
+
+    return True
+
+
+# =============================================================================
+# World Sync Functions
+# =============================================================================
+
+# Files that are non-critical and can be uploaded after server starts
+NON_CRITICAL_FILES = [
+    "DistantHorizons.sqlite",  # LOD cache (~15GB) - can regenerate
+]
+
+# Folders that are non-critical (can continue in background)
+NON_CRITICAL_FOLDERS = [
+    "bluemap",  # BlueMap tiles - can regenerate
+]
+
+
+def world_download(backup_existing=True, auto_confirm=False):
+    """Download world data from production server to LocalServer."""
+    from rich.prompt import Confirm
+    import shutil
+
+    WORLD_FOLDERS = [
+        ("/world", "world-production"),
+        ("/world_nether", "world-production_nether"),
+        ("/world_the_end", "world-production_the_end"),
+    ]
+
+    local_base = LOCALSERVER_DIR
+
+    console.print(Panel(
+        "[bold]Download Production World[/bold]\n\n"
+        "This will download world data from Bloom.host\n"
+        f"to LocalServer: {local_base}",
+        title="[cyan]World Download[/cyan]",
+        border_style="cyan"
+    ))
+
+    if not os.path.exists(local_base):
+        console.print(f"[red]Error: LocalServer directory not found![/red]")
+        console.print(f"[yellow]Expected: {local_base}[/yellow]")
+        return False
+
+    if not check_credentials():
+        return False
+
+    console.print(f"\n[cyan]Connecting to {hostname}:{port}...[/cyan]")
 
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     try:
         ssh.connect(hostname, port=port, username=username, password=password)
+        console.print("[green]Connected![/green]")
         sftp = ssh.open_sftp()
+    except Exception as e:
+        console.print(f"[red]Error connecting: {e}[/red]")
+        return False
 
-        with sftp.open("/modpack-info.json", "w") as f:
-            f.write(json.dumps(new_config, indent=2).encode())
+    console.print("\n[cyan]Scanning remote world folders...[/cyan]")
 
+    folder_info = []
+    total_files = 0
+    total_size = 0
+
+    for remote_path, local_name in WORLD_FOLDERS:
+        file_count, size = get_remote_directory_info(sftp, remote_path)
+        if file_count > 0:
+            folder_info.append({
+                'remote': remote_path,
+                'local': local_name,
+                'files': file_count,
+                'size': size
+            })
+            total_files += file_count
+            total_size += size
+        else:
+            console.print(f"[dim]  {remote_path} (not found, skipping)[/dim]")
+
+    if not folder_info:
+        console.print("[red]No world folders found on remote server![/red]")
         sftp.close()
         ssh.close()
-
-        console.print(Panel(
-            f"[bold green]Updated modpack-info.json to v{version}[/bold green]\n\n"
-            f"URL: {github_url}\n"
-            f"Size: {file_size / (1024*1024):.2f} MB\n"
-            f"SHA512: {file_hash[:32]}...",
-            title="[cyan]Modpack Info Updated[/cyan]",
-            border_style="green"
-        ))
-
-        console.print("\n[yellow]Next steps:[/yellow]")
-        console.print("  1. Ensure GitHub release v{} exists with the .mrpack attached".format(version))
-        console.print("  2. Run: python server-config.py restart")
-
-        return True
-
-    except Exception as e:
-        console.print(f"[red]Error: {e}[/red]")
         return False
+
+    size_str = f"{total_size/(1024*1024*1024):.2f} GB" if total_size > 1024*1024*1024 else f"{total_size/(1024*1024):.1f} MB"
+
+    table = Table(title="Remote World Folders", box=box.ROUNDED)
+    table.add_column("Folder", style="cyan")
+    table.add_column("Files", style="white", justify="right")
+    table.add_column("Size", style="green", justify="right")
+
+    for info in folder_info:
+        folder_size = f"{info['size']/(1024*1024*1024):.2f} GB" if info['size'] > 1024*1024*1024 else f"{info['size']/(1024*1024):.1f} MB"
+        table.add_row(info['remote'], str(info['files']), folder_size)
+
+    table.add_row("", "", "", style="dim")
+    table.add_row("[bold]Total[/bold]", f"[bold]{total_files}[/bold]", f"[bold]{size_str}[/bold]")
+
+    console.print()
+    console.print(table)
+
+    # Check for local server running
+    session_lock = os.path.join(local_base, "world-production", "session.lock")
+    if os.path.exists(session_lock):
+        console.print("\n[yellow]⚠ Warning: Local server may be running (session.lock exists)[/yellow]")
+        if not auto_confirm and not Confirm.ask("Continue anyway?"):
+            console.print("[yellow]Cancelled.[/yellow]")
+            sftp.close()
+            ssh.close()
+            return False
+
+    if not auto_confirm:
+        console.print()
+        if not Confirm.ask(f"Download {size_str} from production server?"):
+            console.print("[yellow]Cancelled.[/yellow]")
+            sftp.close()
+            ssh.close()
+            return False
+
+    # Backup existing local world
+    if backup_existing:
+        local_world_dirs = [os.path.join(local_base, info['local']) for info in folder_info]
+        existing_dirs = [d for d in local_world_dirs if os.path.exists(d)]
+        if existing_dirs:
+            console.print("\n[bold]Backing up existing world...[/bold]")
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            backup_base = os.path.join(local_base, f"world-backup-{timestamp}")
+            os.makedirs(backup_base, exist_ok=True)
+            for world_dir in existing_dirs:
+                dir_name = os.path.basename(world_dir)
+                backup_dest = os.path.join(backup_base, dir_name)
+                console.print(f"[cyan]Backing up {dir_name}...[/cyan]")
+                shutil.copytree(world_dir, backup_dest)
+            console.print(f"[green]✓ Backup saved to: {os.path.basename(backup_base)}/[/green]")
+
+    # Download each folder
+    console.print("\n[bold]Downloading world data...[/bold]\n")
+
+    with RichProgressTracker(total_files=total_files, total_size=total_size) as tracker:
+        for info in folder_info:
+            local_path = os.path.join(local_base, info['local'])
+
+            if os.path.exists(local_path):
+                shutil.rmtree(local_path)
+
+            console.print(f"[cyan]Downloading {info['remote']}...[/cyan]")
+            download_directory_recursive(sftp, info['remote'], local_path, tracker)
+
+    sftp.close()
+    ssh.close()
+
+    console.print("\n" + "="*50)
+    console.print("[bold green]✓ World download complete![/bold green]")
+    console.print(f"\n[cyan]Downloaded {total_files} files ({size_str})[/cyan]")
+    console.print(f"[cyan]Location: {local_base}[/cyan]")
+    console.print("="*50)
+
+    return True
+
+
+def world_upload(auto_confirm=False):
+    """Upload world data from LocalServer to production server.
+
+    Two-phase upload:
+    - Phase 1 (blocking): Critical world data, then start server
+    - Phase 2 (background): Non-critical data (DistantHorizons, BlueMap)
+    """
+    from rich.prompt import Confirm
+    import shutil
+
+    WORLD_FOLDERS = [
+        ("world-production", "/world"),
+        ("world-production_nether", "/world_nether"),
+        ("world-production_the_end", "/world_the_end"),
+    ]
+
+    local_base = LOCALSERVER_DIR
+
+    console.print(Panel(
+        "[bold red]Upload World to Production[/bold red]\n\n"
+        "This will upload world data from LocalServer to Bloom.host.\n"
+        "[yellow]⚠ This will OVERWRITE the production world![/yellow]\n\n"
+        "Phase 1: Upload critical data → Start server\n"
+        "Phase 2: Upload non-critical data (background)",
+        title="[red]World Upload[/red]",
+        border_style="red"
+    ))
+
+    if not os.path.exists(local_base):
+        console.print(f"[red]Error: LocalServer directory not found![/red]")
+        console.print(f"[yellow]Expected: {local_base}[/yellow]")
+        return False
+
+    # Check what we're uploading
+    folder_info = []
+    total_files_phase1 = 0
+    total_size_phase1 = 0
+    total_files_phase2 = 0
+    total_size_phase2 = 0
+
+    for local_name, remote_path in WORLD_FOLDERS:
+        local_path = os.path.join(local_base, local_name)
+        if not os.path.exists(local_path):
+            console.print(f"[dim]  {local_name} (not found, skipping)[/dim]")
+            continue
+
+        # Count files, separating critical from non-critical
+        phase1_files = 0
+        phase1_size = 0
+        phase2_files = 0
+        phase2_size = 0
+
+        for root, dirs, files in os.walk(local_path):
+            # Skip non-critical folders
+            rel_root = os.path.relpath(root, local_path)
+            skip_folder = any(nc in rel_root.split(os.sep) for nc in NON_CRITICAL_FOLDERS)
+
+            for f in files:
+                file_path = os.path.join(root, f)
+                file_size = os.path.getsize(file_path)
+
+                if skip_folder or f in NON_CRITICAL_FILES:
+                    phase2_files += 1
+                    phase2_size += file_size
+                else:
+                    phase1_files += 1
+                    phase1_size += file_size
+
+        folder_info.append({
+            'local': local_name,
+            'remote': remote_path,
+            'local_path': local_path,
+            'phase1_files': phase1_files,
+            'phase1_size': phase1_size,
+            'phase2_files': phase2_files,
+            'phase2_size': phase2_size,
+        })
+
+        total_files_phase1 += phase1_files
+        total_size_phase1 += phase1_size
+        total_files_phase2 += phase2_files
+        total_size_phase2 += phase2_size
+
+    if not folder_info:
+        console.print("[red]No world folders found in LocalServer![/red]")
+        return False
+
+    # Display summary
+    size_str_p1 = f"{total_size_phase1/(1024*1024*1024):.2f} GB" if total_size_phase1 > 1024*1024*1024 else f"{total_size_phase1/(1024*1024):.1f} MB"
+    size_str_p2 = f"{total_size_phase2/(1024*1024*1024):.2f} GB" if total_size_phase2 > 1024*1024*1024 else f"{total_size_phase2/(1024*1024):.1f} MB"
+
+    table = Table(title="Upload Summary", box=box.ROUNDED)
+    table.add_column("Phase", style="cyan")
+    table.add_column("Files", style="white", justify="right")
+    table.add_column("Size", style="green", justify="right")
+    table.add_column("Description", style="dim")
+
+    table.add_row("Phase 1", str(total_files_phase1), size_str_p1, "Critical (server offline)")
+    table.add_row("Phase 2", str(total_files_phase2), size_str_p2, "Non-critical (server online)")
+    table.add_row("", "", "", "", style="dim")
+    table.add_row("[bold]Total[/bold]", f"[bold]{total_files_phase1 + total_files_phase2}[/bold]",
+                  f"[bold]{(total_size_phase1 + total_size_phase2)/(1024*1024*1024):.2f} GB[/bold]", "")
+
+    console.print()
+    console.print(table)
+
+    if not auto_confirm:
+        console.print()
+        console.print("[yellow]This will:[/yellow]")
+        console.print("  1. Stop the production server")
+        console.print("  2. Delete existing world folders on production")
+        console.print(f"  3. Upload {size_str_p1} of critical data")
+        console.print("  4. Start the production server")
+        console.print(f"  5. Upload {size_str_p2} of non-critical data (background)")
+        console.print()
+        if not Confirm.ask("[red]Proceed with world upload?[/red]"):
+            console.print("[yellow]Cancelled.[/yellow]")
+            return False
+
+    if not check_credentials():
+        return False
+
+    # Phase 1: Stop server
+    console.print("\n[bold]Phase 1: Stopping server...[/bold]")
+    if not server_stop():
+        console.print("[red]Failed to stop server![/red]")
+        return False
+
+    # Wait for server to fully stop
+    import time
+    console.print("[cyan]Waiting for server to stop...[/cyan]")
+    time.sleep(5)
+
+    # Connect via SFTP
+    console.print(f"\n[cyan]Connecting to {hostname}:{port}...[/cyan]")
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    try:
+        ssh.connect(hostname, port=port, username=username, password=password)
+        console.print("[green]Connected![/green]")
+        sftp = ssh.open_sftp()
+    except Exception as e:
+        console.print(f"[red]Error connecting: {e}[/red]")
+        return False
+
+    # Delete existing world folders on remote
+    console.print("\n[bold]Deleting existing world folders on production...[/bold]")
+    for info in folder_info:
+        remote_path = info['remote']
+        console.print(f"[cyan]Deleting {remote_path}...[/cyan]")
+        try:
+            # Recursive delete
+            def rm_recursive(path):
+                try:
+                    for item in sftp.listdir_attr(path):
+                        item_path = f"{path}/{item.filename}"
+                        if item.st_mode & 0o40000:
+                            rm_recursive(item_path)
+                        else:
+                            sftp.remove(item_path)
+                    sftp.rmdir(path)
+                except IOError:
+                    pass
+
+            rm_recursive(remote_path)
+            console.print(f"[green]✓ Deleted {remote_path}[/green]")
+        except Exception as e:
+            console.print(f"[yellow]Could not delete {remote_path}: {e}[/yellow]")
+
+    # Upload Phase 1 (critical files)
+    console.print(f"\n[bold]Uploading critical world data ({size_str_p1})...[/bold]\n")
+
+    with RichProgressTracker(total_files=total_files_phase1, total_size=total_size_phase1) as tracker:
+        for info in folder_info:
+            local_path = info['local_path']
+            remote_path = info['remote']
+
+            console.print(f"[cyan]Uploading {info['local']} → {remote_path}...[/cyan]")
+
+            # Create remote directory
+            try:
+                sftp.mkdir(remote_path)
+            except IOError:
+                pass
+
+            # Upload recursively, skipping non-critical files
+            skip_list = NON_CRITICAL_FILES + NON_CRITICAL_FOLDERS
+            upload_directory_recursive(sftp, local_path, remote_path, tracker, skip_files=skip_list)
+
+    console.print("\n[bold green]✓ Phase 1 complete![/bold green]")
+
+    # Start server
+    console.print("\n[bold]Starting server...[/bold]")
+    if not server_start():
+        console.print("[red]Failed to start server![/red]")
+        # Continue with Phase 2 anyway
+
+    # Phase 2: Upload non-critical files
+    if total_files_phase2 > 0:
+        console.print(f"\n[bold]Phase 2: Uploading non-critical data ({size_str_p2})...[/bold]")
+        console.print("[dim]Server is running while this uploads...[/dim]\n")
+
+        with RichProgressTracker(total_files=total_files_phase2, total_size=total_size_phase2) as tracker:
+            for info in folder_info:
+                local_path = info['local_path']
+                remote_path = info['remote']
+
+                # Upload only non-critical files
+                for nc_file in NON_CRITICAL_FILES:
+                    nc_local = os.path.join(local_path, nc_file)
+                    if os.path.exists(nc_local):
+                        nc_remote = f"{remote_path}/{nc_file}"
+                        file_size = os.path.getsize(nc_local)
+                        tracker.start_file(nc_file, file_size)
+                        try:
+                            sftp.put(nc_local, nc_remote, callback=progress_callback(tracker))
+                            tracker.file_complete(success=True)
+                        except Exception as e:
+                            tracker.file_complete(success=False)
+                            console.print(f"[red]Error uploading {nc_file}: {e}[/red]")
+
+                # Upload non-critical folders
+                for nc_folder in NON_CRITICAL_FOLDERS:
+                    nc_local = os.path.join(local_path, nc_folder)
+                    if os.path.exists(nc_local):
+                        nc_remote = f"{remote_path}/{nc_folder}"
+                        upload_directory_recursive(sftp, nc_local, nc_remote, tracker)
+
+        console.print("\n[bold green]✓ Phase 2 complete![/bold green]")
+
+    sftp.close()
+    ssh.close()
+
+    console.print("\n" + "="*50)
+    console.print("[bold green]✓ World upload complete![/bold green]")
+    console.print("="*50)
+
+    return True
 
 
 def deploy_configs():
@@ -960,61 +1489,56 @@ def interactive_menu():
         table.add_column("Key", style="bold yellow")
         table.add_column("Action", style="white")
 
-        table.add_row("1", "Deploy mrpack4server + modpack")
-        table.add_row("2", "Upload configs only")
-        table.add_row("3", "List server files")
+        table.add_row("1", "Start Server")
+        table.add_row("2", "Stop Server")
+        table.add_row("3", "Restart Server")
+        table.add_row("4", "Send Console Command")
         table.add_row("", "")
-        table.add_row("4", "Start Server")
-        table.add_row("5", "Stop Server")
-        table.add_row("6", "Restart Server")
-        table.add_row("7", "Send Console Command")
+        table.add_row("5", "Upload configs only")
+        table.add_row("6", "List server files")
         table.add_row("", "")
         table.add_row("b", "[cyan]Backup Menu →[/cyan]")
         table.add_row("", "")
-        table.add_row("8", "[red]Regenerate World[/red]")
+        table.add_row("7", "[red]Regenerate World[/red]")
         table.add_row("", "")
         table.add_row("q", "Quit")
 
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "b", "q"], default="q")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "b", "q"], default="q")
 
         if choice == "1":
-            deploy_mrpack4server()
-            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
-
-        elif choice == "2":
-            deploy_configs()
-            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
-
-        elif choice == "3":
-            list_remote_files()
-            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
-
-        elif choice == "4":
             server_start()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
-        elif choice == "5":
+        elif choice == "2":
             server_stop()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
-        elif choice == "6":
+        elif choice == "3":
             server_restart()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
-        elif choice == "7":
+        elif choice == "4":
             cmd = Prompt.ask("Enter command")
             if cmd:
                 if send_console_command(cmd):
                     console.print("[green]✓ Command sent[/green]")
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
+        elif choice == "5":
+            deploy_configs()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "6":
+            list_remote_files()
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
         elif choice == "b":
             backup_menu()
 
-        elif choice == "8":
+        elif choice == "7":
             regenerate_world()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
@@ -1422,9 +1946,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         command = sys.argv[1]
 
-        if command == "deploy":
-            deploy_mrpack4server()
-        elif command == "configs":
+        if command == "configs":
             deploy_configs()
         elif command == "list":
             list_remote_files()
@@ -1461,8 +1983,11 @@ if __name__ == "__main__":
                 table.add_row(key, preset["name"], preset["level_type"].replace("minecraft:", ""))
             console.print(table)
         elif command == "update-pack" and len(sys.argv) > 2:
-            version = sys.argv[2]
-            update_modpack_info(version)
+            # Parse args: update-pack <version> [--production|-p]
+            args = sys.argv[2:]
+            production = "--production" in args or "-p" in args
+            version = [a for a in args if not a.startswith("-")][0]
+            update_modpack_info(version, production=production)
         elif command == "backup":
             # Backup subcommands
             if len(sys.argv) < 3:
@@ -1494,6 +2019,17 @@ if __name__ == "__main__":
                     backup_restore(backup_index, auto_confirm)
                 else:
                     console.print(f"[red]Unknown backup command: {subcmd}[/red]")
+        elif command == "world-download":
+            # Parse args: world-download [--no-backup] [-y]
+            args = sys.argv[2:] if len(sys.argv) > 2 else []
+            auto_confirm = "-y" in args or "--yes" in args
+            backup_existing = "--no-backup" not in args
+            world_download(backup_existing=backup_existing, auto_confirm=auto_confirm)
+        elif command == "world-upload":
+            # Parse args: world-upload [-y]
+            args = sys.argv[2:] if len(sys.argv) > 2 else []
+            auto_confirm = "-y" in args or "--yes" in args
+            world_upload(auto_confirm=auto_confirm)
         else:
             console.print("[yellow]Usage:[/yellow]")
             console.print("  python server-config.py              # Interactive menu")
@@ -1504,16 +2040,20 @@ if __name__ == "__main__":
             console.print("  python server-config.py cmd <cmd>    # Send console command")
             console.print("")
             console.print("[yellow]Deployment:[/yellow]")
-            console.print("  python server-config.py update-pack <version>  # Update modpack-info.json")
-            console.print("  python server-config.py deploy       # Upload mrpack4server + local.mrpack")
-            console.print("  python server-config.py configs      # Upload config directory")
-            console.print("  python server-config.py list         # List server files")
+            console.print("  python server-config.py update-pack <version>       # Update LocalServer (default)")
+            console.print("  python server-config.py update-pack <version> -p    # Update production (Bloom.host)")
+            console.print("  python server-config.py configs      # Upload config directory to production")
+            console.print("  python server-config.py list         # List production server files")
             console.print("")
             console.print("[yellow]Backup Management:[/yellow]")
             console.print("  python server-config.py backup list              # List all backups")
             console.print("  python server-config.py backup create [comment]  # Create manual backup")
             console.print("  python server-config.py backup snapshot [comment] # Create snapshot (immune to purge)")
             console.print("  python server-config.py backup restore [number]  # Restore from backup")
+            console.print("")
+            console.print("[yellow]World Sync:[/yellow]")
+            console.print("  python server-config.py world-download [--no-backup] [-y]  # Download production → LocalServer")
+            console.print("  python server-config.py world-upload [-y]                  # Upload LocalServer → production")
             console.print("")
             console.print("[yellow]World Management:[/yellow]")
             console.print("  python server-config.py regenerate [preset] [seed] [-y]  # Regenerate world")

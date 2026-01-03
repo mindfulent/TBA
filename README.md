@@ -225,9 +225,39 @@ The server uses **mrpack4server** which downloads modpacks from GitHub releases.
 ./packwiz.exe modrinth export
 git add -A && git commit -m "v0.9.X - description" && git push
 gh release create v0.9.X MCC-0.9.X.mrpack --title "v0.9.X"
-python server-config.py update-pack 0.9.X
+
+# Test locally first (recommended)
+python server-config.py update-pack 0.9.X           # Updates LocalServer
+# Start LocalServer and verify
+
+# Then deploy to production
+python server-config.py update-pack 0.9.X -p        # Updates Bloom.host
 python server-config.py restart
 ```
+
+### Server Management Commands
+
+```bash
+# Modpack deployment
+python server-config.py update-pack <version>       # Update LocalServer (default)
+python server-config.py update-pack <version> -p    # Update production (Bloom.host)
+
+# Server control
+python server-config.py status                      # Check server status
+python server-config.py restart                     # Restart server
+python server-config.py cmd "say Hello"             # Send console command
+
+# World sync (backup/restore)
+python server-config.py world-download              # Download production → LocalServer
+python server-config.py world-upload                # Upload LocalServer → production
+
+# Backup management (requires Advanced Backups mod)
+python server-config.py backup list                 # List all backups
+python server-config.py backup create               # Create manual backup
+```
+
+See [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md) for complete deployment documentation.
+See [docs/BACKUP-STRATEGY.md](docs/BACKUP-STRATEGY.md) for backup and restore procedures.
 
 ### Initial Setup
 
@@ -235,8 +265,6 @@ python server-config.py restart
 2. Create `modpack-info.json` pointing to GitHub release
 3. Set server jar to `mrpack4server-0.5.0.jar` in Bloom.host panel
 4. Start server - mods auto-download from GitHub
-
-See [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md) for complete documentation.
 
 ### Fabricord Discord Setup
 
