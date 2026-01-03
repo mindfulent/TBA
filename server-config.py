@@ -857,6 +857,95 @@ def regenerate_world(preset_key=None, custom_seed=None, auto_confirm=False):
 # Deployment Functions
 # =============================================================================
 
+def get_expected_mods_from_mrpack(mrpack_path):
+    """Extract the set of expected mod filenames from an mrpack file.
+
+    Returns a set of JAR filenames that should be in the mods folder.
+    """
+    import zipfile
+
+    expected_mods = set()
+
+    try:
+        with zipfile.ZipFile(mrpack_path, 'r') as zf:
+            # Read manifest
+            manifest_data = zf.read('modrinth.index.json')
+            manifest = json.loads(manifest_data)
+
+            # From bundled overrides
+            for name in zf.namelist():
+                if name.startswith('overrides/mods/') and name.endswith('.jar'):
+                    filename = os.path.basename(name)
+                    if filename:
+                        expected_mods.add(filename)
+
+            # From manifest downloads
+            for file_info in manifest.get('files', []):
+                path = file_info.get('path', '')
+                if path.startswith('mods/') and path.endswith('.jar'):
+                    expected_mods.add(os.path.basename(path))
+
+    except Exception as e:
+        console.print(f"[red]Error reading mrpack: {e}[/red]")
+        return None
+
+    return expected_mods
+
+
+def clean_stale_mods_production(sftp, expected_mods):
+    """Remove mods from production server that are not in the expected set.
+
+    Args:
+        sftp: Active SFTP connection
+        expected_mods: Set of expected mod filenames
+
+    Returns:
+        Tuple of (removed_count, failed_count)
+    """
+    console.print("[cyan]Checking for stale mods on production...[/cyan]")
+
+    removed_count = 0
+    failed_count = 0
+
+    try:
+        # List current mods on server
+        try:
+            server_mods = sftp.listdir('/mods')
+        except IOError:
+            console.print("[yellow]  /mods folder not found on server[/yellow]")
+            return 0, 0
+
+        server_jars = [f for f in server_mods if f.endswith('.jar')]
+
+        # Find stale mods
+        stale_mods = [jar for jar in server_jars if jar not in expected_mods]
+
+        if not stale_mods:
+            console.print("[dim]  No stale mods found[/dim]")
+            return 0, 0
+
+        console.print(f"[yellow]  Found {len(stale_mods)} stale mod(s) to remove:[/yellow]")
+
+        for jar in stale_mods:
+            try:
+                sftp.remove(f'/mods/{jar}')
+                console.print(f"[yellow]    Removed: {jar}[/yellow]")
+                removed_count += 1
+            except Exception as e:
+                console.print(f"[red]    Failed to remove {jar}: {e}[/red]")
+                failed_count += 1
+
+        if removed_count > 0:
+            console.print(f"[green]✓ Removed {removed_count} stale mod(s)[/green]")
+        if failed_count > 0:
+            console.print(f"[red]✗ Failed to remove {failed_count} mod(s)[/red]")
+
+    except Exception as e:
+        console.print(f"[red]Error checking stale mods: {e}[/red]")
+
+    return removed_count, failed_count
+
+
 def update_modpack_info(version, production=False):
     """Update modpack-info.json to point to a GitHub release.
 
@@ -940,6 +1029,9 @@ def update_modpack_info(version, production=False):
             sha512.update(chunk)
     file_hash = sha512.hexdigest()
 
+    # Extract expected mods list before cleaning up temp file
+    expected_mods = get_expected_mods_from_mrpack(source_file)
+
     # Clean up temp file if we downloaded
     if temp_file:
         try:
@@ -966,7 +1058,7 @@ def update_modpack_info(version, production=False):
 
     if production:
         # Upload to Bloom.host via SFTP
-        console.print(f"[cyan]Uploading modpack-info.json to Bloom.host...[/cyan]")
+        console.print(f"[cyan]Connecting to Bloom.host...[/cyan]")
 
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -975,8 +1067,17 @@ def update_modpack_info(version, production=False):
             ssh.connect(hostname, port=port, username=username, password=password)
             sftp = ssh.open_sftp()
 
+            # 1. Upload modpack-info.json
+            console.print(f"[cyan]Uploading modpack-info.json...[/cyan]")
             with sftp.open("/modpack-info.json", "w") as f:
                 f.write(json.dumps(new_config, indent=2).encode())
+            console.print(f"[green]✓ modpack-info.json uploaded[/green]")
+
+            # 2. Clean stale mods
+            if expected_mods:
+                clean_stale_mods_production(sftp, expected_mods)
+            else:
+                console.print("[yellow]⚠ Could not read mrpack - skipping stale mod cleanup[/yellow]")
 
             sftp.close()
             ssh.close()
@@ -1622,7 +1723,7 @@ def interactive_menu():
         table.add_row("3", "Restart Server")
         table.add_row("4", "Send Console Command")
         table.add_row("", "")
-        table.add_row("5", "Update Pack (upload modpack-info.json)")
+        table.add_row("5", "Update Pack (modpack-info + clean stale mods)")
         table.add_row("6", "Upload configs only")
         table.add_row("", "")
         table.add_row("b", "[cyan]Backup & World Sync →[/cyan]")
