@@ -10,9 +10,11 @@ All notable changes to MCC will be documented in this file.
 - **Entity Culling** v1.9.5 - Performance: skip rendering off-screen entities
 - **Genshin Instruments** v5.0.1 - Playable musical instruments (Lyre, Zither, etc.)
 - **Ledger** v1.3.5 - Server-side block/entity logging for grief rollback (ops only)
+- **VinURL** v2.2.1 - Play audio from URLs on note blocks (YouTube, SoundCloud, direct links)
+- **owo-lib** v0.12.15.4 - Library dependency for VinURL
 
 ### Notes
-- Mod count: 124 total (121 client, 3 server-only)
+- Mod count: 126 total (123 client, 3 server-only)
 
 ## [0.9.59] - 2026-01-03
 

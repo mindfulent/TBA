@@ -960,6 +960,11 @@ hash = "ae0783f3455e72023fac34f0ebe965ad1b3dbd813f155e2f7fb97e2da029e103"
 metafile = true
 
 [[files]]
+file = "mods/owo-lib.pw.toml"
+hash = "59f3b2e1679e710e694b04e712b2f79be11ec4f1591d831c3adaa86e16d0c1ef"
+metafile = true
+
+[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "0d3e127187193d803aa350bc5843fa7c794433afbc994fe5de9d5ff8d61e6031"
 metafile = true
@@ -1082,6 +1087,11 @@ metafile = true
 [[files]]
 file = "mods/universal-bone-meal.pw.toml"
 hash = "3503ec478e84cfe8351db1cf03018a3dfcf38ebc7505234ad4e8d51a075457b0"
+metafile = true
+
+[[files]]
+file = "mods/vinurl.pw.toml"
+hash = "27b8ffdb40c41b8164483fb171082298ad7ac61e2b478304cab97a2005537376"
 metafile = true
 
 [[files]]
