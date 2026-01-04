@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** January 3, 2026
-**Modpack Version:** 0.9.59 (119 mods total — 116 client, 3 server-only)
+**Modpack Version:** 0.9.60 (126 mods total — 123 client, 3 server-only)
 
 ---
 
@@ -23,6 +23,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [ModernFix](https://modrinth.com/mod/modernfix) | embeddedt | 5.25.1 | Nov 8, 2025 | [Ko-fi](https://ko-fi.com/embeddedt) |
 | [Krypton](https://modrinth.com/mod/krypton) | astei | 0.2.8 | Jun 22, 2024 | [PayPal](https://paypal.me/terminalvelocity1), [GitHub Sponsors](https://github.com/sponsors/astei) |
 | [Iris Shaders](https://modrinth.com/mod/iris) | coderbot, IMS | 1.8.8 | Feb 20, 2025 | [Patreon](https://www.patreon.com/ims21) |
+| [Entity Culling](https://modrinth.com/mod/entityculling) | tr7zw | 1.9.5 | Dec 2025 | [Ko-fi](https://ko-fi.com/tr7zw) |
 
 ## Library/API Mods
 
@@ -58,6 +59,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [YetAnotherConfigLib](https://www.curseforge.com/minecraft/mc-mods/yacl) | isXander | 3.8.1 | Dec 2025 | [Ko-fi](https://ko-fi.com/isxander) |
 | [playerAnimator](https://www.curseforge.com/minecraft/mc-mods/playeranimator) | KosmX | 2.0.4 | Dec 2025 | - |
 | [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib) | Tslat, Gecko, AzureDoom | 4.8.2 | Dec 2025 | [Ko-fi](https://ko-fi.com/geckolib) |
+| [owo-lib](https://modrinth.com/mod/owo-lib) | glisco | 0.12.15.4 | Dec 2025 | - |
 
 ## Map Mods
 
@@ -140,6 +142,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Actually Harvest](https://www.curseforge.com/minecraft/mc-mods/actually-harvest) | MorenPlue | 1.1.7.0 | Dec 2025 | - |
 | [Universal Bone Meal](https://www.curseforge.com/minecraft/mc-mods/universal-bone-meal) | Fuzss | 21.1.0 | Oct 2024 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Better Climbing](https://www.curseforge.com/minecraft/mc-mods/better-climbing) | MoriyaShiine | 3 | Jun 2023 | - |
+| [BetterF3](https://modrinth.com/mod/betterf3) | TreyRuffy | 11.0.3 | Dec 2025 | - |
+| [Accurate Block Placement Reborn](https://modrinth.com/mod/accurate-block-placement-reborn) | schauweg | 1.3.9 | Dec 2025 | - |
 
 ## Multiplayer Mods
 
@@ -149,8 +153,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Voice Chat Interaction](https://www.curseforge.com/minecraft/mc-mods/voice-chat-interaction) | henkelmax | 1.0.8 | Sep 2024 | - |
 | [Connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | someaddon | 7.6 | Dec 2025 | - |
 | [LuckPerms](https://www.curseforge.com/minecraft/mc-mods/luckperms) | lucko | 5.4.140 | Jun 2024 | - |
-| [Universal Graves](https://modrinth.com/mod/universal-graves) | Patbox | 3.4.4 | Sep 9, 2024 | [Ko-fi](https://ko-fi.com/patbox) |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.4 | Nov 20, 2025 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
+| [Ledger](https://modrinth.com/mod/ledger) | QuiltServerTools | 1.3.5 | Dec 2025 | - |
 | [Advanced Backups](https://modrinth.com/mod/advanced-backups) | RyanMoodGAMING | 3.7.1 | Dec 2025 | - |
 | [spark](https://modrinth.com/mod/spark) | lucko | 1.10.109 | Sep 26, 2024 | - |
 | [Chunky](https://modrinth.com/mod/chunky) | pop4959 | 1.4.23 | Apr 4, 2025 | - |
@@ -187,6 +191,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Sound Physics Remastered](https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered) | henkelmax | 1.4.10 | Nov 2024 | - |
 | [AmbientSounds](https://www.curseforge.com/minecraft/mc-mods/ambientsounds) | CreativeMD | 6.3.1 | Dec 2025 | [Patreon](https://www.patreon.com/creativemd) |
 | [Subtle Effects](https://www.curseforge.com/minecraft/mc-mods/subtle-effects) | Fzzy | 1.13.2 | Dec 2025 | - |
+| [VinURL](https://modrinth.com/mod/vinurl) | uku3lig | 2.2.1 | Dec 2025 | - |
+| [Genshin Instruments](https://modrinth.com/mod/genshin-instruments) | StavWasPlayin | 5.0.1 | Dec 2025 | - |
 
 ## Camera & Animation
 
@@ -223,7 +229,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 ### Prolific Contributors
 - **sketch_macaw** (Slovakia) - 8 Macaw's mods providing doors, windows, bridges, roofs, fences, walls, trapdoors, furniture, and lighting
 - **shedaniel** - REI, Cloth Config, Architectury (core infrastructure mods)
-- **Patbox** - Polymer, Universal Graves (server-side mod pioneer)
+- **Patbox** - Polymer, Text Placeholder API (server-side mod pioneer)
 - **Terrarium Earth** (ThatGravyBoat, CodexAdrian, AlexNijjar) - Chipped, Handcrafted, Athena CTM
 - **satisfyu & Cristelknight** - [Let's Do] series (Vinery, Bakery, Farm & Charm)
 - **masa** - Litematica, MaLiLib (essential building tools)
