@@ -957,8 +957,8 @@ def update_modpack_info(version, production=False):
     import tempfile
 
     target_name = "Bloom.host (production)" if production else "LocalServer"
-    github_url = f"https://github.com/mindfulent/MCC/releases/download/v{version}/MCC-{version}.mrpack"
-    mrpack_file = os.path.join(SCRIPT_DIR, f"MCC-{version}.mrpack")
+    github_url = f"https://github.com/mindfulent/TBA/releases/download/v{version}/TBA-{version}.mrpack"
+    mrpack_file = os.path.join(SCRIPT_DIR, f"TBA-{version}.mrpack")
 
     console.print(Panel(
         f"[bold]Updating modpack to v{version}[/bold]\n"
@@ -990,7 +990,7 @@ def update_modpack_info(version, production=False):
             temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".mrpack")
             temp_file.close()
 
-            req = urllib.request.Request(github_url, headers={"User-Agent": "MCC-Server-Config"})
+            req = urllib.request.Request(github_url, headers={"User-Agent": "TBA-Server-Config"})
             with urllib.request.urlopen(req) as response:
                 total_size = int(response.headers.get('content-length', 0))
                 downloaded = 0
@@ -1041,9 +1041,9 @@ def update_modpack_info(version, production=False):
 
     # Build the config
     new_config = {
-        "project_id": "mcc",
+        "project_id": "tba",
         "version_id": version,
-        "display_name": "MCC",
+        "display_name": "TBA",
         "display_version": version,
         "url": github_url,
         "size": file_size,
@@ -1703,7 +1703,7 @@ def interactive_menu():
     while True:
         console.clear()
         console.print(Panel.fit(
-            "[bold cyan]MCC Server Manager[/bold cyan]\n"
+            "[bold cyan]TBA Server Manager[/bold cyan]\n"
             "[dim]Bloom.host Deployment & Control[/dim]",
             border_style="cyan"
         ))

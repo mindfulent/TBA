@@ -1,11 +1,23 @@
 {
   "project_id": "tba",
-  "version_id": "0.9.37",
+  "version_id": "0.9.62",
   "display_name": "TBA",
-  "display_version": "0.9.37",
-  "url": "https://github.com/mindfulent/TBA/releases/download/v0.9.37/TBA-0.9.37.mrpack",
-  "size": 170357475,
-  "sha512": "0c893ca582a4006625090a62d47f92836fe37e9600f4dbee3b4f47b9e618ccd561c248835dffe45c1c8e7befe44d0f5f2685cd6bf9f4b8d524c3cab8c9f9f819",
-  "whitelisted_domains": ["github.com", "objects.githubusercontent.com"],
-  "non_overwritable_paths": ["world", "world_nether", "world_the_end", "server.properties", "ops.json", "whitelist.json", "banned-players.json", "banned-ips.json"]
+  "display_version": "0.9.62",
+  "url": "https://github.com/mindfulent/TBA/releases/download/v0.9.62/TBA-0.9.62.mrpack",
+  "size": 372050899,
+  "sha512": "e9c3a6639ae338e45b7896e71f6d33d1b1011b5877e3033c1ac20eaa6499db8c85532442c6445ecfa2011949df0bff43dc9386f9d0491fd1136bd677152edc80",
+  "whitelisted_domains": [
+    "github.com",
+    "objects.githubusercontent.com"
+  ],
+  "non_overwritable_paths": [
+    "world",
+    "world_nether",
+    "world_the_end",
+    "server.properties",
+    "ops.json",
+    "whitelist.json",
+    "banned-players.json",
+    "banned-ips.json"
+  ]
 }
