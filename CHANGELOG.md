@@ -2,6 +2,16 @@
 
 All notable changes to TBA will be documented in this file.
 
+## [0.9.63] - 2026-01-05
+
+### Fixed
+- **CurseForge compliance** - Switched AutoWhitelist from Modrinth to CurseForge source
+  - Mods available on CurseForge must be referenced in manifest.json, not bundled
+  - Thanks to CurseForge moderation team for the feedback
+
+### Notes
+- Mod count: 126 total (unchanged)
+
 ## [0.9.62] - 2026-01-05
 
 ### Changed
