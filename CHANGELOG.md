@@ -2,6 +2,23 @@
 
 All notable changes to TBA will be documented in this file.
 
+## [0.9.64] - 2026-01-10
+
+### Fixed
+- **Restored missing shaderpacks** - Added back Photon v1.2a and Solas Shader v3.1c
+  - Root cause: These shaders existed locally but were never committed to git
+  - When working directory was rebuilt during v0.9.62 rebrand, untracked files were lost
+  - All 4 bundled shaders now properly tracked in git
+
+### Included Shaderpacks
+- BSL v10.0
+- Complementary Reimagined r5.6.1
+- Photon v1.2a
+- Solas Shader v3.1c
+
+### Notes
+- Mod count: 126 total (unchanged)
+
 ## [0.9.63] - 2026-01-05
 
 ### Fixed
