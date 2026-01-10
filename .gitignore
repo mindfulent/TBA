@@ -6,6 +6,8 @@ packwiz
 *.mrpack
 *.zip
 
+# But DO track shaderpacks (they are bundled with the modpack)
+!shaderpacks/*.zip
 # mrpack4server deployment files
 mrpack4server*.jar
 local.mrpack
