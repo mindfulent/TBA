@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.68] - 2026-01-14
+
+### Changed
+- **CoreCurriculum** - Renamed `/discord` command to `/link` to avoid conflicts with other mods
+  - `/link` - Generate Discord linking code
+  - `/link status` - Check if Discord is linked
+  - `/link remove` - Unlink Discord account
+
 ## [0.9.67] - 2026-01-14
 
 ### Added - Core Curriculum Recognition System

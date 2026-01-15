@@ -672,7 +672,7 @@ metafile = true
 
 [[files]]
 file = "mods/corecurriculum-0.1.0.jar"
-hash = "dc5e7fe5efc0f7b262721c7c923e1479913d08c9f5aa33675b3d260cd5814b7e"
+hash = "ed137abdc9200a73ef83546c3559058164de204c12bfb71d11e577ff4be116c4"
 
 [[files]]
 file = "mods/craterlib.pw.toml"
