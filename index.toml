@@ -680,8 +680,9 @@ hash = "ddf14957c036e6d3fbdd3bf7eaee44a4821d6157175b257a8f13cb31531aa289"
 metafile = true
 
 [[files]]
-file = "mods/corecurriculum-0.1.0.jar"
-hash = "ed137abdc9200a73ef83546c3559058164de204c12bfb71d11e577ff4be116c4"
+file = "mods/core-curriculum.pw.toml"
+hash = "9700ffab8c03cd947129793fb3a6c1c4847b5dd72c6c21acb4fcf3bb7ff774d4"
+metafile = true
 
 [[files]]
 file = "mods/craterlib.pw.toml"
