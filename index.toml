@@ -9,6 +9,10 @@ file = "config/AdvancedBackups.properties"
 hash = "28b1af7e1ccd9695166ec1df33e0d08c1ec078e6e186e0b2e8c0228fe9e10acf"
 
 [[files]]
+file = "config/axiom/axiom.json"
+hash = "fe2109b2c6ddfebbd3f15fd98e180774a262d447029dd6f46e794ad6b86fde78"
+
+[[files]]
 file = "config/bluemap/core.conf"
 hash = "b942611c074c37431c5c24d6d63faaf731e5e3b0a4f210370f3237617031b89e"
 

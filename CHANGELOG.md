@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.70] - 2026-01-15
+
+### Changed
+- **Axiom** - Skip first-time intro and tips for new installs via bundled config
+
+### Notes
+- Mod count: 153 total (unchanged from 0.9.69)
+
 ## [0.9.69] - 2026-01-14
 
 ### Added
