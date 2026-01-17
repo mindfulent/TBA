@@ -3,6 +3,20 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.72] - 2026-01-17
+
+### Changed
+- **Core Curriculum** v0.1.3 → v0.1.9 - Major update with ownership verification and UI improvements:
+  - **Ledger-based ownership verification** - Build submissions now include block ownership stats, allowing slashAI to detect if the submitter actually built what they're submitting
+  - **Discord link required** - `/submit` and `/feedback` now require a linked Discord account for feedback delivery
+  - **Submission management** - Delete submissions from history, improved success messaging
+  - **UI polish** - Smaller thumbnails, location displayed in header, camera emoji placeholders
+  - **OP commands** - `/title grant <player> <title>` for staff to grant titles directly
+  - **New nomination categories** - teacher, student, builder, game-master
+
+### Notes
+- Mod count: 153 total (unchanged from 0.9.71)
+
 ## [0.9.71] - 2026-01-15
 
 ### Changed
