@@ -3,6 +3,21 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.73] - 2026-01-17
+
+### Changed
+- **Core Curriculum** v0.1.9 → v0.1.15 - New features and improvements:
+  - **Welcome screen** - Multi-page onboarding for new players, auto-shows on first join, press `H` to reopen
+  - **Gamemode time tracking** - Tracks time in Survival/Creative/Adventure for title progression
+  - **Gamemode announcements** - Discord notifications when switching gamemodes with session time
+  - **Title revoke** - OPs can now revoke titles with `/title revoke <player> <title>`
+  - **Discord mentions** - Title grants now @mention recipient and granter in Discord
+  - **UI polish** - Welcome screen with gradient backgrounds, progress dots, smooth animations
+- **Auto HUD** - Now disabled by default (HUD stays visible). Players can re-enable dynamic hiding via Mod Menu settings.
+
+### Notes
+- Mod count: 153 total (unchanged from 0.9.72)
+
 ## [0.9.72] - 2026-01-17
 
 ### Changed

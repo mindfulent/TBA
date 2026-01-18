@@ -9,6 +9,14 @@ file = "config/AdvancedBackups.properties"
 hash = "28b1af7e1ccd9695166ec1df33e0d08c1ec078e6e186e0b2e8c0228fe9e10acf"
 
 [[files]]
+file = "config/DistantHorizons.toml"
+hash = "96160eb5ef28e1b349eb91f9c09d8f87367e4b6acfb8d4f40cd56ad22ef85265"
+
+[[files]]
+file = "config/autohud.json5"
+hash = "704c75ce412e41f580017ee3355005aab5b3b702eef4a0e942035382a17b402a"
+
+[[files]]
 file = "config/axiom/axiom.json"
 hash = "fe2109b2c6ddfebbd3f15fd98e180774a262d447029dd6f46e794ad6b86fde78"
 
@@ -485,6 +493,14 @@ file = "config/worldedit/schematics/mcc.schem"
 hash = "84a3c8848190eb4832f8e47798ba686a35d83e682f01f3d7ba8b228acce9f0e2"
 
 [[files]]
+file = "defaultconfigs/voicechat/voicechat-client.properties"
+hash = "8d10cb5c84c81383401303205083c9a0f97766ab1ca4a6e616182f8354901d09"
+
+[[files]]
+file = "journeymap/config/6.0/journeymap.core.config"
+hash = "5896f87075123ab552dca13dab7af629a64c122829fbc413b233c3a4e08be78a"
+
+[[files]]
 file = "journeymap/config/6.0/journeymap.minimap.config"
 hash = "3cc0c1a7ea73053c1f3713bab68d15b64942735a97d77f73a216627ab407e4cb"
 
@@ -681,7 +697,7 @@ metafile = true
 
 [[files]]
 file = "mods/core-curriculum.pw.toml"
-hash = "b68bdc3e6116143745262e784f94fd3df3b00791d2c0178b937148c125c34d55"
+hash = "ebea7c9af70f9d7418524defcb8a4587c45827842e0fee678032a79f496324bb"
 metafile = true
 
 [[files]]

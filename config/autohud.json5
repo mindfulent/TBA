@@ -1,0 +1,208 @@
+{
+	"dynamicOnLoad": false,
+	"ticksRevealed": 40,
+	"animationMove": true,
+	"animationFade": true,
+	"animationSpeed": 2.0,
+	"animationSpeeds": {
+		"moveIn": 0.0,
+		"moveOut": 0.0,
+		"fadeIn": 0.0,
+		"fadeOut": 0.0
+	},
+	"revealType": "Stacked",
+	"events": {
+		"onScreenOpen": "Nothing",
+		"onMoving": "Nothing",
+		"onStandingStill": "Nothing",
+		"onPauseScreen": "Nothing",
+		"onSneaking": "Nothing",
+		"onFlying": "Nothing",
+		"onUsingItem": false,
+		"onMining": false,
+		"onSwinging": false,
+		"onAttacking": false
+	},
+	"statusEffectTimer": true,
+	"defaultValues": {
+		"speedMultiplier": 1.0,
+		"distance": 60,
+		"maximumFade": 0.0
+	},
+	"health": {
+		"active": false
+	},
+	"hunger": {
+		"active": false
+	},
+	"revealBarsWhenHoldingConsumableItem": false,
+	"air": {
+		"active": false
+	},
+	"armor": {
+		"active": false
+	},
+	"experience": {
+		"active": false,
+		"onChange": false
+	},
+	"experienceBar": {
+		"active": false,
+		"onChange": false
+	},
+	"revealExperienceTextOnTargetingEnchantingBlock": false,
+	"mountJumpBar": {
+		"active": false,
+		"onChange": false
+	},
+	"mountHealth": {
+		"active": false
+	},
+	"statusEffects": {
+		"active": false,
+		"onChange": false
+	},
+	"hidePersistentStatusEffects": false,
+	"showHiddenStatusEffects": false,
+	"hotbar": {
+		"hotbar": {
+			"active": false,
+			"onChange": false
+		},
+		"onDamageChange": false,
+		"onStackSizeChange": false,
+		"onSlotChange": false,
+		"onLowDurability": false,
+		"durabilityPercentage": 10,
+		"durabilityTotal": 20,
+		"maximumFadeHotbarItems": 0.0,
+		"revealExperienceTextWithHotbar": false,
+		"hideTooltip": false
+	},
+	"scoreboard": {
+		"scoreboard": {
+			"active": false,
+			"onChange": false
+		},
+		"onScoreChange": false,
+		"onTeamChange": false
+	},
+	"chat": {
+		"chat": {
+			"active": false
+		},
+		"displayIndicator": false
+	},
+	"actionBar": {
+		"active": false
+	},
+	"bossBar": {
+		"active": false
+	},
+	"crosshair": {
+		"active": false,
+		"onChange": false
+	},
+	"crosshairAlwaysVisible": [
+		"minecraft:bow",
+		"minecraft:crossbow",
+		"minecraft:trident"
+	],
+	"advanced": {
+		"hotbar": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"health": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"armor": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"hunger": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"air": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"experience": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"mountJumpBar": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"mountHealth": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"statusEffects": {
+			"direction": "Up",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"scoreboard": {
+			"direction": "Right",
+			"speedMultiplier": -1.0,
+			"distance": 100,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"crosshair": {
+			"speedMultiplier": 2.5,
+			"maximumFade": 0.1
+		},
+		"chat": {
+			"direction": "Left",
+			"speedMultiplier": -1.0,
+			"distance": 100,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"actionBar": {
+			"direction": "Down",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		},
+		"bossBar": {
+			"direction": "Up",
+			"speedMultiplier": -1.0,
+			"distance": -1,
+			"maximumFade": -1.0,
+			"renderWhenHidden": false
+		}
+	}
+}

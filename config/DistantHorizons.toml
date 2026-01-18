@@ -1,0 +1,14 @@
+# Distant Horizons config - TBA defaults
+# Disable startup warnings since players get our welcome screen
+_version = 3
+
+[common]
+	[common.logging]
+		[common.logging.warning]
+			showLowMemoryWarningOnStartup = false
+			showPoolInsufficientMemoryWarning = false
+			showHighVanillaRenderDistanceWarning = false
+			showReplayWarningOnStartup = false
+			showUpdateQueueOverloadedChatWarning = false
+			showSlowWorldGenSettingWarnings = false
+			showModCompatibilityWarningsOnStartup = false
