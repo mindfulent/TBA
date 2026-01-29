@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** January 28, 2026
-**Modpack Version:** 0.9.75 (185 mods total)
+**Modpack Version:** 0.9.77 (186 mods total)
 
 ---
 
@@ -43,7 +43,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [MaLiLib](https://modrinth.com/mod/malilib) | masa, sakura-ryoko | 0.21.9 | Jun 22, 2025 | [PayPal](https://paypal.me/maruohon) |
 | [Moonlight Lib](https://modrinth.com/mod/moonlight) | MehVahdJukaar | 2.28.3 | Dec 17, 2025 | - |
 | [CraterLib](https://modrinth.com/mod/craterlib) | HypherionSA | 3.0.1 | Dec 6, 2025 | [Ko-fi](https://ko-fi.com/hypherionsa) |
-| [Athena CTM](https://modrinth.com/mod/athena-ctm) | Terrarium Earth | 4.0.2 | Jun 19, 2025 | [Ko-fi](https://kofi.terrarium.earth) |
+| [Athena CTM](https://modrinth.com/mod/athena-ctm) | Terrarium Earth | 4.0.2 | Jun 19, 2025 | [Ko-fi](https://ko-fi.com/terrariumearth) |
 | [Searchables](https://modrinth.com/mod/searchables) | jaredlll08 | 1.0.2 | Oct 21, 2024 | - |
 | [Forge Config API Port](https://modrinth.com/mod/forge-config-api-port) | Fuzss | 21.1.6 | Nov 12, 2025 | - |
 | [Bad Packets](https://modrinth.com/mod/badpackets) | deirn | 0.8.2 | Jan 8, 2025 | - |
@@ -68,7 +68,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [MidnightLib](https://www.curseforge.com/minecraft/mc-mods/midnightlib) | TeamMidnightDust | 1.9.2 | Jan 2026 | - |
 | [MossyLib](https://www.curseforge.com/minecraft/mc-mods/mossylib) | Mossy | 1.1.0 | Jan 2026 | - |
 | [CICADA](https://www.curseforge.com/minecraft/mc-mods/cicada) | Enjarai | 0.14.3 | Jan 2026 | - |
-| [M.R.U](https://modrinth.com/mod/mru) | mineblock11 | 1.0.19 | Jan 2026 | - |
+| [M.R.U](https://www.curseforge.com/minecraft/mc-mods/mru) | Okamomille, frikinjay | 1.0.19 | Jan 2026 | - |
+| [Trinkets](https://www.curseforge.com/minecraft/mc-mods/trinkets) | emilyploszaj | 3.10.0 | Jan 2026 | - |
 
 ## Map Mods
 
@@ -116,6 +117,18 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Falling Leaves](https://www.curseforge.com/minecraft/mc-mods/falling-leaves-fabric) | RandomMcSomethin | 1.17.1 | Nov 2024 | - |
 | [Diagonal Fences](https://www.curseforge.com/minecraft/mc-mods/diagonal-fences) | Fuzss | 21.1.1 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
 | [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity) | PepperCode1 | 3.0.0 | Jan 2026 | - |
+| [Macaw's Paintings](https://www.curseforge.com/minecraft/mc-mods/macaws-paintings) | sketch_macaw | 1.0.5 | Jan 2025 | - |
+| [Macaw's Holidays](https://www.curseforge.com/minecraft/mc-mods/macaws-holidays) | sketch_macaw | 1.1.2 | Jan 2026 | - |
+| [Macaw's Paths and Pavings](https://www.curseforge.com/minecraft/mc-mods/macaws-paths-and-pavings) | sketch_macaw | 1.1.1 | Jan 2026 | - |
+| [Sooty Chimneys](https://www.curseforge.com/minecraft/mc-mods/sooty-chimneys) | Kir_Antipov | 1.3.2 | Jan 2026 | - |
+| [Diagonal Windows](https://www.curseforge.com/minecraft/mc-mods/diagonal-windows) | Fuzss | 21.1.1 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Beautify: Refabricated](https://www.curseforge.com/minecraft/mc-mods/beautify-refabricated) | 9Tails | 1.3.0 | Jan 2026 | - |
+| [Clutter](https://www.curseforge.com/minecraft/mc-mods/clutter) | PinkGoosik | 0.6.5 | Jan 2026 | - |
+| [Fetzi's Asian Decoration](https://www.curseforge.com/minecraft/mc-mods/fetzis-asian-decoration) | Fetzi | 1.7.2a | Jan 2026 | - |
+| [Dusty Decorations](https://www.curseforge.com/minecraft/mc-mods/dusty-decorations) | lunarbunten | 1.1 | Jan 2026 | - |
+| [NiftyCarts](https://www.curseforge.com/minecraft/mc-mods/niftycarts) | Fuzss | 21.1.1 | Jan 2026 | [Patreon](https://www.patreon.com/heyitsfuzs) |
+| [Enchanted Vertical Slabs](https://www.curseforge.com/minecraft/mc-mods/enchanted-vertical-slabs) | TheWinAGT | 2.3 | Jan 2026 | - |
+| [VerdantVibes](https://modrinth.com/mod/verdantvibes-unofficial-port) | VerdantVibes community | 1.0.3 | Jan 2026 | - |
 
 ## Content Mods
 
@@ -138,6 +151,10 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Naturally Trimmed](https://www.curseforge.com/minecraft/mc-mods/naturally-trimmed) | Enjarai | 3.1.2 | Jan 2026 | - |
 | [Trimmable Tools](https://www.curseforge.com/minecraft/mc-mods/trimmable-tools) | Trimmable Tools Team | 2.0.5 | Jan 2026 | - |
 | [Do A Barrel Roll](https://www.curseforge.com/minecraft/mc-mods/do-a-barrel-roll) | Enjarai | 3.7.3 | Jan 2026 | - |
+| [[Let's Do] Brewery](https://www.curseforge.com/minecraft/mc-mods/lets-do-brewery) | satisfyu, Cristelknight | 2.1.5 | Jan 2026 | [PayPal](https://paypal.me/mrclbe), [Patreon](https://www.patreon.com/user?u=78595058) |
+| [[Let's Do] Meadow](https://www.curseforge.com/minecraft/mc-mods/lets-do-meadow) | satisfyu, Cristelknight | 1.4.4 | Jan 2026 | [PayPal](https://paypal.me/mrclbe), [Patreon](https://www.patreon.com/user?u=78595058) |
+| [[Let's Do] Beach Party](https://www.curseforge.com/minecraft/mc-mods/lets-do-beachparty) | satisfyu, Cristelknight | 2.1.2 | Jan 2026 | [PayPal](https://paypal.me/mrclbe), [Patreon](https://www.patreon.com/user?u=78595058) |
+| [Friends and Foes](https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-fabric) | Faboslav | 4.0.19 | Jan 2026 | - |
 
 ## Quality of Life Mods
 
@@ -170,6 +187,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Paginated Advancements](https://www.curseforge.com/minecraft/mc-mods/paginated-advancements) | DaFuqs | 2.5.1 | Jan 2026 | - |
 | [Stack to Nearby Chests](https://www.curseforge.com/minecraft/mc-mods/stack-to-nearby-chests) | Kyrptonaught | 0.5.10 | Jan 2026 | - |
 | [Status Effect Bars](https://www.curseforge.com/minecraft/mc-mods/status-effect-bars) | Neecko5b84 | 1.0.6 | Jan 2026 | - |
+| [FallingTree](https://www.curseforge.com/minecraft/mc-mods/falling-tree) | RakSrinpsern | 1.21.1.11 | Jan 2026 | - |
 
 ## Multiplayer Mods
 
@@ -184,6 +202,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Advanced Backups](https://modrinth.com/mod/advanced-backups) | RyanMoodGAMING | 3.7.1 | Dec 2025 | - |
 | [spark](https://modrinth.com/mod/spark) | lucko | 1.10.109 | Sep 26, 2024 | - |
 | [Chunky](https://modrinth.com/mod/chunky) | pop4959 | 1.4.23 | Apr 4, 2025 | - |
+| [Essential Permissions](https://www.curseforge.com/minecraft/mc-mods/essential-permissions) | DrexHD | 0.3.3 | Jan 2026 | - |
 
 ## Server-Only Mods
 
@@ -223,7 +242,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [VinURL](https://modrinth.com/mod/vinurl) | uku3lig | 2.2.1 | Dec 2025 | - |
 | [Cool Rain](https://www.curseforge.com/minecraft/mc-mods/cool-rain) | Cool Rain Team | 1.3.1 | Jan 2026 | - |
 | [Sounds](https://modrinth.com/mod/sounds) | mineblock11 | 2.4.22 | Jan 2026 | - |
-| [Genshin Instruments](https://modrinth.com/mod/genshin-instruments) | StavWasPlayin | 5.0.1 | Dec 2025 | - |
+| [Genshin Instruments](https://www.curseforge.com/minecraft/mc-mods/genshin-instruments) | StavWasPlayZ | 5.0.1 | Jan 2026 | [Ko-fi](https://ko-fi.com/D1D1LE3HC) |
+| [Presence Footsteps](https://www.curseforge.com/minecraft/mc-mods/presence-footsteps) | Sollace | 1.10.2 | Jan 2026 | - |
+| [Even More Instruments](https://www.curseforge.com/minecraft/mc-mods/even-more-instruments) | StavWasPlayZ | 6.1.4 | Jan 2026 | [Ko-fi](https://ko-fi.com/D1D1LE3HC) |
 
 ## Camera & Animation
 
@@ -236,6 +257,11 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Blur+](https://www.curseforge.com/minecraft/mc-mods/blur-fabric) | Motschen | 6.0.0 | Jan 2026 | - |
 | [Inventory Particles](https://www.curseforge.com/minecraft/mc-mods/inventory-particles) | Mossy | 1.3.2 | Jan 2026 | - |
 | [Smooth Swapping](https://www.curseforge.com/minecraft/mc-mods/smooth-swapping) | Schauweg | 0.9.3.2 | Jan 2026 | - |
+| [Visuality](https://www.curseforge.com/minecraft/mc-mods/visuality) | PinkGoosik | 0.7.7 | Jan 2026 | - |
+| [3D Skin Layers](https://www.curseforge.com/minecraft/mc-mods/skin-layers-3d) | tr7zw | 1.10.1 | Jan 2026 | [Ko-fi](https://ko-fi.com/tr7zw) |
+| [Particle Rain](https://www.curseforge.com/minecraft/mc-mods/particle-rain) | PigCart | 4.0.0-beta | Jan 2026 | - |
+| [Eating Animation](https://www.curseforge.com/minecraft/mc-mods/eating-animation-fabric) | theone_ss | 1.9.72 | Jan 2026 | - |
+| [AutoHUD](https://www.curseforge.com/minecraft/mc-mods/autohud) | Crendgrim | 8.11 | Jan 2026 | - |
 
 ---
 
@@ -245,8 +271,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |--------|-----------|--------|
 | BSL Shaders | CaptTatsu | [Patreon](https://www.patreon.com/capttatsu) |
 | Complementary Reimagined | EminGT | [Patreon](https://www.patreon.com/emingt) |
-| Photon | sixthsurge | - |
-| Solas Shader | septonious | [Patreon](https://www.patreon.com/septonious) |
+| Photon | sixthsurge | [Ko-fi](https://ko-fi.com/sixthsurge) |
+| Solas Shader | septonious | [Boosty](https://boosty.to/septonious) |
 
 ---
 
@@ -261,15 +287,15 @@ Many mod creators accept donations to support their work. Consider supporting yo
 ## Creator Highlights
 
 ### Prolific Contributors
-- **sketch_macaw** (Slovakia) - 8 Macaw's mods providing doors, windows, bridges, roofs, fences, walls, trapdoors, furniture, and lighting
+- **sketch_macaw** (Slovakia) - 11 Macaw's mods providing doors, windows, bridges, roofs, fences, walls, trapdoors, furniture, lighting, paintings, holidays, and paths
 - **shedaniel** - REI, Cloth Config, Architectury (core infrastructure mods)
 - **Patbox** - Polymer, Text Placeholder API (server-side mod pioneer)
 - **Terrarium Earth** (ThatGravyBoat, CodexAdrian, AlexNijjar) - Chipped, Handcrafted, Athena CTM
-- **satisfyu & Cristelknight** - [Let's Do] series (Vinery, Bakery, Farm & Charm)
+- **satisfyu & Cristelknight** - [Let's Do] series (Vinery, Bakery, Farm & Charm, Brewery, Meadow, Beach Party)
 - **masa** - Litematica, MaLiLib (essential building tools)
 - **CaffeineMC** (jellysquid3, IMS) - Sodium, Lithium (performance optimization)
 - **MehVahdJukaar** - Moonlight Lib, Supplementaries, Universal Sawmill, Farmer's Delight contributions
-- **Fuzs** - Puzzles Lib, Armor Statues, Forge Config API Port (multi-loader infrastructure)
+- **Fuzs** - Puzzles Lib, Armor Statues, Diagonal Walls/Windows/Fences, Easy Magic, Leaves Be Gone, NiftyCarts, Illager Invasion, and more
 - **BlayTheNinth** - Balm, Little Joys, Waystones, Cooking for Blockheads (12+ years of modding)
 - **Keksuccino** - Konkrete, FancyMenu (library and utility mods)
 - **Apollo** - Lithostitched, Reintegrated series (worldgen compatibility)
