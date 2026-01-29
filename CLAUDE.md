@@ -80,12 +80,27 @@ Local Dev (packwiz) → GitHub Release (.mrpack) → Bloom.host (mrpack4server)
 
 ## CurseForge-First Policy
 
-**Always try CurseForge first** for mod distribution compliance:
+**Always try CurseForge first** for mod distribution compliance. Mods with Modrinth metadata become overrides (bundled jars) in the CurseForge export, which can cause submission rejection if CurseForge detects the mod is actually hosted on their platform.
 
 1. Use `./packwiz.exe cf install <mod>` first
 2. If wrong file returned (e.g., Spigot instead of Fabric), check CurseForge project page for correct file ID
-3. Only use Modrinth (`mr install`) if mod doesn't exist on CurseForge
+3. Only use Modrinth (`mr install`) if mod genuinely doesn't exist on CurseForge
 4. Document Modrinth-only mods in CHANGELOG (they become overrides in CF export)
+
+**⚠️ CRITICAL: When `cf install` fails, do NOT immediately fall back to Modrinth.** A failed `cf install` often means the slug is wrong, not that the mod is missing from CurseForge. Before using Modrinth:
+
+1. **Try alternate slugs** — CurseForge slugs often differ from Modrinth:
+   - With/without `-fabric` suffix (e.g., `c2me` not `c2me-fabric`)
+   - Singular vs plural (e.g., `sound` not `sounds`)
+   - Different naming entirely (e.g., `nords-leaf-me-alone` not `leaf-me-alone`)
+2. **Web search** for the mod's actual CurseForge project page to find the correct slug
+3. **Check for name collisions** — "mod not available for configured version" may mean packwiz found a *different mod* with the same slug (e.g., an old 1.16 mod vs the 1.21 version under a different project)
+4. **Use `--file-id`** if the slug works but packwiz picks the wrong file
+
+**After adding from Modrinth, always verify:**
+- Run `curseforge export` and check the override count
+- Any mod "added to zip" is an override — search CurseForge for it before accepting
+- If switching a mod from Modrinth to CF, delete the old `.pw.toml` file (packwiz creates a new one with a different name rather than overwriting)
 
 ## Shaderpacks
 
