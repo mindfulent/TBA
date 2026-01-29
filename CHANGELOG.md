@@ -3,6 +3,16 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.77] - 2026-01-28
+
+### Fixed
+- Switched C2ME, Sounds, and Leaf Me Alone from Modrinth to CurseForge metadata for CF export compliance
+- Removed duplicate mod metadata files (c2me-fabric, leaf-me-alone)
+
+### Notes
+- Mod count: 186 total (unchanged from 0.9.76)
+- CurseForge overrides reduced from 7 to 4 (VerdantVibes, ReFramed, Better Sleep, Fabricord)
+
 ## [0.9.76] - 2026-01-28
 
 ### Added

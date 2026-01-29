@@ -659,8 +659,8 @@ hash = "7e9f534e3c25d1d757374b55f766ce7dc4c9a98bcae530b1571fc7f914ff86da"
 metafile = true
 
 [[files]]
-file = "mods/c2me-fabric.pw.toml"
-hash = "941c3f358ef74f4fc99727e550106b8905d77cb4971321fd8ca4406e33b704a6"
+file = "mods/c2me.pw.toml"
+hash = "512a9aa7d85f3cf154f36ac8e287889e5730088fe19b8eb0b1e9409ca2ba5756"
 metafile = true
 
 [[files]]
@@ -1014,11 +1014,6 @@ hash = "e8775813abb0b1d5e69d8345a3bdb83174510b5d6a2b943c4818734e00090cc1"
 metafile = true
 
 [[files]]
-file = "mods/leaf-me-alone.pw.toml"
-hash = "443ec5c37984c9f0076b2059543f2113a43d1f029aaa9a5e20c59dfa804b965d"
-metafile = true
-
-[[files]]
 file = "mods/leaves-be-gone.pw.toml"
 hash = "9d80a460f4d7a575cc077da17e639909d3b67b2900548adfb028c8012ee5f3c6"
 metafile = true
@@ -1204,6 +1199,11 @@ hash = "c380081c42e1af92db4c44b820912931b52cccd2fde3d38ebb7fce122f67c5b7"
 metafile = true
 
 [[files]]
+file = "mods/nords-leaf-me-alone.pw.toml"
+hash = "60bd9c6badf7c1bd9cf22de36f4a91aace34c96fab563d821f00b8beede42e49"
+metafile = true
+
+[[files]]
 file = "mods/not-enough-animations.pw.toml"
 hash = "29dc45e85f75a0b4d4f3e914fe63e593ece25b60026f28f73a7dd23bbb1bbbce"
 metafile = true
@@ -1325,7 +1325,7 @@ metafile = true
 
 [[files]]
 file = "mods/sound.pw.toml"
-hash = "1d0e54184bf7982547240482dd90ae24a34eea89927ca3b3f23b37e7b2c17574"
+hash = "503a13fb7a8188f8434a82df32c16644cba3d0f25e31da88626acc52af03da41"
 metafile = true
 
 [[files]]
