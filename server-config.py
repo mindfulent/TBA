@@ -427,7 +427,8 @@ def pterodactyl_request(endpoint, method="GET", data=None):
     headers = {
         "Authorization": f"Bearer {PTERODACTYL_API_KEY}",
         "Content-Type": "application/json",
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "User-Agent": "TBA-Server-Config"
     }
 
     try:
@@ -523,7 +524,8 @@ def send_console_command(command):
     headers = {
         "Authorization": f"Bearer {PTERODACTYL_API_KEY}",
         "Content-Type": "application/json",
-        "Accept": "application/json"
+        "Accept": "application/json",
+        "User-Agent": "TBA-Server-Config"
     }
 
     try:

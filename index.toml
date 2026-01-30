@@ -744,9 +744,8 @@ hash = "693d8c86a7a742c504ead1fbf62202d23713c20c4fbdc654b905ba9f6621332f"
 metafile = true
 
 [[files]]
-file = "mods/core-curriculum.pw.toml"
-hash = "9813cab36623ca615fc33098b6ad2faeaaacb950f44b7cb5edfd8871df066f0b"
-metafile = true
+file = "mods/corecurriculum-0.1.18.jar"
+hash = "40f2e69a8bd2f81e475a6462aa55ec7b81deb01a3fe91e944277815fa145a4f6"
 
 [[files]]
 file = "mods/crash-assistant.pw.toml"
@@ -861,6 +860,11 @@ metafile = true
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
 hash = "e6fca8f140f326b8484b7326d6720364a3855223b5f804a4d520f262541b001d"
+metafile = true
+
+[[files]]
+file = "mods/fabric-seasons-delight-compat.pw.toml"
+hash = "f9efc3a8b92991d29b7117b9a0d9fd7a3f7d567d0139243f35c6257f56068b75"
 metafile = true
 
 [[files]]

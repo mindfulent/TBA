@@ -3,6 +3,20 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.80] - 2026-01-30
+
+### Added
+- **Fabric Seasons: Delight Compat** v1.0 — Adds Farmer's Delight compatibility for Fabric Seasons, suppresses the first-join nag message
+
+### Updated
+- **Core Curriculum** 0.1.17 → 0.1.18:
+  - HUD auto-hides during screenshot capture mode (hotbar, crosshair removed for cleaner screenshots)
+  - HUD state preserved — if already hidden via F1, stays hidden after submission
+  - Welcome screen scrollbar no longer appears when content fits on screen
+
+### Notes
+- Mod count: 187 total (+1 from 0.9.79)
+
 ## [0.9.79] - 2026-01-30
 
 ### Fixed
