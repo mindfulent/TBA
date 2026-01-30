@@ -3,6 +3,15 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.79] - 2026-01-30
+
+### Fixed
+- **LuckPerms Placeholders hook** — Replaced broken JAR (artifact was renamed upstream from `LuckPerms-Fabric-PlaceholderAPI-Hook.jar` to `LuckPerms-Fabric-Placeholders.jar`), fixing `%luckperms:prefix%` not resolving in chat
+- **Core Curriculum** 0.1.16 → 0.1.17 — Title prefixes now use Simplified Text Format tags for Styled Chat compatibility
+
+### Notes
+- Mod count: 186 total (unchanged from 0.9.78)
+
 ## [0.9.78] - 2026-01-29
 
 ### Updated

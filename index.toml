@@ -1080,7 +1080,7 @@ metafile = true
 
 [[files]]
 file = "mods/luckperms-placeholders.pw.toml"
-hash = "66dc1f4b13b3c20ae1a422d396ee8dbc267a3b064eb4f988e6f63e46299d07f4"
+hash = "c2c9e22fcfda2d1ac7460439ace932d4008eed51c876f9e4493581b70cff068c"
 metafile = true
 
 [[files]]
