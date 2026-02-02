@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.82] - 2026-02-02
+
+### Fixed
+- Removed StreamCraft server mod from CurseForge zip overrides (flagged by CurseForge moderation as a CF-hosted project that should be in manifest). Server mod is now marked server-side only and excluded from client distribution.
+
+### Notes
+- Mod count: 189 total (unchanged from 0.9.81)
+
 ## [0.9.81] - 2026-02-02
 
 ### Added
