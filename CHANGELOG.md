@@ -6,7 +6,7 @@ All notable changes to TBA will be documented in this file.
 ## [0.9.81] - 2026-02-02
 
 ### Added
-- **StreamCraft Live** v0.1.9 — Real-time video conferencing in Minecraft (webcam, screen share, voice via LiveKit WebRTC). Client mod for players, server mod for proximity tracking and token brokering.
+- **StreamCraft Live** v0.1.10 — Real-time video conferencing in Minecraft (webcam, screen share, voice via LiveKit WebRTC). Client mod for players, server mod for proximity tracking and token brokering.
 
 ### Updated
 - **Core Curriculum** 0.1.18 → 0.1.19:
