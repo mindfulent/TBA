@@ -8,6 +8,7 @@ packwiz
 # mrpack4server deployment files
 mrpack4server*.jar
 local.mrpack
+modpack-info.json
 
 # Windows artifacts
 nul

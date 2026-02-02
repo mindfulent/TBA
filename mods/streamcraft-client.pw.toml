@@ -1,0 +1,13 @@
+name = "StreamCraft Live"
+filename = "streamcraft-client-0.1.9.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7564/264/streamcraft-client-0.1.9.jar"
+hash-format = "sha1"
+hash = "a877afb0d88d7fc51e714caf90df078cade17420"
+
+[update]
+[update.curseforge]
+file-id = 7564264
+project-id = 1451729

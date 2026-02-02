@@ -525,10 +525,6 @@ file = "modified_stats_sonar6ix.json"
 hash = "605ef244f96db8bc88c65d08644243e4ae980e2b08b40e7963118051c0135757"
 
 [[files]]
-file = "modpack-info.json"
-hash = "30a62d4cbf8b92da3091e139ccac10180dd053e03345d282d47a688b7d8134a1"
-
-[[files]]
 file = "mods/accurate-block-placement-reborn.pw.toml"
 hash = "c216152e4706477b3e07f00fcefef921b37bc1008501862a9b6bb44dd44dc05e"
 metafile = true
@@ -745,7 +741,7 @@ metafile = true
 
 [[files]]
 file = "mods/core-curriculum.pw.toml"
-hash = "df9f5d43484e914d04e9484f0849d68c8f91140cb76641092c1c130f82bbfba6"
+hash = "70f7b28d214c48120564fa541ea98c32206a44123617adf326b3abec5eeb73b7"
 metafile = true
 
 [[files]]
@@ -1085,7 +1081,7 @@ metafile = true
 
 [[files]]
 file = "mods/luckperms-placeholders.pw.toml"
-hash = "c2c9e22fcfda2d1ac7460439ace932d4008eed51c876f9e4493581b70cff068c"
+hash = "9396c98d92c8e977977c113979b7cf45c33328b4d15049ed17421b8c323279b1"
 metafile = true
 
 [[files]]
@@ -1356,6 +1352,16 @@ metafile = true
 [[files]]
 file = "mods/storage-drawers.pw.toml"
 hash = "befd654249edcbfcbe1f331dfea15c174715743ad5dd65412a008c5180b4a821"
+metafile = true
+
+[[files]]
+file = "mods/streamcraft-client.pw.toml"
+hash = "156efc00cba467f4719d25b51d825f60f6886fa878c375a8eda54438f42ff772"
+metafile = true
+
+[[files]]
+file = "mods/streamcraft-server.pw.toml"
+hash = "854fd3460d07eea2907b6e00308f4dc5f74983bfafde7caf2ca71b6cf1afb469"
 metafile = true
 
 [[files]]

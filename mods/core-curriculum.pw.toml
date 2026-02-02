@@ -1,13 +1,13 @@
 name = "Core Curriculum"
-filename = "corecurriculum-0.1.18.jar"
+filename = "corecurriculum-0.1.19.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "a6e0ba0c07388ab057cfecd8849580ca5fb92a37"
+hash = "21c27d21b7f9c5c307163441d93b02bb1ebcfaa1"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7552941
+file-id = 7563844
 project-id = 1430194
