@@ -3,6 +3,15 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.88] - 2026-02-03
+
+### Updated
+- **StreamCraft Live** 0.1.15 → 0.1.16 — Added handshake diagnostics: state machine (NOT_SENT, PENDING, RECEIVED, TIMEOUT), 5-second timeout detection, detailed client/server logging. Menu now shows connection status. Fixed client version constant (was hardcoded to 0.1.0).
+- **StreamCraft Live (Server)** 0.1.15 → 0.1.16 — Added detailed handshake logging (player name, UUID, versions, license state). Fixed server MOD_VERSION constant.
+
+### Notes
+- Mod count: 189 total (unchanged from 0.9.87)
+
 ## [0.9.87] - 2026-02-03
 
 ### Fixed
