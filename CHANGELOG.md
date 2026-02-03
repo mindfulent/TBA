@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.84] - 2026-02-03
+
+### Fixed
+- **StreamCraft Live** 0.1.11 → 0.1.12 — Fixed client crash on launch (payload types not registered with Fabric networking). Client now registers its own payload types so it works standalone.
+
+### Notes
+- Mod count: 189 total (unchanged from 0.9.83)
+
 ## [0.9.83] - 2026-02-03
 
 ### Fixed
