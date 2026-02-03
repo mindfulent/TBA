@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.83] - 2026-02-03
+
+### Fixed
+- **StreamCraft Live** 0.1.10 → 0.1.11 — Fixed client crash on launch (`ClassNotFoundException: HandshakeC2S`). v0.1.10's optional server dependency fix was incomplete; payload classes now properly duplicated in client mod.
+
+### Notes
+- Mod count: 189 total (unchanged from 0.9.82)
+
 ## [0.9.82] - 2026-02-02
 
 ### Fixed
