@@ -1,6 +1,6 @@
 name = "StreamCraft Live (Server)"
 filename = "streamcraft-server-0.1.16.jar"
-side = "server"
+side = "both"
 
 [download]
 url = "https://mediafilez.forgecdn.net/files/7572/647/streamcraft-server-0.1.16.jar"

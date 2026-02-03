@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.89] - 2026-02-03
+
+### Fixed
+- **StreamCraft server mod not deploying** — Changed `side` from "server" back to "both". mrpack4server only extracts from `overrides/`, not `server-overrides/`. This regression from v0.9.85 fix caused the server mod to be missing entirely on production.
+
+### Notes
+- Mod count: 189 total (unchanged)
+
 ## [0.9.88] - 2026-02-03
 
 ### Updated

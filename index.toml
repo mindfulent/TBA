@@ -517,6 +517,10 @@ file = "journeymap/config/6.0/journeymap.minimap2.config"
 hash = "89eabb286e12a96f4af8df530c390ea0fcfabfab7dad4c68a9d6ee676eec5880"
 
 [[files]]
+file = "latest.log"
+hash = "697dbdd54adc678f47c47ec77a120339b8930622ad7df4ff6aff373affc1e922"
+
+[[files]]
 file = "minescript/config.txt"
 hash = "4dcf7855abb3439f00d76ba676653eeb01ffc529babc0a2bdd1bb37d144a6833"
 
@@ -1361,7 +1365,7 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-server.pw.toml"
-hash = "e013b032c408e06c927a71ae48b43acc46148f319fe3e5a8715eeec228f1abd1"
+hash = "c87929697e5bf7fb34d82adfb53e2b17ca44a9b8926d7dacd1a8a3ae30e4b6c1"
 metafile = true
 
 [[files]]
