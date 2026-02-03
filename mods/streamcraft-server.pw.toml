@@ -1,8 +1,13 @@
 name = "StreamCraft Live (Server)"
-filename = "streamcraft-server-0.1.10.jar"
-side = "both"
+filename = "streamcraft-server-0.1.14.jar"
+side = "server"
 
 [download]
-url = "https://mediafilez.forgecdn.net/files/7565/506/streamcraft-server-0.1.10.jar"
+url = "https://mediafilez.forgecdn.net/files/7572/141/streamcraft-server-0.1.14.jar"
 hash-format = "sha1"
-hash = "f24015cdebb490c4ee2fbcf0dcb1a27c8b69ebb5"
+hash = "fbbaddba0b95af1474a6c09a2a57b84f35f9ddcb"
+
+[update]
+[update.curseforge]
+file-id = 7572141
+project-id = 1451729

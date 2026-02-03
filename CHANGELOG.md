@@ -3,6 +3,15 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.86] - 2026-02-03
+
+### Updated
+- **StreamCraft Live** 0.1.12 → 0.1.14 — Display Block re-enabled. Block registration moved from server mod to client mod, resolving registry mismatch errors when connecting to servers. Client mod no longer depends on server mod.
+- **StreamCraft Live (Server)** 0.1.10 → 0.1.14 — Server mod cleaned up; Display Block registration now handled by client.
+
+### Notes
+- Mod count: 189 total (unchanged from 0.9.85)
+
 ## [0.9.85] - 2026-02-03
 
 ### Fixed
