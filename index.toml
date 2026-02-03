@@ -1360,8 +1360,8 @@ hash = "484ed8c3507f59bca03a5a9be146b71662bae06c0f0fce05746db55a9f478521"
 metafile = true
 
 [[files]]
-file = "mods/streamcraft-live.pw.toml"
-hash = "2c11af6d81ddf6bc91603ed4e5c61e20df49d1c77db534c1f3b2fafd62598c23"
+file = "mods/streamcraft-server.pw.toml"
+hash = "ad0e2fe75a5d54b3a2372ac8060dd8943e1e6ca65fc3601cd3764d3906ae91f1"
 metafile = true
 
 [[files]]
