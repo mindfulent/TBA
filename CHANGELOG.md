@@ -3,6 +3,15 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.87] - 2026-02-03
+
+### Fixed
+- **StreamCraft Live** 0.1.14 → 0.1.15 — Fixed crash when placing Display Block in hotbar. Both client and server must register Display Block for packet handling.
+- **StreamCraft Live (Server)** 0.1.14 → 0.1.15 — Re-added Display Block registration for server-side packet decoding.
+
+### Notes
+- Mod count: 189 total (unchanged from 0.9.86)
+
 ## [0.9.86] - 2026-02-03
 
 ### Updated
