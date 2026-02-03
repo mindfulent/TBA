@@ -1356,17 +1356,12 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-client.pw.toml"
-hash = "34a2e15f03a710a20cbce200c41d55bb96065289bb2d74b11b95760f7ca1bfb8"
-metafile = true
-
-[[files]]
-file = "mods/streamcraft-live.pw.toml"
-hash = "484ed8c3507f59bca03a5a9be146b71662bae06c0f0fce05746db55a9f478521"
+hash = "d7a02e38deeb48934d9cbf5277d670a4c536b3d13871f407c952e734b4ebe15e"
 metafile = true
 
 [[files]]
 file = "mods/streamcraft-server.pw.toml"
-hash = "3570057362400e0e30ff1ec6a432cac4b45db70b8ae70657b4bb26d43c3e4eb2"
+hash = "f6e36dc35b0616000072be6c920c149bbe1485d650ad067598c42b3c0a3d8b52"
 metafile = true
 
 [[files]]

@@ -3,9 +3,9 @@ filename = "streamcraft-client-0.1.14.jar"
 side = "client"
 
 [download]
-url = "https://mediafilez.forgecdn.net/files/7572/138/streamcraft-client-0.1.14.jar"
 hash-format = "sha1"
 hash = "d3b779724f85c1fec5dc9e064e4d524c83ef4815"
+mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]

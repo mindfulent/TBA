@@ -6,8 +6,3 @@ side = "server"
 url = "https://mediafilez.forgecdn.net/files/7572/141/streamcraft-server-0.1.14.jar"
 hash-format = "sha1"
 hash = "fbbaddba0b95af1474a6c09a2a57b84f35f9ddcb"
-
-[update]
-[update.curseforge]
-file-id = 7572141
-project-id = 1451729
