@@ -3,10 +3,16 @@
 All notable changes to TBA will be documented in this file.
 
 
-## [0.9.89] - 2026-02-03
+## [0.9.89] - 2026-02-04
+
+### Updated
+- **StreamCraft Live** 0.1.16 → 0.1.19 — Fixed mirrored webcam billboard, fixed inverted billboard pitch, added FPS overlay toggle in Settings (hidden by default)
+- **StreamCraft Live (Server)** 0.1.16 → 0.1.19 — Server-side updates matching client changes
+- **Core Curriculum** 0.1.19 → 0.1.21 — Added player stats sync (reads stat files every 15min, syncs to backend, auto-allowlisting, excludes banned players)
 
 ### Fixed
-- **StreamCraft server mod not deploying** — Changed `side` from "server" back to "both". mrpack4server only extracts from `overrides/`, not `server-overrides/`. This regression from v0.9.85 fix caused the server mod to be missing entirely on production.
+- **StreamCraft server mod not deploying** — Changed `side` from "server" back to "both". mrpack4server only extracts from `overrides/`, not `server-overrides/`.
+- **StreamCraft server mod CurseForge metadata** — Reinstalled server mod via CurseForge to use proper metadata instead of bare URL (prevents overrides in CF export)
 
 ### Notes
 - Mod count: 189 total (unchanged)

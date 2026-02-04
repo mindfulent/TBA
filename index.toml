@@ -517,10 +517,6 @@ file = "journeymap/config/6.0/journeymap.minimap2.config"
 hash = "89eabb286e12a96f4af8df530c390ea0fcfabfab7dad4c68a9d6ee676eec5880"
 
 [[files]]
-file = "latest.log"
-hash = "697dbdd54adc678f47c47ec77a120339b8930622ad7df4ff6aff373affc1e922"
-
-[[files]]
 file = "minescript/config.txt"
 hash = "4dcf7855abb3439f00d76ba676653eeb01ffc529babc0a2bdd1bb37d144a6833"
 
@@ -745,7 +741,7 @@ metafile = true
 
 [[files]]
 file = "mods/core-curriculum.pw.toml"
-hash = "70f7b28d214c48120564fa541ea98c32206a44123617adf326b3abec5eeb73b7"
+hash = "870659820f5359a98a242ccae0ab7543cce5191407c26b9bc9c6a92dc0cf9516"
 metafile = true
 
 [[files]]
@@ -1360,12 +1356,12 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-client.pw.toml"
-hash = "721d7b7860b78ac2b8c13581cb0afa75ae7c084090df15146e2f27ba1ef63569"
+hash = "55036651612ea1cb0c461c4d26010ca91a68e472c151c746c8cae2421188e188"
 metafile = true
 
 [[files]]
 file = "mods/streamcraft-server.pw.toml"
-hash = "c87929697e5bf7fb34d82adfb53e2b17ca44a9b8926d7dacd1a8a3ae30e4b6c1"
+hash = "dee4db3a696295972f5e92e6f3d6a924f4454e725ad3332b5d99915cd8d7ac73"
 metafile = true
 
 [[files]]
