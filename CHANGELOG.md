@@ -15,7 +15,6 @@ All notable changes to TBA will be documented in this file.
   - "How It Works" info modal with privacy consent gate
   - Video quality improvements (1080p capture, 8 Mbps bitrate)
   - Fixed disconnect crash, mirrored webcam, and various stability issues
-- **WATERMeDIA** 2.1.37 → 3.0.0-beta.7 — Fixes YouTube playback issues
 
 ### Notes
 - Mod count: 188 total (-1 from 0.9.89 — StreamCraft unified into single JAR)
