@@ -1355,13 +1355,8 @@ hash = "befd654249edcbfcbe1f331dfea15c174715743ad5dd65412a008c5180b4a821"
 metafile = true
 
 [[files]]
-file = "mods/streamcraft-client.pw.toml"
-hash = "55036651612ea1cb0c461c4d26010ca91a68e472c151c746c8cae2421188e188"
-metafile = true
-
-[[files]]
-file = "mods/streamcraft-server.pw.toml"
-hash = "dee4db3a696295972f5e92e6f3d6a924f4454e725ad3332b5d99915cd8d7ac73"
+file = "mods/streamcraft-live.pw.toml"
+hash = "3036a2aa62195542fc0951518eb4bf17b818061eb9a2658065d64ef48b96a207"
 metafile = true
 
 [[files]]
@@ -1441,12 +1436,12 @@ metafile = true
 
 [[files]]
 file = "mods/watermedia-yt-plugin.pw.toml"
-hash = "81ce037dab28206092917f764fde6b6dd6f4bb0492918f302737b81dbe9a1e6f"
+hash = "ae4c442f0049d0af3abbe851d1b51126c43e614cb97636c9958036b910b619c9"
 metafile = true
 
 [[files]]
 file = "mods/watermedia.pw.toml"
-hash = "9c99f3544f6b2d5aff63be6d93877b1bfae22ab3ba5fc56bdbe7a664910830de"
+hash = "00f8ad447dc77c88dd8d0c800f5939839e2f85538e94ee286a35a9c073c008db"
 metafile = true
 
 [[files]]

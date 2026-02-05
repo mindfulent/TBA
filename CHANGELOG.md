@@ -3,6 +3,23 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.90] - 2026-02-04
+
+### Updated
+- **StreamCraft Live** 0.1.19 → 0.2.9 — Major update with unified single-JAR mod (replaces separate client/server jars):
+  - Renamed "Display Block" to "StreamCraft Block" with configurable appearances (11 vanilla block disguises)
+  - Dynamic stream illumination (active streams emit light level 12)
+  - Fullbright webcam billboards (visible at night like name tags)
+  - Horizontal offset control for screen projection
+  - "Who can see me?" viewer list in HUD while streaming
+  - "How It Works" info modal with privacy consent gate
+  - Video quality improvements (1080p capture, 8 Mbps bitrate)
+  - Fixed disconnect crash, mirrored webcam, and various stability issues
+- **WATERMeDIA** 2.1.37 → 3.0.0-beta.7 — Fixes YouTube playback issues
+
+### Notes
+- Mod count: 188 total (-1 from 0.9.89 — StreamCraft unified into single JAR)
+
 ## [0.9.89] - 2026-02-04
 
 ### Updated
