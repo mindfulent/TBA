@@ -1356,7 +1356,7 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-live.pw.toml"
-hash = "3036a2aa62195542fc0951518eb4bf17b818061eb9a2658065d64ef48b96a207"
+hash = "360f267681fa4b7437d6c7278ba1805ef538410469d6b2db2aa6452ab1cc32bc"
 metafile = true
 
 [[files]]

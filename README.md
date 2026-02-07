@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v0.9.89
+# TBA (TheBlock.Academy) v0.9.91
 
 A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**189 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**188 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 

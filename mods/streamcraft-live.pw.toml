@@ -1,13 +1,13 @@
 name = "StreamCraft Live"
-filename = "streamcraft-0.2.9.jar"
+filename = "streamcraft-0.2.10.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "936a0e7574931cb49262a45fde1f180e7b893597"
+hash = "f25af3f201008fb5bd7124a2242b53311c7a6737"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7577918
+file-id = 7587614
 project-id = 1451729

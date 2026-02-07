@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.91] - 2026-02-06
+
+### Updated
+- **StreamCraft Live** 0.2.9 → 0.2.10 — Desktop audio streaming for screen share (WASAPI loopback capture, toggle in menu, default ON), audio track receiving for subscribers, `setAudioVolume()` API for future proximity-based volume control. Fixed DisplayBlockEntity deadlock causing server freeze on chunk load.
+
+### Notes
+- Mod count: 188 total (unchanged from 0.9.90)
+
 ## [0.9.90] - 2026-02-04
 
 ### Updated
