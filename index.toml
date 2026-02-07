@@ -1355,11 +1355,6 @@ hash = "befd654249edcbfcbe1f331dfea15c174715743ad5dd65412a008c5180b4a821"
 metafile = true
 
 [[files]]
-file = "mods/streamcraft-live.pw.toml"
-hash = "360f267681fa4b7437d6c7278ba1805ef538410469d6b2db2aa6452ab1cc32bc"
-metafile = true
-
-[[files]]
 file = "mods/styled-chat.pw.toml"
 hash = "e0838a8e0bffb1e49df34cbeb10c34ee682a4e488c3e015c6c9f298e3cad4b63"
 metafile = true

@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.92] - 2026-02-06
+
+### Removed
+- **StreamCraft Live** — Temporarily removed. DisplayBlockEntity deadlock during chunk loading causes server to freeze and crash on startup (watchdog timeout after 60s). Will be re-added after fix.
+
+### Notes
+- Mod count: 187 total (-1 from 0.9.91)
+
 ## [0.9.91] - 2026-02-06
 
 ### Updated
