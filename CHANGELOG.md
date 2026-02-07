@@ -3,7 +3,7 @@
 All notable changes to TBA will be documented in this file.
 
 
-## [0.9.92] - 2026-02-06
+## [0.9.93] - 2026-02-06
 
 ### Updated
 - **StreamCraft Live** 0.2.9 → 0.2.11 — Fixed server deadlock: `DisplayBlockEntity.setLevel()` now uses `scheduleTick()` instead of `execute()` to safely defer streaming state reset after chunk loading (deadlocked with C2ME). Also adds desktop audio streaming for screen share (WASAPI loopback capture, toggle in menu, default ON), audio track receiving, and `setAudioVolume()` API.
