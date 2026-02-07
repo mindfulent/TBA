@@ -5,11 +5,14 @@ All notable changes to TBA will be documented in this file.
 
 ## [0.9.92] - 2026-02-06
 
-### Removed
-- **StreamCraft Live** — Temporarily removed. DisplayBlockEntity deadlock during chunk loading causes server to freeze and crash on startup (watchdog timeout after 60s). Will be re-added after fix.
+### Updated
+- **StreamCraft Live** 0.2.9 → 0.2.11 — Fixed server deadlock: `DisplayBlockEntity.setLevel()` now uses `scheduleTick()` instead of `execute()` to safely defer streaming state reset after chunk loading (deadlocked with C2ME). Also adds desktop audio streaming for screen share (WASAPI loopback capture, toggle in menu, default ON), audio track receiving, and `setAudioVolume()` API.
+
+### Fixed
+- Suppressed Fetzi's Asian Decoration join message (bundled config override)
 
 ### Notes
-- Mod count: 187 total (-1 from 0.9.91)
+- Mod count: 188 total (unchanged from 0.9.90)
 
 ## [0.9.91] - 2026-02-06
 

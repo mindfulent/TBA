@@ -469,6 +469,10 @@ file = "config/fabric-seasons.json"
 hash = "a3b8196f10c965eadcd19784324f4e2ba73e4a65b7fc76bf5be020f4936c03b4"
 
 [[files]]
+file = "config/fetzis_asian_deco/fetzis-asian-deco-config.json"
+hash = "38a0c151dd48aed356762cf14e44a31e6ca7d62d550727a7f805a42a7aa69f43"
+
+[[files]]
 file = "config/iris.properties"
 hash = "268f71f955aede24519f4cae967624cc18b0358d1e5c0ddb88645cc7e70c0b1b"
 
@@ -1352,6 +1356,11 @@ metafile = true
 [[files]]
 file = "mods/storage-drawers.pw.toml"
 hash = "befd654249edcbfcbe1f331dfea15c174715743ad5dd65412a008c5180b4a821"
+metafile = true
+
+[[files]]
+file = "mods/streamcraft-live.pw.toml"
+hash = "dce289ae44067684d928563c270de424a3cb281235f083939796cbb3ece20f42"
 metafile = true
 
 [[files]]
