@@ -1379,8 +1379,8 @@ hash = "f12e69b576da03cd12b57007ba05000497c0a87966b1816d2c425db4e67c0b6f"
 metafile = true
 
 [[files]]
-file = "mods/synthcraft-0.1.8.jar"
-hash = "d50ca096b1629d525ee169789de27a82022ddf9812c3e12dff9fa6ef85900737"
+file = "mods/synthcraft-0.1.7.jar"
+hash = "c6cdbfb54e69a1a180abb416f404a47591e4fbe3f820a7dc11e4f0f87d908416"
 
 [[files]]
 file = "mods/text-placeholder-api.pw.toml"
