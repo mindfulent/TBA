@@ -1,0 +1,13 @@
+name = "SynthCraft Live"
+filename = "synthcraft-0.1.13.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d32503a071c0fd2f27084717331ce3599ef75199"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7594839
+project-id = 1456843

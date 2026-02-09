@@ -3,14 +3,13 @@
 All notable changes to TBA will be documented in this file.
 
 
-## [0.9.94] - 2026-02-07
+## [0.9.94] - 2026-02-09
 
 ### Added
-- **SynthCraft** 0.1.7 — AI-powered music generation for Minecraft. Describe the genre, mood, and lyrics you want, and get a full original song in seconds. Listen privately or broadcast server-wide as a shared soundtrack replacing vanilla ambient music. Press `,` (comma) to open the menu.
+- **SynthCraft Live** 0.1.13 — AI-powered music generation for Minecraft. Describe the genre, mood, and lyrics you want, and get a full original song in seconds. Listen privately or broadcast server-wide as a shared soundtrack replacing vanilla ambient music. Press `,` (comma) to open the menu.
 
 ### Notes
 - Mod count: 189 total (+1 from 0.9.93)
-- SynthCraft included as override (pending CurseForge approval)
 
 ## [0.9.93] - 2026-02-06
 
