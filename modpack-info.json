@@ -1,11 +1,11 @@
 {
   "project_id": "tba",
-  "version_id": "0.9.64",
+  "version_id": "0.9.95",
   "display_name": "TBA",
-  "display_version": "0.9.64",
-  "url": "https://github.com/mindfulent/TBA/releases/download/v0.9.64/TBA-0.9.64.mrpack",
-  "size": 388871636,
-  "sha512": "b3d64f8750c9f0d8f4d52b2d3101285caed9b5e6545a411698052198d81a2d2eedf36c3dffa742a837dceab85a4a790743e3f49517755c3be2986a699a50ede3",
+  "display_version": "0.9.95",
+  "url": "https://github.com/mindfulent/TBA/releases/download/v0.9.95/TBA-0.9.95.mrpack",
+  "size": 474472798,
+  "sha512": "bfdaf6275d08468057e954d2c516fd7a9d6898808017b76dc600373421b0b6d86b1dee00bf68c14737b14be8fc6292b47d544f428d2aefb0742a019eea9f4145",
   "whitelisted_domains": [
     "github.com",
     "objects.githubusercontent.com"
