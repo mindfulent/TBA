@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v0.9.94
+# TBA (TheBlock.Academy) v0.9.95
 
 A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**189 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**190 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -144,6 +144,7 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Voice Chat Interaction** - Nearby sounds play through voice chat proximity
 - **StreamCraft Live** - Real-time video conferencing (webcam, screen share, voice) rendered on in-world blocks via LiveKit WebRTC
 - **SynthCraft** - AI-powered music generation — describe genre, mood, and lyrics to create original songs; listen privately or broadcast server-wide
+- **SceneCraft** - Automatic cinematic highlight reels — records gameplay, detects highlights, generates camera paths, and exports MP4 clips
 - **Universal Graves** - Death item protection (server-side, vanilla client compatible)
 - **Flan** - Land claiming and protection
 - **Better Sleep** - Sleep voting for multiplayer nights

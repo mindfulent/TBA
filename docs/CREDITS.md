@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** February 2, 2026
-**Modpack Version:** 0.9.94 (189 mods total)
+**Modpack Version:** 0.9.95 (190 mods total)
 
 ---
 
@@ -196,7 +196,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat) | henkelmax | 2.6.9 | Dec 17, 2025 | - |
 | [Voice Chat Interaction](https://www.curseforge.com/minecraft/mc-mods/voice-chat-interaction) | henkelmax | 1.0.8 | Sep 2024 | - |
 | [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.2.11 | Feb 2026 | - |
-| [SynthCraft Live](https://www.curseforge.com/minecraft/mc-mods/synthcraft-live) | Slash | 0.1.13 | Feb 2026 | - |
+| [SynthCraft Live](https://www.curseforge.com/minecraft/mc-mods/synthcraft-live) | Slash | 0.1.15 | Feb 2026 | - |
+| [SceneCraft Live](https://www.curseforge.com/minecraft/mc-mods/scenecraft-live) | Slash | 0.1.16 | Feb 2026 | - |
 | [Connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | someaddon | 7.6 | Dec 2025 | - |
 | [LuckPerms](https://www.curseforge.com/minecraft/mc-mods/luckperms) | lucko | 5.4.140 | Jun 2024 | - |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.4 | Nov 20, 2025 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |
@@ -214,7 +215,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|----------|---------|--------|
 | [AutoWhitelist](https://modrinth.com/mod/autowhitelist) | Awakened-Redstone | 1.3.2 | Dec 2025 | Discord `/register` whitelist | - |
 | [Better Sleep](https://modrinth.com/mod/better-sleep) | Giselbaer | 2.2.2 | Aug 6, 2025 | Sleep voting for multiplayer | - |
-| [Core Curriculum](https://www.curseforge.com/minecraft/mc-mods/core-curriculum) | The Block Academy | 0.1.3 | Jan 2026 | Recognition system with titles | - |
+| [Core Curriculum](https://www.curseforge.com/minecraft/mc-mods/core-curriculum) | The Block Academy | 0.1.22 | Feb 2026 | Recognition system with titles | - |
 | [Fabricord](https://modrinth.com/mod/fabricord) | HypherionSA | 4.2.1 | Mar 8, 2025 | Discord ↔ server chat bridge | [Buy Me a Coffee](https://www.buymeacoffee.com/hypherionsa) |
 | [LuckPerms Placeholders](https://github.com/LuckPerms/placeholders) | lucko | 5.4 | Jan 2026 | Enables `%luckperms:prefix%` | - |
 | [Styled Chat](https://www.curseforge.com/minecraft/mc-mods/styled-chat) | Patbox | 2.6.1 | Dec 2024 | Server-side chat formatting | [Ko-fi](https://ko-fi.com/patbox) |

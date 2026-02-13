@@ -3,6 +3,18 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.95] - 2026-02-12
+
+### Added
+- **SceneCraft Live** 0.1.16 — Automatic cinematic highlight reels from your gameplay. Records your session in the background, detects highlights (combat, building, exploration, advancements), generates cinematic camera paths, and batch-renders MP4 clips. Press F12 to start recording, disconnect to review and export. 10 free export sessions.
+
+### Updated
+- **SynthCraft Live** 0.1.13 → 0.1.15 — Prompt templates (10 Minecraft-themed presets), duration quality warning for songs over 60s, bugfixes and security measures
+- **Core Curriculum** 0.1.21 → 0.1.22 — Added SynthCraft and SceneCraft tips to welcome screen, new "Mod Shortcuts" section on commands page listing keybinds for all three mods
+
+### Notes
+- Mod count: 190 total (+1 from 0.9.94)
+
 ## [0.9.94] - 2026-02-09
 
 ### Added
