@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.96] - 2026-02-14
+
+### Updated
+- **SceneCraft Live** 0.1.16 → 0.1.27 — Major export quality improvements: eliminated camera jerk/twitch during export by removing packet lookahead and preloading all position data, fixed block pre-placement in exported video, smooth tick-boundary camera tracking (bypasses Minecraft's xo/x interpolation discontinuities), fixed chunks disappearing during export travel, fixed player skin not loading in replays, full-recording export option, client-side license recheck on disconnect, fixed frame gaps from chunk compilation, fixed mouse input corrupting rotation during export, centered license UI on review screen, fixed EXPIRED license re-validation and stale license state on clients
+
+### Notes
+- Mod count: 190 total (unchanged from 0.9.95)
+
 ## [0.9.95] - 2026-02-12
 
 ### Added

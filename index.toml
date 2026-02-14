@@ -1280,7 +1280,7 @@ metafile = true
 
 [[files]]
 file = "mods/scenecraft.pw.toml"
-hash = "d4283a7bfebf596a4f22cbf1851306e1a56a49e03766d2b0b6dff3e26aa1b0bf"
+hash = "390a480ac58659e4b28389b05bc2d63816b31ea1e4494f9481924d93a230c0c1"
 metafile = true
 
 [[files]]

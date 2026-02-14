@@ -1,13 +1,13 @@
 name = "SceneCraft Live"
-filename = "scenecraft-0.1.16.jar"
+filename = "scenecraft-0.1.27.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "f18f8fadeee5201da8f6c744a4bef96353d8af28"
+hash = "0867f78b521c76c1a34f030da0def3a1f780ae65"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7616862
+file-id = 7622619
 project-id = 1460312
