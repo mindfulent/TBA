@@ -149,6 +149,21 @@ Two export formats for different purposes:
 
 **Server-only mods** (in mrpack, not needed by clients): AutoWhitelist, Better Sleep, Fabricord, Ledger, Advanced Backups, LuckPerms
 
+## Server Disk Usage
+
+The Bloom.host server accumulates data over time. Key space consumers (as of Feb 2026):
+
+- **`.mrpack4server/modpack/`** — mrpack4server caches every downloaded mrpack version and **never auto-cleans**. With frequent releases (~450 MB each), this grows fast. Periodically delete old versions, keeping only the latest.
+- **`world/data/DistantHorizons.sqlite`** — DH's LOD database grows continuously as chunks load (C2ME accelerates this). Can reach 8-10+ GB. Normal but worth monitoring.
+- **`backups/world/differential/`** — Advanced Backups stores full differential zips here (~11 GB). Managed by the backup mod's retention policy.
+- **`world/region/`** — Overworld chunk data (~4 GB). Normal growth from exploration.
+- **`world/DIM-1/`** — Nether chunk data (~1 GB). Normal.
+
+**Periodic cleanup checklist:**
+1. Delete old mrpacks in `.mrpack4server/modpack/` (keep only latest version)
+2. Remove any stale `world-*.tar.gz` backups left in the server root
+3. Check overall disk usage via SFTP if borg backup size jumps unexpectedly
+
 ## Requirements
 
 - Minecraft 1.21.1

@@ -3,6 +3,19 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.97] - 2026-02-16
+
+### Updated
+- **StreamCraft Live** 0.2.11 → 0.2.13 — Lazy-load MCEF browser: Chromium no longer spawns on game startup, deferred until player actually needs it (menu open, token received, or nearby streamer). Zero startup cost for non-users. Also fixes Display Block opacity being semi-transparent by default (now fully opaque unless explicitly lowered) and adds per-block opacity/brightness controls.
+- **Core Curriculum** 0.1.22 → 0.1.23 — Added loading progress bar to custom TBA splash screen (smoothed fill animation with dark navy bar matching logo palette)
+
+### Changed
+- Unbound Iris "Disable Shaders" keybind (was F12, conflicted with SceneCraft recording)
+- Added `join.theblock.academy` to the default server list — new installs start with The Block Academy pre-populated in Multiplayer
+
+### Notes
+- Mod count: 190 total (unchanged from 0.9.96)
+
 ## [0.9.96] - 2026-02-14
 
 ### Updated

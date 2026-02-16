@@ -48,6 +48,9 @@ plugins/
 # Large LOD cache (optional download)
 DistantHorizons.sqlite
 
+# Stray directory copies
+objective-maxwell/
+
 # Git
 .git/
 .gitignore

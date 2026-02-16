@@ -745,7 +745,7 @@ metafile = true
 
 [[files]]
 file = "mods/core-curriculum.pw.toml"
-hash = "c9de4e6fb15744dd6ba1e1f245bb7d59f26889cc49e7e927d3d36b727e416e46"
+hash = "7671327b501bcfd0a371c454d9158f02884e4d804038eaa3eff660b69bf67097"
 metafile = true
 
 [[files]]
@@ -1365,7 +1365,7 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-live.pw.toml"
-hash = "dce289ae44067684d928563c270de424a3cb281235f083939796cbb3ece20f42"
+hash = "4ecef623da3b2e1a9dec17c99010c7f12641ee60f08ba6890854e933b695566f"
 metafile = true
 
 [[files]]
@@ -1480,11 +1480,15 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "3b155e518e4492084de096985b0a7b1642a20a5253ac943c6bb3f6e34daa70fe"
+hash = "a915d73e4d78104f596a3191703be7368f991f202977b2360b74881a547656a8"
 
 [[files]]
 file = "server.properties"
 hash = "c2d03a19a6c931658ae2cab5617781f7f2016499f2986ad9e603e7364119605f"
+
+[[files]]
+file = "servers.dat"
+hash = "9568e02cb11ba1359585e8c755bfbbfb8d263e756531de9f5a3bc8643de501f9"
 
 [[files]]
 file = "shaderpacks/BSL_v10.0.zip"

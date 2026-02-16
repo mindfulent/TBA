@@ -215,7 +215,7 @@ key_key.voice_chat_group:key.keyboard.g
 key_key.voice_chat_toggle_recording:key.keyboard.unknown
 key_key.voice_chat_adjust_volumes:key.keyboard.unknown
 key_iris.keybind.reload:key.keyboard.f10
-key_iris.keybind.toggleShaders:key.keyboard.f12
+key_iris.keybind.toggleShaders:key.keyboard.unknown
 key_iris.keybind.shaderPackSelection:key.keyboard.y
 key_iris.keybind.wireframe:key.keyboard.unknown
 key_key.camerautils.zoom:key.keyboard.z
