@@ -745,7 +745,7 @@ metafile = true
 
 [[files]]
 file = "mods/core-curriculum.pw.toml"
-hash = "7671327b501bcfd0a371c454d9158f02884e4d804038eaa3eff660b69bf67097"
+hash = "467831c4a150b707f6d8d79ef4d0b0a8e63a830a0008f1384739a7611d1889aa"
 metafile = true
 
 [[files]]
@@ -1280,7 +1280,7 @@ metafile = true
 
 [[files]]
 file = "mods/scenecraft.pw.toml"
-hash = "390a480ac58659e4b28389b05bc2d63816b31ea1e4494f9481924d93a230c0c1"
+hash = "6e47fc2ce9cb054e23c528b4c8ace424be35aa1156d364dd791cd604a71f89ad"
 metafile = true
 
 [[files]]
@@ -1365,7 +1365,7 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-live.pw.toml"
-hash = "4ecef623da3b2e1a9dec17c99010c7f12641ee60f08ba6890854e933b695566f"
+hash = "0a7bec69a97ae259afecf32024e89b66e94d362d329b05d263c4682cb9dcb085"
 metafile = true
 
 [[files]]
@@ -1385,7 +1385,7 @@ metafile = true
 
 [[files]]
 file = "mods/synthcraft-live.pw.toml"
-hash = "8092884b508233e7a597c04db9d07eb0293e2a5f77185b5307260d775248dc53"
+hash = "161b0e7549e24ae4f9cab19e3a2b3eb1dc1d86d39c276cfe23d54fbcb4223ade"
 metafile = true
 
 [[files]]

@@ -3,6 +3,17 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.98] - 2026-02-16
+
+### Updated
+- **StreamCraft Live** 0.2.13 → 0.3.3 — Major rewrite: replaced MCEF (Chromium) with LiveKit Rust FFI via JNA. ~200MB → ~30MB download size, ~80% less RAM usage (~30MB vs ~150MB). Direct frame pipeline without JavaScript bridge. Also includes deferred LiveKit FFI initialization (zero startup overhead), webcam rendering/aspect ratio fixes, license handshake validation improvements, and redesigned trial expired screen.
+- **SceneCraft Live** 0.1.27 → 0.1.29 — Block at checkbox when trial exhausted (prevents recording a full session only to discover export is unavailable on disconnect), persisted license state surviving client restarts, simplified trial exhausted screen.
+- **SynthCraft Live** 0.1.15 → 0.1.17 — Fresh license validation on handshake (bypasses 24h throttle), simplified trial expired screen, redesigned upgrade messaging.
+- **Core Curriculum** 0.1.23 → 0.1.24 — Splash screen progress bar now fades with the splash screen and uses vanilla's smoothed progress directly
+
+### Notes
+- Mod count: 190 total (unchanged from 0.9.97)
+
 ## [0.9.97] - 2026-02-16
 
 ### Updated
