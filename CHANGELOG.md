@@ -12,6 +12,7 @@ All notable changes to TBA will be documented in this file.
 
 ### Updated
 - **Connectible Chains** 2.5.5 → 2.5.7
+- **StreamCraft Live** 0.3.3 → 0.3.4 — Fixed macOS crash when opening StreamCraft menu (Windows-only capture code now platform-gated; capture buttons greyed out on non-Windows with status message)
 
 ### Notes
 - Mod count: 194 total (+4 from 0.9.98)
