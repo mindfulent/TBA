@@ -1117,6 +1117,99 @@ def update_modpack_info(version, production=False):
     return True
 
 
+def verify_mods(version, production=True):
+    """Verify that all mods from the mrpack are installed on the server.
+
+    Compares the expected mod set (from the local mrpack) against the actual
+    /mods/ folder on the server via SFTP.
+
+    Args:
+        version: The version string (e.g., "0.9.99")
+        production: If True, check Bloom.host. If False, check LocalServer.
+    """
+    target_name = "Bloom.host (production)" if production else "LocalServer"
+    mrpack_file = os.path.join(SCRIPT_DIR, f"TBA-{version}.mrpack")
+
+    console.print(Panel(
+        f"[bold]Verifying mods for v{version}[/bold]\n"
+        f"Target: [{'red' if production else 'cyan'}]{target_name}[/{'red' if production else 'cyan'}]",
+        border_style="cyan"
+    ))
+
+    # Read expected mods from mrpack
+    if not os.path.exists(mrpack_file):
+        console.print(f"[red]Error: {os.path.basename(mrpack_file)} not found locally[/red]")
+        console.print("[yellow]Export the mrpack first: ./packwiz.exe modrinth export[/yellow]")
+        return False
+
+    expected_mods = get_expected_mods_from_mrpack(mrpack_file)
+    if expected_mods is None:
+        console.print("[red]Error: Could not read mrpack[/red]")
+        return False
+
+    console.print(f"[cyan]Expected mods from mrpack: {len(expected_mods)}[/cyan]")
+
+    # Get actual mods from server
+    if production:
+        if not check_credentials():
+            return False
+
+        ssh = paramiko.SSHClient()
+        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+        try:
+            ssh.connect(hostname, port=port, username=username, password=password)
+            sftp = ssh.open_sftp()
+            server_files = sftp.listdir('/mods')
+            sftp.close()
+            ssh.close()
+        except Exception as e:
+            console.print(f"[red]Error connecting: {e}[/red]")
+            return False
+    else:
+        local_mods = os.path.join(LOCALSERVER_DIR, "mods")
+        if not os.path.exists(local_mods):
+            console.print(f"[red]Error: {local_mods} not found[/red]")
+            return False
+        server_files = os.listdir(local_mods)
+
+    server_jars = set(f for f in server_files if f.endswith('.jar'))
+    console.print(f"[cyan]Mods on server: {len(server_jars)}[/cyan]")
+
+    # Compare
+    missing = expected_mods - server_jars
+    extra = server_jars - expected_mods
+
+    if not missing and not extra:
+        console.print(Panel(
+            f"[bold green]✓ All {len(expected_mods)} mods verified[/bold green]\n"
+            f"Server matches mrpack exactly.",
+            title="[green]Verification Passed[/green]",
+            border_style="green"
+        ))
+        return True
+
+    # Report differences
+    if missing:
+        console.print(f"\n[red]Missing mods ({len(missing)}):[/red]")
+        for mod in sorted(missing):
+            console.print(f"  [red]✗ {mod}[/red]")
+
+    if extra:
+        console.print(f"\n[yellow]Extra mods ({len(extra)}):[/yellow]")
+        for mod in sorted(extra):
+            console.print(f"  [yellow]? {mod}[/yellow]")
+
+    console.print(Panel(
+        f"[bold red]✗ Verification failed[/bold red]\n"
+        f"Expected: {len(expected_mods)} | On server: {len(server_jars)} | Missing: {len(missing)} | Extra: {len(extra)}",
+        title="[red]Mismatch Detected[/red]",
+        border_style="red"
+    ))
+
+    return False
+
+
 # =============================================================================
 # World Sync Functions
 # =============================================================================
@@ -1726,18 +1819,19 @@ def interactive_menu():
         table.add_row("4", "Send Console Command")
         table.add_row("", "")
         table.add_row("5", "Update Pack (modpack-info + clean stale mods)")
-        table.add_row("6", "Upload configs only")
+        table.add_row("6", "Verify Mods (compare server vs mrpack)")
+        table.add_row("7", "Upload configs only")
         table.add_row("", "")
         table.add_row("b", "[cyan]Backup & World Sync →[/cyan]")
         table.add_row("", "")
-        table.add_row("7", "[red]Regenerate World[/red]")
+        table.add_row("8", "[red]Regenerate World[/red]")
         table.add_row("", "")
         table.add_row("q", "Quit")
 
         console.print(table)
         console.print()
 
-        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "b", "q"], default="q")
+        choice = Prompt.ask("Select", choices=["1", "2", "3", "4", "5", "6", "7", "8", "b", "q"], default="q")
 
         if choice == "1":
             server_start()
@@ -1765,13 +1859,19 @@ def interactive_menu():
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "6":
+            version = Prompt.ask("Enter version (e.g., 0.9.99)")
+            if version:
+                verify_mods(version, production=True)
+            Prompt.ask("\n[dim]Press Enter to continue[/dim]")
+
+        elif choice == "7":
             deploy_configs()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
         elif choice == "b":
             backup_menu()
 
-        elif choice == "7":
+        elif choice == "8":
             regenerate_world()
             Prompt.ask("\n[dim]Press Enter to continue[/dim]")
 
@@ -2242,6 +2342,12 @@ if __name__ == "__main__":
             production = "--production" in args or "-p" in args
             version = [a for a in args if not a.startswith("-")][0]
             update_modpack_info(version, production=production)
+        elif command == "verify-mods" and len(sys.argv) > 2:
+            # Parse args: verify-mods <version> [--local|-l]
+            args = sys.argv[2:]
+            local = "--local" in args or "-l" in args
+            version = [a for a in args if not a.startswith("-")][0]
+            verify_mods(version, production=not local)
         elif command == "backup":
             # Backup subcommands
             if len(sys.argv) < 3:
@@ -2298,6 +2404,8 @@ if __name__ == "__main__":
             console.print("[yellow]Deployment:[/yellow]")
             console.print("  python server-config.py update-pack <version>       # Update LocalServer (default)")
             console.print("  python server-config.py update-pack <version> -p    # Update production (Bloom.host)")
+            console.print("  python server-config.py verify-mods <version>       # Verify mods on production match mrpack")
+            console.print("  python server-config.py verify-mods <version> -l    # Verify mods on LocalServer")
             console.print("  python server-config.py configs      # Upload config directory to production")
             console.print("  python server-config.py list         # List production server files")
             console.print("")
