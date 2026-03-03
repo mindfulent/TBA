@@ -720,7 +720,7 @@ metafile = true
 
 [[files]]
 file = "mods/connectiblechains.pw.toml"
-hash = "d557a08271666b4b928f4b7c8595fa54242d3428b46bf3ae417e1c2e5bbcc08f"
+hash = "4b93fb04c5453b877b791deed59442f8eea976a2506666817dce9b2a65114852"
 metafile = true
 
 [[files]]
@@ -761,6 +761,11 @@ metafile = true
 [[files]]
 file = "mods/creativecore.pw.toml"
 hash = "21cf696a57160fa67634e31b25d9b391aca2b465f261924fc508f96a28052377"
+metafile = true
+
+[[files]]
+file = "mods/cubes-without-borders.pw.toml"
+hash = "23bdbf17e1fd8aeed7efeeea72741662734199dbef0b2adfac2ba795acf5ca40"
 metafile = true
 
 [[files]]
@@ -929,6 +934,11 @@ hash = "c983c82dca8021666fe2aa4d1f96af383ce905d09ae284472e7cd5aa87582d41"
 metafile = true
 
 [[files]]
+file = "mods/framework.pw.toml"
+hash = "73ba52fce9064dfb0a3b78f1d96354b79c52db7e2a3e8ecc713da6429b4c5723"
+metafile = true
+
+[[files]]
 file = "mods/friends-and-foes.pw.toml"
 hash = "b4cdd06c59b01823f66897869ea7fdc6a7b17713a1db4bbe0f28dc3f4617a1a6"
 metafile = true
@@ -966,6 +976,11 @@ metafile = true
 [[files]]
 file = "mods/immediatelyfast.pw.toml"
 hash = "1c5e90c7879f5bbf069055aa60d04a86d8c80417b0a47d72b47cf16e3fb05f32"
+metafile = true
+
+[[files]]
+file = "mods/immersive-aircraft.pw.toml"
+hash = "b6a3fc219562a9f4b3fadb789de1dd362570f7c856e96eacffac5b8fcfe1765d"
 metafile = true
 
 [[files]]
@@ -1156,6 +1171,11 @@ metafile = true
 [[files]]
 file = "mods/midnightlib.pw.toml"
 hash = "5781f42b2ab7747dabe7169de31325683a5cb61884339438c8b7b7ca8773a93f"
+metafile = true
+
+[[files]]
+file = "mods/mighty-mail.pw.toml"
+hash = "be23f8e39be6368729dc085d3443c8739092ad42df2740dca396b3914733c74c"
 metafile = true
 
 [[files]]

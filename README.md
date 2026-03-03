@@ -2,11 +2,11 @@
   <img src="tba_banner.png" alt="TBA Logo" width="100%">
 </p>
 
-# TBA (TheBlock.Academy) v0.9.98
+# TBA (TheBlock.Academy) v0.9.99
 
 A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](https://packwiz.infra.link/) for easy version control and distribution.
 
-**190 mods total** — see [Mod Distribution](#mod-distribution) for details.
+**194 mods total** — see [Mod Distribution](#mod-distribution) for details.
 
 ## Features
 
@@ -91,6 +91,7 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Naturally Trimmed** - Mobs spawn wearing armor trims
 - **Trimmable Tools** - Apply armor trims to tools
 - **Do A Barrel Roll** - Enhanced elytra flight control
+- **Immersive Aircraft** - Craftable biplanes, airships, and gyrodyne helicopters
 
 ### Web Map
 - **BlueMap** - Live 3D web map of the server world (port 8100)
@@ -121,6 +122,8 @@ A curated Fabric 1.21.1 modpack for The Block Academy CMP, built with [Packwiz](
 - **Paginated Advancements** - Better advancement screen
 - **Stack to Nearby Chests** - Terraria-style deposit into chests
 - **Status Effect Bars** - Duration bars on effect icons
+- **Mighty Mail** - In-game mailbox system for sending items and letters between players
+- **Cubes Without Borders** - Borderless fullscreen windowed mode
 
 ### Scripting & Automation
 - **Minescript** - Python scripting for Minecraft (run scripts from chat with `\scriptname`)

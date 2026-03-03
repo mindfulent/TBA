@@ -3,7 +3,7 @@
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
 **Last Updated:** February 2, 2026
-**Modpack Version:** 0.9.96 (190 mods total)
+**Modpack Version:** 0.9.99 (194 mods total)
 
 ---
 
@@ -70,6 +70,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [CICADA](https://www.curseforge.com/minecraft/mc-mods/cicada) | Enjarai | 0.14.3 | Jan 2026 | - |
 | [M.R.U](https://www.curseforge.com/minecraft/mc-mods/mru) | Okamomille, frikinjay | 1.0.19 | Jan 2026 | - |
 | [Trinkets](https://www.curseforge.com/minecraft/mc-mods/trinkets) | emilyploszaj | 3.10.0 | Jan 2026 | - |
+| [Framework](https://www.curseforge.com/minecraft/mc-mods/framework) | MrCrayfish | 0.13.11 | Mar 2026 | [Patreon](https://www.patreon.com/mrcrayfish) |
 
 ## Map Mods
 
@@ -102,7 +103,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Macaw's Lights and Lamps](https://modrinth.com/mod/macaws-lights-and-lamps) | sketch_macaw | 1.1.5 | Dec 7, 2025 | - |
 | [Excessive Building](https://modrinth.com/mod/excessive-building) | Yirmiri | 3.3.10 | Jan 11, 2025 | - |
 | [Adorn](https://modrinth.com/mod/adorn) | Juuz | 6.1.2 | Oct 4, 2025 | - |
-| [Connectible Chains](https://modrinth.com/mod/connectiblechains) | legoatoom | 2.5.5 | Oct 25, 2025 | - |
+| [Connectible Chains](https://modrinth.com/mod/connectiblechains) | legoatoom | 2.5.7 | Mar 2026 | - |
 | [Underlay](https://modrinth.com/mod/underlay) | Kir_Antipov | 0.9.9 | Dec 10, 2025 | - |
 | [Supplementaries](https://modrinth.com/mod/supplementaries) | MehVahdJukaar | 3.5.14 | Dec 6, 2025 | - |
 | [Amendments](https://modrinth.com/mod/amendments) | MehVahdJukaar | 2.0.13 | Dec 2025 | - |
@@ -155,6 +156,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [[Let's Do] Meadow](https://www.curseforge.com/minecraft/mc-mods/lets-do-meadow) | satisfyu, Cristelknight | 1.4.4 | Jan 2026 | [PayPal](https://paypal.me/mrclbe), [Patreon](https://www.patreon.com/user?u=78595058) |
 | [[Let's Do] Beach Party](https://www.curseforge.com/minecraft/mc-mods/lets-do-beachparty) | satisfyu, Cristelknight | 2.1.2 | Jan 2026 | [PayPal](https://paypal.me/mrclbe), [Patreon](https://www.patreon.com/user?u=78595058) |
 | [Friends and Foes](https://www.curseforge.com/minecraft/mc-mods/friends-and-foes-fabric) | Faboslav | 4.0.19 | Jan 2026 | - |
+| [Immersive Aircraft](https://www.curseforge.com/minecraft/mc-mods/immersive-aircraft) | Luke100000 | 1.4.2 | Mar 2026 | - |
 
 ## Quality of Life Mods
 
@@ -188,6 +190,8 @@ Many mod creators accept donations to support their work. Consider supporting yo
 | [Stack to Nearby Chests](https://www.curseforge.com/minecraft/mc-mods/stack-to-nearby-chests) | Kyrptonaught | 0.5.10 | Jan 2026 | - |
 | [Status Effect Bars](https://www.curseforge.com/minecraft/mc-mods/status-effect-bars) | Neecko5b84 | 1.0.6 | Jan 2026 | - |
 | [FallingTree](https://www.curseforge.com/minecraft/mc-mods/falling-tree) | RakSrinpsern | 1.21.1.11 | Jan 2026 | - |
+| [Mighty Mail](https://www.curseforge.com/minecraft/mc-mods/mighty-mail) | MrCrayfish | 1.1.4 | Mar 2026 | [Patreon](https://www.patreon.com/mrcrayfish) |
+| [Cubes Without Borders](https://www.curseforge.com/minecraft/mc-mods/cubes-without-borders) | Kir_Antipov | 3.0.0 | Mar 2026 | - |
 
 ## Multiplayer Mods
 

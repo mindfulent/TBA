@@ -3,6 +3,19 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.99] - 2026-03-02
+
+### Added
+- **Mighty Mail** 1.1.4 — In-game mailbox system for sending items and letters between players (+ Framework 0.13.11 library)
+- **Cubes Without Borders** 3.0.0 — Borderless fullscreen windowed mode
+- **Immersive Aircraft** 1.4.2 — Craftable biplanes, airships, and gyrodyne helicopters
+
+### Updated
+- **Connectible Chains** 2.5.5 → 2.5.7
+
+### Notes
+- Mod count: 194 total (+4 from 0.9.98)
+
 ## [0.9.98] - 2026-02-16
 
 ### Updated
