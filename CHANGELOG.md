@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [0.9.100] - 2026-03-17
+
+### Updated
+- **StreamCraft Live** 0.3.4 → 0.5.1 — Multi-version support (MC 1.21.1 + 1.20.1), true 100% opacity on Display Blocks (no more world bleed-through), persistent Display Block settings across reconnects/chunk reloads, sticky defaults (configure one block, all future blocks inherit), auto-reconnect for bound Display Blocks when streamers rejoin, mid-session license activation, version gate enforcement, and improved activation feedback
+
+### Notes
+- Mod count: 194 total (unchanged from 0.9.99)
+
 ## [0.9.99] - 2026-03-02
 
 ### Added

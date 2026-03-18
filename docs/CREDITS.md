@@ -199,7 +199,7 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|----------|--------|
 | [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat) | henkelmax | 2.6.9 | Dec 17, 2025 | - |
 | [Voice Chat Interaction](https://www.curseforge.com/minecraft/mc-mods/voice-chat-interaction) | henkelmax | 1.0.8 | Sep 2024 | - |
-| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.2.13 | Feb 2026 | - |
+| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.5.1 | Mar 2026 | - |
 | [SynthCraft Live](https://www.curseforge.com/minecraft/mc-mods/synthcraft-live) | Slash | 0.1.15 | Feb 2026 | - |
 | [SceneCraft Live](https://www.curseforge.com/minecraft/mc-mods/scenecraft-live) | Slash | 0.1.27 | Feb 2026 | - |
 | [Connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | someaddon | 7.6 | Dec 2025 | - |
