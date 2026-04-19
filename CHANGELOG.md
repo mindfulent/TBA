@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [1.0.2] - 2026-04-19
+
+### Added
+- **ShapeCraft** 0.4.18 — Natural language block generation. Describe a custom block via `/shapecraft <description>` and ShapeCraft generates a valid block model, picks textures, and injects it as a placeable block in real time. Registers 64 pool blocks, 64 pool items, a pool block entity, and 9 network payloads. *(Note: ShapeCraft was silently bundled in the 1.0.0 and 1.0.1 exports but not documented in those changelogs. This entry formalizes it and git-tracks the jar to prevent it being dropped from a clean working-directory rebuild.)*
+
+### Notes
+- Mod count: 195 total (+1 ShapeCraft vs 0.9.100 — retroactively correct for 1.0.0 and 1.0.1, which stated 194)
+
 ## [1.0.1] - 2026-04-19
 
 ### Updated
