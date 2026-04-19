@@ -1314,6 +1314,10 @@ hash = "84dd384bc4165a83da685991223bd10063c0c31d7be558287ec60f8bc40a1f59"
 metafile = true
 
 [[files]]
+file = "mods/shapecraft-0.4.18.jar"
+hash = "5cf2e2da8f2510af9f5abbade49688349b7b6594e0a9adb0d25fab39aa10f53f"
+
+[[files]]
 file = "mods/simple-discord-rpc.pw.toml"
 hash = "4ca0174e9bebd37a075058c495fa6b2c232ed48093be2d849c9d5814f010cdaa"
 metafile = true
@@ -1385,7 +1389,7 @@ metafile = true
 
 [[files]]
 file = "mods/streamcraft-live.pw.toml"
-hash = "8d8720e28594c5448e60417d52ada6a92c97b1de544c44f074b36a8be5c05e50"
+hash = "1a5a89d85340c40338c1bf047787f38dc1ff7b4c8c388c9070af76f48aa263a8"
 metafile = true
 
 [[files]]

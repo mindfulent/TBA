@@ -3,6 +3,16 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [1.0.0] - 2026-04-19
+
+**🎉 TBA 1.0 — out of beta.** After 100+ patch releases and a year-plus of curation on the Fabric 1.21.1 build, the modpack is stable, mature, and ready to drop the 0.9 prefix. No breaking changes vs 0.9.100 — this is a symbolic version bump paired with a routine StreamCraft update.
+
+### Updated
+- **StreamCraft Live** 0.5.1 → 0.6.2 — Adds Minecraft 26.1 ("Tiny Takeover") support (no impact on 1.21.1 users), fixes missing HUD overlays (LIVE indicator, viewer-name list, self-view preview) introduced in v0.6.0, and fixes held-item tooltip rendering `item.streamcraft-server.display_block` instead of "StreamCraft Block"
+
+### Notes
+- Mod count: 194 total (unchanged from 0.9.100)
+
 ## [0.9.100] - 2026-03-17
 
 ### Updated
