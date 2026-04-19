@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [1.0.3] - 2026-04-19
+
+### Reverted
+- **Distant Horizons** 3.0.1-b → 2.4.5-b — DH 3.0.1-b (beta) bundles an outdated `fabric-resource-loader-v0 2.0.0` whose `server.LanguageMixin` fails `@Redirect` injection against MC 1.21.1's `Language` class. The failure surfaces on server startup when Travelers Backpack calls `Language.getString()` during `onInitialize`, which forces mixin transformation on `class_2477` and crashes the server. Client-only play didn't exercise the server-side LanguageMixin path, so the bug didn't appear during earlier testing. Reverting DH restores a stable server. Players will see DH's "New update available!" menu popup again — click "Not now" to dismiss.
+
+### Notes
+- Mod count: 195 total (unchanged from 1.0.2)
+
 ## [1.0.2] - 2026-04-19
 
 ### Added
