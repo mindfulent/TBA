@@ -3,6 +3,14 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [1.0.1] - 2026-04-19
+
+### Updated
+- **Distant Horizons** 2.4.5-b → 3.0.1-b — Suppresses the "New update available!" menu prompt for fresh 1.0 installs. 3.0.0 adds MC 26 support (no impact on 1.21.1), a rendering API bump (5.1.0 → 6.0.0), progressive LOD quality loading, and framerate stability improvements; 3.0.1 fixes an underwater-grid bug. Both releases are still tagged beta. Major-version bumps for DH have historically reformatted LOD data — existing client and server DH SQLite databases may regenerate or migrate on first load.
+
+### Notes
+- Mod count: 194 total (unchanged from 1.0.0)
+
 ## [1.0.0] - 2026-04-19
 
 **🎉 TBA 1.0 — out of beta.** After 100+ patch releases and a year-plus of curation on the Fabric 1.21.1 build, the modpack is stable, mature, and ready to drop the 0.9 prefix. No breaking changes vs 0.9.100 — this is a symbolic version bump paired with a routine StreamCraft update.
