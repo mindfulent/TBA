@@ -1,12 +1,12 @@
 name = "TBA"
 author = "Slash"
-version = "1.0.3"
+version = "1.0.4"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "374eb74a375f93caa7e23097d2d3ab6bbd247eef719c6ce39a3e70d5b5b2465c"
+hash = "ea3d2dface9c757b0005de7570cf1b8ed96df472284dc1f8844681cffe6ee129"
 
 [versions]
 fabric = "0.18.3"

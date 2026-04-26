@@ -948,23 +948,31 @@ def clean_stale_mods_production(sftp, expected_mods):
     return removed_count, failed_count
 
 
-def update_modpack_info(version, production=False):
+def update_modpack_info(version, production=False, variant="linux"):
     """Update modpack-info.json to point to a GitHub release.
 
     Args:
         version: The version string (e.g., "0.9.54")
         production: If True, update Bloom.host server. If False (default), update LocalServer.
+        variant: Platform variant ("windows", "linux", "macos-arm64", "macos-x86_64").
+                 Default "linux" — the server runs Linux, so that's the JAR it needs.
+                 "windows" maps to the no-suffix canonical filename.
     """
     import hashlib
     import tempfile
 
     target_name = "Bloom.host (production)" if production else "LocalServer"
-    github_url = f"https://github.com/mindfulent/TBA/releases/download/v{version}/TBA-{version}.mrpack"
-    mrpack_file = os.path.join(SCRIPT_DIR, f"TBA-{version}.mrpack")
+    suffix = "" if variant == "windows" else f"-{variant}"
+    github_url = f"https://github.com/mindfulent/TBA/releases/download/v{version}/TBA-{version}{suffix}.mrpack"
+    mrpack_file = os.path.join(SCRIPT_DIR, "dist", f"TBA-{version}{suffix}.mrpack")
+    if not os.path.exists(mrpack_file):
+        # Fall back to repo root for back-compat with releases built before scripts/build-variants.py.
+        mrpack_file = os.path.join(SCRIPT_DIR, f"TBA-{version}{suffix}.mrpack")
 
     console.print(Panel(
         f"[bold]Updating modpack to v{version}[/bold]\n"
-        f"Target: [{'red' if production else 'cyan'}]{target_name}[/{'red' if production else 'cyan'}]",
+        f"Target: [{'red' if production else 'cyan'}]{target_name}[/{'red' if production else 'cyan'}]\n"
+        f"Variant: [yellow]{variant}[/yellow]",
         border_style="cyan"
     ))
 
@@ -1050,7 +1058,9 @@ def update_modpack_info(version, production=False):
         "url": github_url,
         "size": file_size,
         "sha512": file_hash,
-        "whitelisted_domains": ["github.com", "objects.githubusercontent.com"],
+        # cdn.modrinth.com: required while StreamCraft 0.7.26+ is sourced from Modrinth
+        # (CurseForge approval pending). Drop it once all mods are CF-pinned again.
+        "whitelisted_domains": ["github.com", "objects.githubusercontent.com", "cdn.modrinth.com"],
         "non_overwritable_paths": [
             "world", "world_nether", "world_the_end",
             "server.properties", "ops.json", "whitelist.json",
@@ -2337,11 +2347,19 @@ if __name__ == "__main__":
                 table.add_row(key, preset["name"], preset["level_type"].replace("minecraft:", ""))
             console.print(table)
         elif command == "update-pack" and len(sys.argv) > 2:
-            # Parse args: update-pack <version> [--production|-p]
+            # Parse args: update-pack <version> [--production|-p] [--variant <name>]
             args = sys.argv[2:]
             production = "--production" in args or "-p" in args
-            version = [a for a in args if not a.startswith("-")][0]
-            update_modpack_info(version, production=production)
+            variant = "linux"
+            if "--variant" in args:
+                vi = args.index("--variant")
+                if vi + 1 < len(args):
+                    variant = args[vi + 1]
+            positional = [a for i, a in enumerate(args)
+                          if not a.startswith("-")
+                          and not (i > 0 and args[i - 1] == "--variant")]
+            version = positional[0]
+            update_modpack_info(version, production=production, variant=variant)
         elif command == "verify-mods" and len(sys.argv) > 2:
             # Parse args: verify-mods <version> [--local|-l]
             args = sys.argv[2:]
@@ -2402,8 +2420,9 @@ if __name__ == "__main__":
             console.print("  python server-config.py cmd <cmd>    # Send console command")
             console.print("")
             console.print("[yellow]Deployment:[/yellow]")
-            console.print("  python server-config.py update-pack <version>       # Update LocalServer (default)")
-            console.print("  python server-config.py update-pack <version> -p    # Update production (Bloom.host)")
+            console.print("  python server-config.py update-pack <version>                       # Update LocalServer (Linux variant)")
+            console.print("  python server-config.py update-pack <version> -p                    # Update production (Bloom.host, Linux variant)")
+            console.print("  python server-config.py update-pack <version> --variant windows     # Override variant (rare)")
             console.print("  python server-config.py verify-mods <version>       # Verify mods on production match mrpack")
             console.print("  python server-config.py verify-mods <version> -l    # Verify mods on LocalServer")
             console.print("  python server-config.py configs      # Upload config directory to production")

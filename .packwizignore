@@ -5,6 +5,12 @@ packwiz
 # Exported modpacks
 *.mrpack
 
+# Build outputs from scripts/build-variants.py
+dist/
+
+# Build scripts (not part of the pack itself)
+scripts/
+
 # mrpack4server deployment files
 mrpack4server*.jar
 local.mrpack

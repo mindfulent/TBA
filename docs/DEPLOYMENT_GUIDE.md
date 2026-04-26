@@ -66,10 +66,24 @@ version = "0.9.20"  # Increment from previous
 
 ### Step 3: Export the Modpack
 
+For single-variant releases (StreamCraft pinned to one platform — historical, pre-0.7.26):
 ```bash
 ./packwiz.exe modrinth export
-# Creates: TBA-0.9.20.mrpack
+./packwiz.exe curseforge export
+# Creates: TBA-0.9.20.mrpack and TBA-0.9.20.zip in the repo root
 ```
+
+For multi-platform releases (StreamCraft 0.7.26+, with file IDs registered in `scripts/build-variants.py`):
+```bash
+python scripts/build-variants.py
+# Builds 8 artifacts in dist/:
+#   TBA-0.9.20.{mrpack,zip}                  Windows (canonical)
+#   TBA-0.9.20-linux.{mrpack,zip}            Linux (also what the server uses)
+#   TBA-0.9.20-macos-arm64.{mrpack,zip}      Apple Silicon
+#   TBA-0.9.20-macos-x86_64.{mrpack,zip}     Intel Mac
+```
+
+The script swaps `mods/streamcraft-live.pw.toml` per platform, exports, renames, and restores the original toml at the end. Build a single platform with `--platform <name>`.
 
 ### Step 4: Commit and Push
 
@@ -81,9 +95,17 @@ git push
 
 ### Step 5: Create GitHub Release
 
+Single variant:
 ```bash
-gh release create v0.9.20 TBA-0.9.20.mrpack --title "v0.9.20" --notes "Release notes here"
+gh release create v0.9.20 TBA-0.9.20.mrpack TBA-0.9.20.zip --title "v0.9.20" --notes "Release notes here"
 ```
+
+Multi-platform (all 8 artifacts):
+```bash
+gh release create v0.9.20 dist/TBA-0.9.20*.{mrpack,zip} --title "v0.9.20" --notes "Release notes here"
+```
+
+Then upload all 4 `.zip` files to the CurseForge modpack page (Windows = primary release, others = additional release files). CurseForge reviews each file independently, so Mac/Linux variants ship in waves.
 
 ### Step 6: Update Server Configuration
 
@@ -92,9 +114,11 @@ python server-config.py update-pack 0.9.20
 ```
 
 This command:
-- Reads the local .mrpack file
+- Reads the local `dist/TBA-0.9.20-linux.mrpack` (or repo root `TBA-0.9.20.mrpack` for legacy single-variant releases)
 - Calculates SHA512 hash and file size
 - Updates `modpack-info.json` on the server via SFTP
+
+The server runs on Linux, so `update-pack` defaults to `--variant linux`. The Linux variant bundles the Linux StreamCraft JAR; using any other variant on the server would crash StreamCraft on startup.
 
 ### Step 7: Restart Server
 

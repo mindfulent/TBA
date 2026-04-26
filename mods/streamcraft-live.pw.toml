@@ -1,13 +1,8 @@
 name = "StreamCraft Live"
-filename = "streamcraft-0.6.2+mc1.21.1.jar"
+filename = "streamcraft-0.7.26+mc1.21.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "681de053207181b5672da0cba78696fa71f58390"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 7952947
-project-id = 1451729
+hash = "69c5de6703750e88e0fffee9d74e0ad6cad141df"
+url = "https://cdn.modrinth.com/data/UUUunIAe/versions/F9hKGI2L/streamcraft-0.7.26%2Bmc1.21.1.jar"

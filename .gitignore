@@ -6,6 +6,9 @@ packwiz
 *.mrpack
 *.zip
 
+# Build outputs from scripts/build-variants.py
+dist/
+
 # But DO track shaderpacks (they are bundled with the modpack)
 !shaderpacks/*.zip
 # mrpack4server deployment files

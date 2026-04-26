@@ -3,6 +3,23 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [1.0.4] - 2026-04-26
+
+### Updated
+- **StreamCraft** 0.6.2 → 0.7.26 — Adds platform-specific native bundles (LiveKit FFI / JNA / JavaCV / FFmpeg) so Mac and Linux clients now have working in-game webcam, screen share, and voice. Sourced temporarily from Modrinth (`cdn.modrinth.com`) while CurseForge approval of the v0.7.26 files is pending; will move back to CurseForge metadata once approved.
+
+### Infrastructure
+- **Multi-platform release artifacts** — every TBA release now ships 4 variants so StreamCraft's native libraries match the player's OS/CPU. Filenames: `TBA-X.Y.Z.{mrpack,zip}` (Windows, canonical), `TBA-X.Y.Z-linux.{mrpack,zip}`, `TBA-X.Y.Z-macos-arm64.{mrpack,zip}`, `TBA-X.Y.Z-macos-x86_64.{mrpack,zip}`.
+- **`scripts/build-variants.py`** — new build helper that swaps `mods/streamcraft-live.pw.toml` per platform, runs `packwiz refresh && modrinth/curseforge export`, and writes named artifacts to `dist/`. Restores the original toml on exit. Supports both CurseForge metadata and Modrinth URL sources per platform via the StreamCraft file registry.
+- **`.packwizignore`** — added `dist/` and `scripts/` so per-variant builds don't bundle each other or the build script.
+- **`server-config.py update-pack`** now defaults to the Linux variant (the server runs on Linux and needs the Linux StreamCraft JAR). Override with `--variant <name>` if needed. Whitelisted `cdn.modrinth.com` so mrpack4server can fetch the Modrinth-sourced StreamCraft.
+- **theblockacademy site** — new `/downloads` page with auto-detected platform pre-selection. Version + URL constants centralized in `src/config/downloads.ts`. `AVAILABLE_PLATFORMS` registry gates broken links per release.
+
+### Notes
+- Mod count: 195 total (unchanged from 1.0.3 — StreamCraft swap only).
+- Validated end-to-end on LocalServer with the Windows variant: StreamCraft initialized cleanly, server boot in ~1.2s.
+
+
 ## [1.0.3] - 2026-04-19
 
 ### Reverted
