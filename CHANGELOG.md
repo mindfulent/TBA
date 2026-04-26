@@ -3,6 +3,15 @@
 All notable changes to TBA will be documented in this file.
 
 
+## [1.0.5] - 2026-04-26
+
+### Fixed
+- **Distant Horizons** — suppressed the "New update available!" prompt on first launch by setting `client.advanced.autoUpdater.enableAutoUpdater = false` in `config/DistantHorizons.toml`. DH is pinned to 2.4.5-b deliberately because 3.0.x breaks server-side mixins (Travelers Backpack LanguageMixin crash, see v1.0.3); players should never click "Update" — so we don't ask them.
+
+### Notes
+- Mod count: 195 total (unchanged from 1.0.4 — config-only fix).
+- v1.0.4 was published with the multi-platform pipeline + StreamCraft 0.7.26 upgrade but missed the DH popup suppression. v1.0.5 supersedes it; v1.0.4 should be skipped.
+
 ## [1.0.4] - 2026-04-26
 
 ### Updated

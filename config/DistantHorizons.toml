@@ -12,3 +12,13 @@ _version = 3
 			showUpdateQueueOverloadedChatWarning = false
 			showSlowWorldGenSettingWarnings = false
 			showModCompatibilityWarningsOnStartup = false
+
+[client]
+	[client.advanced]
+		# Suppress the "New update available!" prompt on first launch.
+		# DH is pinned to 2.4.5-b deliberately because 3.0.x breaks server-side
+		# mixins (Travelers Backpack LanguageMixin crash, see CHANGELOG v1.0.3
+		# for the incident). Players should never click "Update" — so don't ask.
+		[client.advanced.autoUpdater]
+			enableAutoUpdater = false
+			enableSilentUpdates = false

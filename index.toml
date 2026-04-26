@@ -10,7 +10,7 @@ hash = "28b1af7e1ccd9695166ec1df33e0d08c1ec078e6e186e0b2e8c0228fe9e10acf"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "96160eb5ef28e1b349eb91f9c09d8f87367e4b6acfb8d4f40cd56ad22ef85265"
+hash = "f13a3b4a601f7f82101de3e73bc0274a69f140191017a7c7b16ce5d62e088f92"
 
 [[files]]
 file = "config/autohud.json5"
