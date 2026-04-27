@@ -2,8 +2,8 @@
 
 This document credits all mod creators whose work makes this modpack possible. Thank you for your incredible contributions to the Minecraft modding community!
 
-**Last Updated:** April 19, 2026
-**Modpack Version:** 1.0.3 (195 mods total)
+**Last Updated:** April 27, 2026
+**Modpack Version:** 1.0.5 (194 mods total)
 
 ---
 
@@ -199,10 +199,9 @@ Many mod creators accept donations to support their work. Consider supporting yo
 |-----|-----------|---------|----------|--------|
 | [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat) | henkelmax | 2.6.9 | Dec 17, 2025 | - |
 | [Voice Chat Interaction](https://www.curseforge.com/minecraft/mc-mods/voice-chat-interaction) | henkelmax | 1.0.8 | Sep 2024 | - |
-| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.6.2 | Apr 2026 | - |
+| [StreamCraft Live](https://www.curseforge.com/minecraft/mc-mods/streamcraft-live) | Slash | 0.7.26 | Apr 2026 | - |
 | [SynthCraft Live](https://www.curseforge.com/minecraft/mc-mods/synthcraft-live) | Slash | 0.1.15 | Feb 2026 | - |
 | [SceneCraft Live](https://www.curseforge.com/minecraft/mc-mods/scenecraft-live) | Slash | 0.1.27 | Feb 2026 | - |
-| [ShapeCraft](https://github.com/mindfulent/ShapeCraft) | Slash | 0.4.18 | Apr 2026 | - |
 | [Connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | someaddon | 7.6 | Dec 2025 | - |
 | [LuckPerms](https://www.curseforge.com/minecraft/mc-mods/luckperms) | lucko | 5.4.140 | Jun 2024 | - |
 | [Flan](https://modrinth.com/mod/flan) | flemmli97 | 1.12.4 | Nov 20, 2025 | [PayPal](https://www.paypal.com/donate/?hosted_button_id=2PNHRS9X7YCDS), [Ko-fi](https://ko-fi.com/flemmli97), [Patreon](https://www.patreon.com/flemmli97) |

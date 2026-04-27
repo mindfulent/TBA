@@ -11,8 +11,11 @@ All notable changes to TBA will be documented in this file.
 ### Updated
 - **StreamCraft 0.7.26** — flipped from Modrinth URL mode back to CurseForge metadata across all four platforms (windows/linux/macos-arm64/macos-x86_64). CurseForge approved the v0.7.26 files (project 1451729, file IDs 7996534/7996556/7996538/7996545), so the platform JARs are now first-party CF dependencies in the `.zip` exports instead of bundled overrides — restoring CurseForge-First Policy compliance for the CurseForge App distribution. JAR contents are byte-identical (same SHA1s); only the source URL changes. The v1.0.5 `.zip` artifacts on CurseForge App reflect this; GitHub release `.mrpack` artifacts (Prism Launcher / server) were not rebuilt since they install correctly under either source.
 
+### Removed
+- **ShapeCraft** — removed `mods/shapecraft-0.4.18.jar`. ShapeCraft is not published to CurseForge or Modrinth, so it shipped as a raw override JAR in the CurseForge `.zip` export, which violates CurseForge-First Policy compliance for modpack submission. ShapeCraft was experimentally bundled in 1.0.0–1.0.4; with v1.0.5 it leaves the modpack until it has a public CurseForge or Modrinth listing. Players who placed ShapeCraft-generated blocks in those builds will see them turn to air on first load after this update.
+
 ### Notes
-- Mod count: 195 total (unchanged from 1.0.4 — config-only fix).
+- Mod count: 194 total (-1 ShapeCraft removed vs 1.0.4).
 - v1.0.4 was published with the multi-platform pipeline + StreamCraft 0.7.26 upgrade but missed the DH popup suppression. v1.0.5 supersedes it; v1.0.4 should be skipped.
 
 ## [1.0.4] - 2026-04-26
