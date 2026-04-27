@@ -5,4 +5,9 @@ side = "both"
 [download]
 hash-format = "sha1"
 hash = "69c5de6703750e88e0fffee9d74e0ad6cad141df"
-url = "https://cdn.modrinth.com/data/UUUunIAe/versions/F9hKGI2L/streamcraft-0.7.26%2Bmc1.21.1.jar"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7996534
+project-id = 1451729

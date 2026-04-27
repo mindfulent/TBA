@@ -71,29 +71,26 @@ STREAMCRAFT_REGISTRY: dict[str, dict[str, StreamCraftFile]] = {
             cf_file_id=7952947,
         ),
     },
-    # v0.7.26 sourced from Modrinth (project UUUunIAe, version F9hKGI2L).
-    # CurseForge upload is awaiting manual review — flip these to cf_file_id once
-    # the files are approved (project 1451729).
     "0.7.26+mc1.21.1": {
         "windows": StreamCraftFile(
             filename="streamcraft-0.7.26+mc1.21.1.jar",
             sha1="69c5de6703750e88e0fffee9d74e0ad6cad141df",
-            mr_url="https://cdn.modrinth.com/data/UUUunIAe/versions/F9hKGI2L/streamcraft-0.7.26%2Bmc1.21.1.jar",
+            cf_file_id=7996534,
         ),
         "linux": StreamCraftFile(
             filename="streamcraft-0.7.26+mc1.21.1-linux.jar",
             sha1="e0b4e084263b54cdcffe49a6b7867a66f9746d72",
-            mr_url="https://cdn.modrinth.com/data/UUUunIAe/versions/F9hKGI2L/streamcraft-0.7.26%2Bmc1.21.1-linux.jar",
+            cf_file_id=7996556,
         ),
         "macos-arm64": StreamCraftFile(
             filename="streamcraft-0.7.26+mc1.21.1-macos-arm64.jar",
             sha1="bdaae7d1b1097488326bbdb7ffda8dc409ffaa27",
-            mr_url="https://cdn.modrinth.com/data/UUUunIAe/versions/F9hKGI2L/streamcraft-0.7.26%2Bmc1.21.1-macos-arm64.jar",
+            cf_file_id=7996538,
         ),
         "macos-x86_64": StreamCraftFile(
             filename="streamcraft-0.7.26+mc1.21.1-macos-x86_64.jar",
             sha1="3a85e944b38260ff573f7bef8da55f6229a5b65e",
-            mr_url="https://cdn.modrinth.com/data/UUUunIAe/versions/F9hKGI2L/streamcraft-0.7.26%2Bmc1.21.1-macos-x86_64.jar",
+            cf_file_id=7996545,
         ),
     },
 }

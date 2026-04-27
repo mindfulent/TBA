@@ -8,6 +8,9 @@ All notable changes to TBA will be documented in this file.
 ### Fixed
 - **Distant Horizons** — suppressed the "New update available!" prompt on first launch by setting `client.advanced.autoUpdater.enableAutoUpdater = false` in `config/DistantHorizons.toml`. DH is pinned to 2.4.5-b deliberately because 3.0.x breaks server-side mixins (Travelers Backpack LanguageMixin crash, see v1.0.3); players should never click "Update" — so we don't ask them.
 
+### Updated
+- **StreamCraft 0.7.26** — flipped from Modrinth URL mode back to CurseForge metadata across all four platforms (windows/linux/macos-arm64/macos-x86_64). CurseForge approved the v0.7.26 files (project 1451729, file IDs 7996534/7996556/7996538/7996545), so the platform JARs are now first-party CF dependencies in the `.zip` exports instead of bundled overrides — restoring CurseForge-First Policy compliance for the CurseForge App distribution. JAR contents are byte-identical (same SHA1s); only the source URL changes. The v1.0.5 `.zip` artifacts on CurseForge App reflect this; GitHub release `.mrpack` artifacts (Prism Launcher / server) were not rebuilt since they install correctly under either source.
+
 ### Notes
 - Mod count: 195 total (unchanged from 1.0.4 — config-only fix).
 - v1.0.4 was published with the multi-platform pipeline + StreamCraft 0.7.26 upgrade but missed the DH popup suppression. v1.0.5 supersedes it; v1.0.4 should be skipped.
